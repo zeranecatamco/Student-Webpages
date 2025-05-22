@@ -50,18 +50,36 @@ You are allowed to use **ChatGPT** to help you generate this file — that is th
 
 ---
 
-## 📁 Step 2: Submit Your Files to This Repo
+📁 Step 2: Submit Your Files to This Repo
+Once your own repo is ready with all your files and your README.md, you need to submit a copy to this class repo.
 
-Once your own repo is ready with all your files and your README, you need to submit a copy to **this class repo**.
+Fork this repository (click “Fork” in the top-right)
 
-1. Fork this repository (click “Fork” in the top-right)
-2. Go to the folder for your class:  
-   Example: `3rd-period/`
-3. Inside that folder, create a **new folder** using your **first name and last initial**, lowercase and separated by a dash:  
-   Example: `alex-g`
-4. Upload all the same files from your own repo into that folder:
-   - `index.html`, `style.css`, etc.
-   - Your personal `README.md` file
+Go to the folder for your class:
+Example: 3rd-period/
+
+Inside that folder, create a new folder using your first name and last initial, all lowercase, separated by a dash
+Example: alex-g
+
+Upload all the same files from your own repo into your folder:
+
+index.html, style.css, JavaScript files, images, etc.
+
+Your personal README.md file
+
+At the end, your directory should look something like this:
+
+```
+3rd-period/
+└── alex-g/
+    ├── index.html
+    ├── style.css
+    ├── script.js
+    ├── README.md
+```
+
+These filenames are just examples - your actual files may be named differently depending on what you included in your portfolio.
+Just make sure everything you used in your project is included, and the structure is clear.
 
 ---
 
