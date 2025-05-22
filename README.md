@@ -43,7 +43,10 @@ You are allowed to use **ChatGPT** to help you generate this file — that is th
 > - An overview of what my portfolio site includes  
 > - A section that lists the projects featured in my portfolio, with a brief description of each project’s features or purpose  
 > - A link to my GitHub repository: `https://github.com/yourusername/final-project-portfolio`  
-> - A link to my live site that is running through GitHub Pages: `https://yourusername.github.io/final-project-portfolio/`
+> - A link to my live site that is running through GitHub Pages: `https://yourusername.github.io/final-project-portfolio/`  
+>  
+> **Make sure to update the two links above to match your actual GitHub repository and your live site URL.**
+
 
 ---
 
