@@ -23,23 +23,15 @@ You are allowed to use **ChatGPT** to help you generate this file — that is th
 
 ---
 
-### ✅ What to Include in Your README.md:
-
-- Your first name and last initial
-- A short paragraph about what this project is
-- What you learned this year
-- A list or description of the features in your portfolio
-- A link to your GitHub repository
-- A link to your live website (GitHub Pages or Netlify)
-
----
-
-### ✅ Copy and Paste the Prompt Below Into ChatGPT:
+### ✅ Use the prompt below to generate your README.md file using ChatGPT.
+The prompt already includes everything your README needs — simply copy and paste it into ChatGPT to get started.
 
 > Can you write a professional `README.md` file for my final portfolio project?  
 >  
 > Include the following:  
-> - A short introduction about me as a student developer. (My main portfolio page already has this, so you can include a **revised version of what I wrote there** in the README.)  
+> - My first name and last initial  
+> - A short introduction about me as a student developer (My main portfolio page already has this, so you can include a **revised version of what I wrote there** in the README.)  
+> - A short paragraph about what this project is and what I learned this year  
 > - An overview of what my portfolio site includes  
 > - A section that lists the projects featured in my portfolio, with a brief description of each project’s features or purpose  
 > - A link to my GitHub repository: `https://github.com/yourusername/final-project-portfolio`  
