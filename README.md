@@ -23,8 +23,12 @@ You are allowed to use **ChatGPT** to help you generate this file — that is th
 
 ---
 
-### ✅ Use the prompt below to generate your README.md file using ChatGPT.
-The prompt already includes everything your README needs — simply copy and paste it into ChatGPT to get started.
+### ✅ Use the Prompt Below to Generate Your `README.md` File Using ChatGPT
+
+Please make sure to **update the example links in the prompt before pasting** it into ChatGPT — this ensures that the AI includes your actual GitHub repo and live site.  
+If you forget to update them, ChatGPT may include placeholders or incorrect links.
+
+Copy and paste the prompt below, and once you have added your links to the repo and live site, you can submit the prompt to ChatGPT:
 
 > Can you write a professional `README.md` file for my final portfolio project?  
 >  
