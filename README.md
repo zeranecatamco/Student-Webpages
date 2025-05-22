@@ -36,6 +36,8 @@ You are allowed to use **ChatGPT** to help you generate this file — that is th
 
 ### ✅ Copy and Paste the Prompt Below Into ChatGPT:
 
+### ✅ Copy and Paste the Prompt Below Into ChatGPT:
+
 > Can you write a professional `README.md` file for my final portfolio project?  
 >  
 > Include the following:  
@@ -47,6 +49,11 @@ You are allowed to use **ChatGPT** to help you generate this file — that is th
 >  
 > **Make sure to update the two links above to match your actual GitHub repository and your live site URL.**
 
+---
+
+You are responsible for making sure your `README.md` is formatted correctly.  
+**ChatGPT can help you write it, but it can sometimes make formatting mistakes**, especially with links, headers, or spacing.  
+**Review the file before submitting to make sure everything renders properly on GitHub.**
 
 ---
 
