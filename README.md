@@ -36,8 +36,6 @@ You are allowed to use **ChatGPT** to help you generate this file — that is th
 
 ### ✅ Copy and Paste the Prompt Below Into ChatGPT:
 
-### ✅ Copy and Paste the Prompt Below Into ChatGPT:
-
 > Can you write a professional `README.md` file for my final portfolio project?  
 >  
 > Include the following:  
