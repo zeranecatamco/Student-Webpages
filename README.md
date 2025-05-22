@@ -45,13 +45,13 @@ Copy and paste the prompt below, and once you have added your links to the repo 
 
 ---
 
-You are responsible for making sure your `README.md` is formatted correctly.  
+### You are responsible for making sure your `README.md` is formatted correctly.  
 **ChatGPT can help you write it, but it can sometimes make formatting mistakes**, especially with links, headers, or spacing.  
 **Review the file before submitting to make sure everything renders properly on GitHub.**
 
 ---
 
-📁 Step 2: Submit Your Files to This Repo
+## 📁 Step 2: Submit Your Files to This Repo
 Once your own repo is ready with all your files and your README.md, you need to submit a copy to this class repo.
 
 Fork this repository (click “Fork” in the top-right)
