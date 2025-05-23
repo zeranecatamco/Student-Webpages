@@ -77,6 +77,7 @@ At the end, your directory should look something like this:
     ├── style.css
     ├── script.js
     ├── README.md
+```
 
 
 These filenames are just examples - your actual files may be named differently depending on what you included in your portfolio.
