@@ -1,2 +1,3 @@
--[GitHub repository](https://github.com/EvelynSanchezL/final-project-portfolio)
--[Live Website]( https://evelynsanchezl.github.io/final-project-portfolio/)
+-**GitHub repository:**[https://github.com/EvelynSanchezL/final-project-portfolio](https://github.com/EvelynSanchezL/final-project-portfolio)
+
+-**Live Website:**[https://evelynsanchezl.github.io/final-project-portfolio/]( https://evelynsanchezl.github.io/final-project-portfolio/)
