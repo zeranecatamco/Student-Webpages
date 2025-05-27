@@ -1,3 +1,4 @@
-🔗 GitHub Repository: https://github.com/hiitscyrus/Final-Project.git
+# Cyrus G.
 
-🌐 Live Site on GitHub Pages: https://hiitscyrus.github.io/Final-Project/index.html
+- [GitHub Repository] (https://github.com/hiitscyrus/Final-Project.git)
+- [Live Website] (https://hiitscyrus.github.io/Final-Project/index.html)
