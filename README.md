@@ -79,6 +79,7 @@ At the end, your directory should look something like this:
     ├── README.md
 ```
 
+
 These filenames are just examples - your actual files may be named differently depending on what you included in your portfolio.
 Just make sure everything you used in your project is included, and the structure is clear.
 
