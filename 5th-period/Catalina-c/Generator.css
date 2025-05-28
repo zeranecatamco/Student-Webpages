@@ -1,0 +1,32 @@
+h1{
+  text-align:center;
+  font-family: cambria;
+  color: #264653;
+   padding: 1rem;
+        border: solid white 5px; /* White border */
+        border-radius: 100px;
+        margin-top: 0.30rem;
+}
+body{
+  text-align:center;
+  font-family: cambria;
+  background-color:#e9c46a;
+} 
+button{
+      background-color: #f4a261; 
+      font weight: bold;
+            color: #264653;
+            width: 160px;
+            margin-bottom: 20px;
+            padding: 7px 7px;
+            border: circle;
+            border-radius: 5px;
+            font-family: "italiac", serif;
+            box-shadow: 0px 0px 2px 2px rgb(230, 252, 241);
+            
+}
+button:hover {
+      background-color:#2a9d8f;
+      transition: 0.7s;
+  }
+
