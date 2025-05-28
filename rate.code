@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, intial-scale=1.0"/> 
+    <meta http-equiv="X-pUA-Compatible" content="ie-edge" /> 
+    <title>Star Rating in HTML CSS & Javascript</title> 
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/> 
+  </head> 
+  <style> 
+    { 
+    margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+      font-family: "Verdana", serif; 
+    }
+   body{
+      height: 100vh; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      background: linear-gradient(45deg, #ADD8E6, #87CEEB); 
+    }
+    .rating-box{
+      position: relative; 
+      background: #fff; 
+      padding: 25px 50px 35px; 
+      border-radius: 25px; 
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); 
+    }
+    .rating-box header{
+      font-size: 22px; 
+      color: #004687; 
+      font-weight: 500; 
+      margin-bottom: 20px; 
+      text-align: center; 
+    }
+    .rating-box .stars{ 
+      display: flex; 
+      align-items: center; 
+      gap: 25px; 
+    }
+    .stars i{
+      color: #e6e6e6; 
+      font-size: 35px; 
+      cursor: pointer; 
+      transition: color 0.2s ease;
+    }
+    .stars i.active{
+      color: #87CEFA; 
+    }
+  </style> 
+  <body> 
+    <div class="rating-box"> 
+      <header> How was your experience?</header> 
+      <div class="stars"> 
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+      </div>
+    </div>
+    </body> 
+  <script defer>
+    const stars = document.querySelectorAll(".stars i"); 
+    console.log(stars); stars.forEach((star, index1) => {
+star.addEventListener("click", () => { 
+     console.log(index1);          
+stars.forEach((star,index2) => {
+      console.log(index2);
+      index1 >= index2 ? star.classList.add("active") : star.classList.remove("active");
+    })
+  })
+})
+  </script> 
+</html> 
