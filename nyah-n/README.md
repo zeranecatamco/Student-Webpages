@@ -1,4 +1,4 @@
 # Nyah N
 
-- [Github Repository](link for repo here)
+- [Github Repository](https://github.com/san6o/NyahN-Final-Project)
 - [live webpage](actual url here for live state)
