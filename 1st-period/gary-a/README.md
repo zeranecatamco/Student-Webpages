@@ -1,4 +1,4 @@
 # Gary A
 
-- [Github Repository](https://mr-alvarado.github.io/Final-Project-1/)
--[Live Website()
+- [Github Repo](https://github.com/Carlitos13180/Final-Project)
+- [Live Website](https://carlitos13180.github.io/Final-Project/)
