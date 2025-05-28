@@ -1,0 +1,165 @@
+.title{
+    text-align: center;
+}
+.div-holder{
+    display: grid;
+    grid-template-columns: repeat(12, auto);
+    grid-template-areas: 
+    "one one one one one one one one one one one one"
+    "two two two two two two two two two two two two"
+    "three three three three three three three three three three three three"
+    "four four four four four four four four four four four four"
+    "five five five five five five five five five five five five"
+    "cut cut cut cut cut cut cut cut cut cut cut cut"
+    "reflec reflec reflec reflec reflec reflec reflec reflec reflec reflec reflec reflec"
+    "mid mid mid mid mid mid mid mid mid mid mid mid"
+    "pro pro pro pro pro pro pro pro pro pro pro pro"
+    "six six six six six six six six six six six six"
+    "seven seven seven seven eight eight eight eight nine nine nine nine"
+    "ten ten ten ten eleven eleven eleven eleven twelve twelve twelve twelve"
+    ;
+}
+
+.one{
+   grid-area: one; 
+   padding: 2px 20px 0; 
+   font-size: 25px;
+   line-height: 1.25;
+   text-align: center;
+}
+.two{
+    grid-area: two;
+    height: 100px;
+}
+.three{
+    grid-area: three;
+    padding: 0; 
+    font-size: 25px;
+    text-align: center;
+}
+.four{
+    grid-area: four;
+    height: 50px;
+}
+.five{
+    grid-area: five;
+    padding: 2px 20px 0; 
+    font-size: 25px;
+    line-height: 2;
+    max-height: 600px;
+    max-width: 1000px;
+    border: dashed 2px;
+    border-radius: 5%;
+    background: #e5c6b2;
+    margin: auto;
+}
+
+.cut{
+  height: 100px;
+}
+.reflection{
+    grid-area: reflec;
+    padding: 2px 20px 0; 
+    font-size: 25px;
+    line-height: 2;
+    height: 630px;
+    max-width: 1200px;
+    border: dashed 2px;
+    border-radius: 5%;
+    background: #e5c6b2;
+    margin: auto;
+}
+h3{
+    text-align: center;
+    height: 50px;
+}
+.six{
+    grid-area: six;
+    height: 100px;
+    background: #877f7f;
+}
+.middleLine{
+    grid-area: mid;
+    height: 100px;
+}
+
+.projectSection{
+    grid-area: pro;
+    text-align: center; 
+    font-size: 25px;
+    line-height: 1.25;
+    height: 50px;
+    background: #6c5e5e;
+    color: #fabd20;
+    border-top: solid 3px black;
+    border-bottom: solid 3px black;
+}
+.seven{
+    grid-area: seven;
+    border-right: solid 1px black;
+}
+.eight{
+    grid-area: eight;
+    border-right: solid 1px black;
+    border-left: solid 1px black;
+}
+.nine{
+    grid-area: nine;
+    border-left: solid 1px black;
+}
+.seven, .eight, .nine{
+    max-height: 500px;
+    background: #877f7f;
+    color: #877f7f;
+    align-items: center;
+}
+.ten, .eleven, .twelve{
+    text-align: center;
+    padding: 2px 20px 0; 
+    font-size: 25px;
+    line-height: 1.25;
+    background: #877f7f;    
+}
+.ten{
+    grid-area: ten;
+    border-right: solid 1px black;
+}
+.eleven{
+    grid-area: eleven;  
+    border-right: solid 1px black;
+    border-left: solid 1px black;
+}
+.twelve{
+    grid-area: twelve;
+    border-left: solid 1px black;
+}
+body{
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    background: #CBE1EF;
+    margin: auto;
+}
+img{
+    width: 350px;
+    height: 200px;
+}
+.projectSection, .seven, .eight, .nine, .ten, .eleven, .twelve{
+  font-family: "Caprasimo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+a{
+  text-decoration: none;
+}
+.aten{
+  color: #54eae5;
+}
+.aeleven{
+  color: #75ea54;
+}
+.atwelve{
+  color: #dfea54;
+}
