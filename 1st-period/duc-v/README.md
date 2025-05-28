@@ -1,6 +1,4 @@
-#Duc V.
-
- # Final Portfolio Project
+# Duc V. - Final Portfolio Project
 
 ## About Me
 
