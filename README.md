@@ -1,115 +1,47 @@
-# Final Project Submission Instructions
+# Mason W – Final Portfolio Project
 
-Follow the steps below to correctly submit your final website project.  
-Make sure you only edit inside your own class folder and do **not modify this README file**.
+## 👋 About Me
 
----
+Hi! I'm Mason W, a student developer with a passion for problem-solving, learning new technologies, and building cool things with code. Over the past year, I've grown my skills in web development and programming through hands-on projects and collaborative learning.
 
-## 🛠️ Step 1: Set Up Your Own Project Repository
+## 📚 Project Overview
 
-You should already have your own GitHub repository for your final website project.  
-In that repository, make sure you include:
+This portfolio website is the culmination of my learning throughout the year in AP Computer Science. It showcases my growth as a developer, highlights several projects I’ve completed, and reflects the skills I’ve gained in C++, HTML, CSS, and JavaScript.
 
-- All your project files (`index.html`, `style.css`, images, JavaScript files, etc.)
-- A new file called `README.md` (see below for instructions)
+Through this project, I’ve learned how to:
+- Break down complex problems into manageable steps
+- Debug code efficiently and independently
+- Collaborate with peers and contribute meaningfully to group projects
+- Build responsive and interactive web applications
 
----
+## 🌐 What’s Included in the Portfolio
 
-## 📄 What is a README.md?
+The site includes:
+- A personal introduction
+- Descriptions of key programming projects
+- Live demos hosted online
+- A downloadable game project
+- Clean, responsive design using HTML and CSS
 
-A `README.md` file is a special file used to describe what your project is, how it works, and how to view or use it. GitHub automatically displays the contents of this file on your repo’s main page.
+## 🛠️ Featured Projects
 
-You are allowed to use **ChatGPT** to help you generate this file — that is the **only use of AI allowed** for this project.
+### 🎮 Rock Paper Scissors Game
+A C++ console game where the player chooses rock, paper, or scissors. The computer randomly selects a move, and the winner is determined and displayed.
 
----
+### ⏰ JavaScript Clock
+A real-time digital clock made with HTML, CSS, and JavaScript. It displays the current time and updates every second.
 
-### ✅ Use the Prompt Below to Generate Your `README.md` File Using ChatGPT
+### 🔊 Soundboard
+An interactive soundboard hosted on CodePen. It uses HTML buttons, styled with CSS, and plays sound clips via JavaScript when clicked.
 
-Please make sure to **update the example links in the prompt before pasting** it into ChatGPT — this ensures that the AI includes your actual GitHub repo and live site.  
-If you forget to update them, ChatGPT may include placeholders or incorrect links.
+### 🧮 Scratch Math Game
+A speed-based math game created in Scratch. Players solve problems quickly to earn more time, with increasing difficulty levels. A downloadable ZIP file is available to run the game offline in Scratch.
 
-Copy and paste the prompt below, and once you have added your links to the repo and live site, you can submit the prompt to ChatGPT:
+## 🔗 Links
 
-> Can you write a professional `README.md` file for my final portfolio project?  
->  
-> Include the following:  
-> - My first name and last initial  
-> - A short introduction about me as a student developer (My main portfolio page already has this, so you can include a **revised version of what I wrote there** in the README.)  
-> - A short paragraph about what this project is and what I learned this year  
-> - An overview of what my portfolio site includes  
-> - A section that lists the projects featured in my portfolio, with a brief description of each project’s features or purpose  
-> - A link to my GitHub repository: `https://github.com/yourusername/final-project-portfolio`  
-> - A link to my live site that is running through GitHub Pages: `https://yourusername.github.io/final-project-portfolio/`  
->  
-> **Make sure to update the two links above to match your actual GitHub repository and your live site URL.**
-
----
-
-### You are responsible for making sure your `README.md` is formatted correctly.  
-**ChatGPT can help you write it, but it can sometimes make formatting mistakes**, especially with links, headers, or spacing.  
-**Review the file before submitting to make sure everything renders properly on GitHub.**
+- **GitHub Repository:** [https://github.com/EWGFking/AP-comp-sci-final-project](https://github.com/EWGFking/AP-comp-sci-final-project)
+- **Live Site on GitHub Pages:** [https://ewgfking.github.io/AP-comp-sci-final-project/](https://ewgfking.github.io/AP-comp-sci-final-project/)
 
 ---
 
-## 📁 Step 2: Submit Your Files to This Repo
-Once your own repo is ready with all your files and your README.md, you need to submit a copy to this class repo.
-
-Fork this repository (click “Fork” in the top-right)
-
-Go to the folder for your class:
-Example: 3rd-period/
-
-Inside that folder, create a new folder using your first name and last initial, all lowercase, separated by a dash
-Example: alex-g
-
-Upload all the same files from your own repo into your folder:
-
-index.html, style.css, JavaScript files, images, etc.
-
-Your personal README.md file
-
-At the end, your directory should look something like this:
-
-```
-3rd-period/
-└── alex-g/
-    ├── index.html
-    ├── style.css
-    ├── script.js
-    ├── README.md
-```
-
-
-These filenames are just examples - your actual files may be named differently depending on what you included in your portfolio.
-Just make sure everything you used in your project is included, and the structure is clear.
-
----
-
-## 💾 Step 3: Commit Your Files
-
-1. Scroll down and add a commit message like:  
-   `Add final project - Alex G.`
-2. Click **“Commit changes”**
-
----
-
-## 🔁 Step 4: Submit a Pull Request
-
-1. Go back to the main page of your **forked copy of this class repository** (not your personal portfolio repo)  
-2. Click **“Contribute” > “Open pull request”**  
-3. Review your changes  
-4. Click **“Create pull request”**  
-5. Title it like:  
-   `Final project submission - Alex G.`
-
----
-
-## ✅ That’s It!
-
-Once your pull request is submitted, I’ll review and merge your folder into the class repo.  
-Just make sure:
-- You only use AI for generating your `README.md`
-- Your folder includes all the same files from your personal repo
-- Your live site link and repo link are included in your `README.md`
-
-Let me know if you have any questions or need help.
+Thanks for visiting my portfolio!
