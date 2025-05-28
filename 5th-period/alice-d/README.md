@@ -1,5 +1,3 @@
-#Alice D.
+# Alice Dazo 
 
-- [Github Repo](link)
-  
-- [Website Link](actaul link)
+#About Me 
