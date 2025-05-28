@@ -1,4 +1,4 @@
 # Isabella M
 
-- [Github Repository](https://classroom.google.com/c/NzI1NDA1MTkwMzEz/a/Nzg0NTkxMTIyMDg5/details)
-- [Live Website](Live site URL)
+- [Github Repository](https://github.com/esaiiisayy/I.M.-Final-Project)
+- [Live Website](https://esaiiisayy.github.io/I.M.-Final-Project/)
