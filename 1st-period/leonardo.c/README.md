@@ -1,4 +1,4 @@
 # Leonardo C
 
--[Github Respository](actual URL for repo goes here)
--[Live Webpage](actual URL goes here for live site)
+-[Github Respository](https://github.com/C1leo/final--project/tree/main)
+-[Live Webpage](https://c1leo.github.io/final--project/)
