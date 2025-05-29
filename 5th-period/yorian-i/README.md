@@ -7,6 +7,7 @@ Hello, my name is Yorian Ixcol. I am a junior in highschool and I enjoy learning
 ## Project Overview
 
 This portfolio project represents my learning journey throughout the year. In this project I explored  and learned the complexities of coding and gained a better appreciation for developers' skills. Thoughout the year I learned the basics of computers, including binary code and C++, and was introduced to web development languages like HTML, CSS, and JavaScript. Designing with these languages quickly became one of my favorite things to do. I always found the process enjoyable. In this project I learned the process of creating things I use in my everyday life:live websites. It was entertaining and a cool new experience to learn this. 
+
 ## Portfolio Overview
 
 This portfolio site includes the following projects, each showcasing my growing skills in programming and game development:
