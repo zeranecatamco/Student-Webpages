@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #546a7b;
+  /*  added fonts of choice, and color to personalize it  */
+
+}
+
+section {
+    text-align: center;
+    border-radius: 10px;
+    width: 400px;
+    margin: auto;
+    background-color: #fdfdff;
+    margin-top: 110px;
+    box-shadow: 0px 10px 36px 16px rgba(0,0,0,0.1)
+      /*   this focus on the alignment of the title and more   */
+
+}
+
+.game--title {
+    padding-top: 20px;
+  /* focus on the title part as well   */
+
+}
+
+.game--container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 150px;
+    margin: 110px;
+    margin-bottom: 60px;
+    margin-top: 10px;
+  /*  makes up got the game grid and the size  */
+
+}
+.cell {
+    font-family: "Poppins", sans-serif;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 0 0 1px #333333;
+    border: 1px solid #333333;
+    cursor: pointer;
+    line-height: 50px;
+    font-size: 20px;
+}
+button {
+  margin-bottom: 20px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #c6c5b9;
+  cursor: pointer;
+  /* top and bottom function helps how to click on the restart button and the color way and size */
+
+}
+button:hover {
+    transition: 0.25s;
+    background-color: #62929e;
+}

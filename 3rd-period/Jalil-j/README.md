@@ -1,4 +1,4 @@
-# Final Portfolio Website 🎮
+# Jalil Johnson Final Project Portfolio 🎮
 
 ## About Me
 Hi! I’m Jalil J., a student developer currently enrolled in AP Computer Science. I’m passionate about programming and love creating interactive games through code. Over the past year, I’ve grown more confident in my skills and have enjoyed the process of learning and building with HTML, CSS, and JavaScript.
@@ -13,9 +13,10 @@ This final project is a personal portfolio website that showcases the games and 
 - Clickable links that lead directly to playable game pages
 
 ## Featured Projects
-- **Game 1** – A fun, interactive browser-based game (insert a short description of the game's purpose or mechanics)
-- **Game 2** – Another creative project showcasing a different concept or gameplay (insert description)
-- *(Add more if needed)*
+- **Game 1: French Catacombs** - A Rpg game that Francis, Rice, Kierian, and me made. Staring Furina from the series Genshin Impact.
+- **Game 2: Dino game (with Obama)** - A classic no-internet game, but with Obama! Created this with Francis.
+- **Game 3: Endless Game survival** - A simple survival challenge game with increasing difficulty.
+- **Game 4: KFC(licker)** -A fun KFC-clicking game. Tap to earn and upgrade! Created this with kierian.
 
 ## Links
 - 🔗 [GitHub Repository](https://github.com/Randomman123598/Project-Portfolio.github.io)  

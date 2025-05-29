@@ -37,5 +37,3 @@ My portfolio site includes:
 
 - 🔗 [GitHub Repository](https://github.com/Gavin15716/FINAL-PROJECT)  
 - 🌐 [Live Site on GitHub Pages](https://gavin15716.github.io/FINAL-PROJECT/)
-
----

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christofer's Final Project</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #e0f2ff;
+      color: #333;
+    }
+
+    nav {
+      background-color: #007cf0;
+      color: white;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+    
+    header {
+      background: linear-gradient(135deg, #007cf0, #00dfd8);
+      padding: 6rem 2rem;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    .box {
+      background-color: #ade8f4;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      transition: transform 0.2s ease;
+    }
+    
+    .box p {
+      margin: 0 0 1rem;
+      text-align: center;
+    }
+
+    .box a {
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      color: #007cf0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #cde7f9;
+      font-size: 1rem;
+    }
+    
+    h3{
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#footer">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Welcome to My Final Project</h1>
+    <p>"People say nothing is impossible, but I do nothing every day"- Winnie The Pooh</p>
+  </header>
+
+  <div class="container" id="about">
+    <div class="box">
+      <p>I’m a JR in high school who attends Mt.Eden High School. Throughout the year Computer Science has taught me the principles of C++, javascript, the internet, and overall coding, as well as working with classmates. At first, it was a bit of a confusing topic...C++ was something completely new, something that my brain couldn't understand so easily. This class eventually made some sense to me, as a student, it's difficult for me to learn some subjects because it merely doesn't grab my attention. Being in this class has exposed me to some coding, and now I know the basics, maybe one day I use my knowledge for a good use.</p>
+    </div>
+  </div>
+
+  <div class="container" id="projects">
+    <div class="box">
+      <p>Need a timer to count your mile time? Click the link below! This stopwatch was created by one of my fellow classmate and I. The stopwatch app was created using javascript, HTML, and CSS. This stopwatch contains if statements allowing for the timer to count once you start it, as it also uses the function button to allow for interaction, which implements the computer to read the action and go through the algorithm.</p>
+      <a href="stopWatch.html">StopWatch App</a>
+    </div>
+
+    <div class="box">
+      <p>This project is a matching game, it's a fun way to go by with your time when bored. The game was made with javascript, HTML, and CSS. In order for this game to work, a grid was needed, as well as an array that randomizes where the different objects will be on the grid for the users to guess and match. Just like the stopwatch, a countdown is started with a function that allows for a timer to react once the user starts the game. Not only will a timer be started, but the computer will be able to read the core logic behind a memory game, which is reading if two objects  match. Constants are used to make sure users can't click other buttons.</p>
+      <a href="MatchingGame.html">Matching Game</a>
+    </div>
+
+    <div class="box">
+      <p>Connect 4 game was a complicated game. Although there isn't an actual animation style that showcases the dropping affect of connect 4, the game still works as usual! Instead of using a grid like the matching game, my fellow classmates and I decided to use cell indexes' to create the grid of connect 4. Not only did that take forever, but in connect 4 you have multiple ways that you can win, so we had to create multiple win conditions, there are horizontal, vertical, and right/left win conditions. We used functions that would constantly update the game to read when it's red or yellows turn, as well as when someone wins the actual game.</p>
+      <a href="Connect4.html">Connect Four Game</a>
+    </div>
+  </div>
+
+  <footer id="footer">
+  <h3>
+    <a href="mailto:15762@husd.k12.ca.us">Email</a> |
+    <a href="https://github.com/chrzzz5" target="_blank">GitHub</a>
+  </h3>
+  <p>© 2025 Christofer's CS Project</p>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: 'Times New Roman', serif;
+  background-color: #ffffff;
+  text-align: center;
+  color: #222;
+}
+
+.about-me {
+  max-width: 900px;         
+  margin: 0 auto;          
+  padding: 20px;            
+  font-size: 20px;      
+  color: #000;
+  text-align: left;
+  font-family: 'Times New Roman', serif;
+}
+ 
+
+.image-banner {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.image-banner img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: bold;
+  text-shadow: 7px 7px 7px #000;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.project-card {
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  width: 220px;
+  text-decoration: none;
+  color: blue;
+  box-shadow: 1px 1px 10px #000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 6px 15px;
+}
+
+.project-card img {
+  width: 100%;
+  border-bottom: 1px;
+  border-radius: 10px 10px 0 0;
+}
+
+.project-card span {
+  display: block;
+  padding: 15px 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.contact {
+  background-color: #2976bb;
+  color: white;
+  font-size: 17px;
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+.contact a {
+  color: #ffeb3b;
+  text-decoration: underline;
+}
+
+.contact a:hover {
+  color: blue;
+}
+
+.project-row {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.project-card {
+  width: 220px; 
+}
+
+.project-description {
+  flex: 1; 
+  font-size: 20px;
+  color: #000;
+}

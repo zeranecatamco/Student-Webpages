@@ -1,0 +1,154 @@
+html {
+    width: 100%;
+    height: 100%;
+    background: #1A50D0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+/*This creates a multi-color background. Specifies the font to use. and it overflows, which prevents any content from overflowing the visible area of the webpage.
+ */
+
+.game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Positions the element relative to its nearest positioned ancestor. Transform  moves the element horizontally and vertically by -50% of its own width and height
+  */
+
+
+.controls {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* This makes the elements within the .controls class arrange themselves in a flexible box layout.  .gap allows for easy horizontal or vertical arrangement and adds a 20-pixel gap between the elements inside the .controls container. Margin-bottom adds a 20-pixel margin below the .controls element. */
+
+
+button {
+    background: #282A3A;
+    color: #FFF;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: 0;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18pt;
+    font-weight: bold;
+}
+/* Rounds the button corners by 5 pixels. padding: 10px 20px;: Adds a padding of 10 pixels vertically and 20 pixels horizontally. border: 0;: Removes the default button border. cursor: pointer;: Changes the mouse cursor to a pointer when hovering over the button, indicating it's clickable.
+ */
+
+.disabled {
+    color: #757575;
+}
+.stats {
+    color: #FFDD00;
+    font-size: 14pt;
+    font-weight: bold;
+}
+.board-container {
+    position: relative;
+}
+.board,
+.win {
+    border-radius: 5px;
+    box-shadow: 0 25px 50px rgb(33 33 33 / 55%);
+    background: #ffffff;
+    transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
+    backface-visibility: hidden;
+}
+/* border shadow is a box shadow, and a multicolored linear gradient background is displayed.  A transition effect is applied,  changing the element's transform property over 0.6 seconds using a cubic-bezier timing function. backface-visibility: hidden; prevents the back side of the element from being visible during transitions */
+
+.board {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 20px;
+}
+
+/* Defines a grid layout with four columns. Each column automatically adjusts its width to fit its content. There's a 20-pixel gap between columns and 20 pixels of padding around the entire grid. The repeat(4, auto) in grid-template-columns is key to creating the four columns*/
+
+
+.board-container.flipped .board {
+    transform: rotateY(180deg) rotateZ(50deg);
+}
+.board-container.flipped .win {
+    transform: rotateY(0) rotateZ(0);
+}
+.card {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+.card-front,
+.card-back {
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    background: #282A3A;
+    transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
+    backface-visibility: hidden;
+}
+
+.card-back {
+    transform: rotateY(180deg) rotateZ(50deg);
+    font-size: 28pt;
+    user-select: none;
+    text-align: center;
+    line-height: 100px;
+    background: #FDF8E6;
+}
+.card.flipped .card-front {
+    transform: rotateY(180deg) rotateZ(50deg);
+}
+.card.flipped .card-back {
+    transform: rotateY(0) rotateZ(0);
+}
+/*This will rotate the back of the card 180 degrees away from us. We can use .flipped to set the rotate back to 0 and set the rotate for the front of the card to 180 degrees.*/
+
+
+
+.win {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #FDF8E6;
+    transform: rotateY(180deg) rotateZ(50deg);
+}
+.win-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 21pt;
+    color: #282A3A;
+}
+
+.highlight {
+    color: #00FF62;
+}
+
+.return-home {
+  display: inline-block;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #333;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+.return-home:hover {
+  background-color: #ddd;
+}
