@@ -2,11 +2,11 @@
 
 ## About Me
 
-Hello, my name is Yorian Ixcol. I am a junior in highschool and enjoy learning new things about technology. This interest grew when I decided to Take APCSP last year and it has been one of the coolest experiences of highschool. 
+Hello, my name is Yorian Ixcol. I am a junior in highschool and I enjoy learning new things about technology. This interest grew when I decided to Take APCSP last year and it has been one of the coolest experiences of highschool. 
 
 ## Project Overview
 
-This portfolio project represents my learning journey throughout the year. I explored the complexities of coding and gained a better appreciation for developers' skills. I learned the basics of computers, including binary code and C++, and was introduced to web development languages like HTML, CSS, and JavaScript. Designing with these languages quickly became one of my favorite things to do. I always found the process enjoyable.This project showcases what I’ve learned in computer science this year. I built simple games using HTML, CSS, and JavaScript, and learned how to structure a website, write interactive code, and solve problems like a developer. It was a fun and challenging way to apply everything I’ve learned. This class impacted me in a beyond academic way, as it also taught me to face unexpected challenges of life, and to persist. 
+This portfolio project represents my learning journey throughout the year. In this project I explored  and learned the complexities of coding and gained a better appreciation for developers' skills. Thoughout the year I learned the basics of computers, including binary code and C++, and was introduced to web development languages like HTML, CSS, and JavaScript. Designing with these languages quickly became one of my favorite things to do. I always found the process enjoyable. In this project I learned the process of creating things I use in my everyday life:live websites. It was entertaining and a cool new experience to learn this. 
 
 ## Portfolio Overview
 

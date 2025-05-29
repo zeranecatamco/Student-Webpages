@@ -1,0 +1,137 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: "Chewy", system-ui;
+   font-weight: 400;
+   font-style: normal;
+ }
+ body { /*main background*/
+   background-image:url("https://thumbs.dreamstime.com/b/small-white-flowers-sage-green-background-have-light-yellow-center-surrounded-leaves-pattern-delicate-346593147.jpg");
+   background-size: cover;
+ }
+ .container { /*game space*/
+   font-size: 16px;
+   background-color: #c3cfa0;
+   width: 90vw;
+   max-width: 34em;
+   position: absolute;
+   transform: translate(-50%, -50%);
+   top: 50%;
+   left: 50%;
+   padding: 3em;
+   border: solid white;
+   border-radius: 0.6em;
+   box-shadow: 0 1.2em 2.4em rgba(111, 85, 0, 0.25);
+ }
+ #options-container { /*categories boxes*/
+   text-align: center;
+ }
+ #options-container div {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   margin: 1.2em 0 2.4em 0;
+ }
+ #options-container button {
+   padding: 0.6em 1.2em;
+   border: 3px solid white;
+   background-color: #b5c99a;
+   color: solid white;
+   border-radius: 0.3em;
+   text-transform: capitalize;
+   cursor: pointer;
+ }
+ #options-container button:disabled {
+   border: 3px solid white;
+   color: #fff;
+   background-color: #b5c99a;
+ }
+ #options-container button.active {
+   background-color: #718355;
+   border: 3px solid white;
+   color: #fff;
+ }
+ .letter-container { /*letters once category is picked*/
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 0.6em;
+ }
+ #letter-container button {
+   height: 2.4em;
+   width: 2.4em;
+   border-radius: 0.3em;
+   background-color: #cfe1b9;
+   cursor: pointer;
+   border: solid white;
+   color: #606f49;
+ }
+.used{ /*changes color once letter is picked*/
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+ .new-game-popup {/*after game ends*/
+   background-color:#97a97c;
+   position: absolute;
+   left: 0;
+   top: 0;
+   height: 100%;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   border-radius: 0.6em;
+   color:
+ }
+ 
+ #user-input-section {
+   display: flex;
+   justify-content: center;
+   font-size: 1.8em;
+   margin: 0.6em 0 1.2em 0;
+ }
+ canvas { /*drawing of man area*/
+   display: block;
+   margin: auto;
+   border: 10px solid white;
+   border-radius: 10px;
+ }
+ .hide {
+   display: none;
+ }
+ #result-text h2 {
+   font-size: 1.8em;
+   text-align: center;
+   
+ }
+ #result-text p {
+   font-size: 1.25em;
+   margin: 1em 0 2em 0;
+   c
+ }
+ #result-text span {
+   font-weight: 600;
+   
+ }
+ #new-game-button {
+   font-size: 1.25em;
+   padding: 0.5em 1em;
+   background-color: #c8dd96;
+   border: 3px solid #fff;
+   color: #fff;
+   border-radius: 0.2em;
+   cursor: pointer;
+ }
+ .win-msg { /*you win*/
+   color: #fff;
+ }
+ .lose-msg { /*you lose*/
+   color: #fff;
+ }
+
+

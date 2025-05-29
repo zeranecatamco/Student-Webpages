@@ -15,24 +15,24 @@ An overview of my technical skills
 
 A showcase of featured projects
 
-Links to my GitHub and Repository
+Links to my GitHub and résumé
 
 A responsive design for various screen sizes
 
 💼 Featured Projects
-1. Slot Machine
-This was the first game that was created with Kierian Bautista. It was a Slot Machine game that you were able to collect money and gamble it to earn for upgrades
+1. Task Tracker Web App
+A simple yet functional to-do application that lets users add, complete, and delete tasks. Built using vanilla JavaScript and styled with CSS.
 
-2. Tic-Tac-Toe
-This was the second game that I and other classmate created. Although it went down in quality I feel more proud of this game as I did put effort into it (all things concidered)
+2. Weather Dashboard
+A responsive weather app that uses an external API to show real-time weather conditions for any city. It includes search functionality and stores recent searches in local storage.
 
 3. Portfolio Website
 The very site you’re viewing! Designed and coded from scratch to serve as my main digital presence and showcase for all my work.
 
-4. Stinky Dungeon RPG
-A group project that was a Visual novel as well as a Turn based RPG. This was created wiht the help of Francis, Jalil, and Kerian.
+4. Calculator App
+A web-based calculator that performs basic arithmetic operations. Developed with a focus on clean UI and functional UX.
 
 🔗 Links
-GitHub Repository: (https://github.com/Johnathan-Rice/Johnathan-R)
+GitHub Repository: https://github.com/Johnathan-Rice/Johnathan-R
 
-Live Site (GitHub Pages): (https://johnathan-rice.github.io/Johnathan-R/)
+Live Site (GitHub Pages): https://johnathan-rice.github.io/Johnathan-R/
