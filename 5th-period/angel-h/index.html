@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Webpage</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-padding-top: 80px; 
+    }
+
+    body {
+      font-family: 'Comic Sans MS', 'Arial Narrow', Arial, sans-serif;
+      background-color: rgb(40, 107, 109);
+      font-size: 20px;
+      background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210701/pngtree-abstract-low-poly-style-dark-green-background-cyan-background-image_736231.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      color: white; 
+    }
+
+    h1, h2 {
+      color: white;
+      background-color: #2ca2a6; 
+      text-align: center;
+      padding: 1rem;
+      border-radius: 1.25rem;
+      border: solid 2px #238184; 
+      margin-top: 0.25rem;
+      text-shadow: 2px 2px 4px #238184;
+    }
+
+    p {
+      text-shadow: 1px 1px 2px #238184;
+    }
+
+    img {
+      width: 20%;
+      border-radius: 29px;
+      border: solid #238184 0.1rem;
+      margin-top: 0.25rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: #134648; 
+    }
+
+    a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #1e7174;
+      padding: 1rem;
+      z-index: 1000;
+      text-align: center;
+    }
+
+    .navbar a {
+      margin: 0 1rem;
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    .navbar a:hover {
+      color: rgb(44, 162, 166);
+    }
+
+    main {
+      margin: 5rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border: solid 2px #238184;
+      background-color: #41abae; 
+      border-radius: 4px;
+    }
+
+    ul, ol {
+      padding: 1rem;
+      margin-left: 2rem;
+    }
+
+    footer {
+      background-color: #1e7174;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#LearningJourney">Learning</a>
+    <a href="#projects">Projects</a>
+  </div>
+
+  <main>
+    <h1 id="home"> Angel's Personal Portfolio </h1>
+
+    <section id="about">
+      <h2> About me </h2>
+      <p> Hi, my name is Angel Ho, and this is my personal portfolio! I am currently a junior student going to Mt. Eden Highschool bound to graduate the year 2026, and I've recently entered the programming world through my APCSP class. This portfolio holds everything that I've made and learned from 2024-2025. It's been a rough and definitely confusing year, but please feel free to learn more about me through my website!</p>
+    </section>
+
+    <section id="LearningJourney">
+      <h2> Learning Journey </h2>
+      <p> Through programming, I’ve learned the basics of C++, HTML, CSS, and JavaScript. I’ve learned how to implement code in many different ways, like loops, arrays, etc. I’ve learned to make my own websites and games with all the knowledge I’ve gained, and even had some fun making them. Preparing for the AP exam, I gained a better understanding of how the internet works, how data is managed, and the impact of technology on our society. APCSP has generally improved my problem solving skills, and it has shown me the importance of computer science. I wouldn’t have the knowledge today if it weren’t for my teacher, Mr. Alvarado, so when you read this, thanks for teaching me man!! 
+ </p>
+    </section>
+
+    <section id="projects">
+      <h2> Projects </h2>
+
+      <div>
+        <h3> Project 1: C++ Slots and Coinflip </h3>
+        <p> Little casino gambling game in C++, has slots and coin flips. Test your luck here! </p>
+        <p> <a href="gambling.html"> Slots and Coinflip </a> </p>
+      </div>
+
+      <div>
+        <h3> Project 2: Hangman </h3>
+        <p> Simple basic hangman game, with categories: videogames, stores, and candy. </p>
+        <p> <a href="hangman.html"> Hangman</a> </p>
+      </div>
+
+      <div>
+        <h3> Project 3: Squid Game - Red Light Green Light </h3>
+        <p> Standard red light green light — move when it's green, don't move when it's red. </p>
+        <p> <a href="squidgame.html"> Squid Game </a> </p>
+      </div>
+    </section>
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Comp Sci Webpage </p>
+  </footer>
+</body>
+</html>
