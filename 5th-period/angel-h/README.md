@@ -13,9 +13,9 @@ Making this portfolio, I refreshed my memory on everything I learned, and even l
 - learning journey
 - projects list
 ## Projects
-- Slots and Coins Gambling game
-- Hangman
-- Squidgame Red Light Green Light
+- Slots and Coins Gambling game (Casino Slots and Coinflip, 100$ to bet to increase your value)
+- Hangman (Hangman, guess letters to make a word before the man is fully drawn)
+- Squidgame Red Light Green Light (A game where you make it across the finish line. moving while its green, and staying still while its red)
 
 Look into the website for more detailed descriptions!
 
