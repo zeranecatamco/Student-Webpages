@@ -1,0 +1,196 @@
+body{
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  background-color: #f0f0f0;
+  color: #222;
+  line-height: 1;
+}
+
+p{
+  line-height: 1.75rem;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(23,111,202);
+  font-weight: bold;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
+.navbar{
+  background-color: #212529;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  border-bottom: 4px solid black;
+  top: 0;
+}
+.navbar a{
+  font-size: 1rem;
+}
+
+
+h1, h2, h3{
+  border: 3px solid blue;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 25px auto 15px auto;
+  width: fit-content;
+  box-sizing: border-box;
+  background-color: #ffd700;
+  color: #000;
+  font-family: 'Times New Roman', serif;
+  text-align: center;
+}
+
+h1 {
+  border: 5px solid black;
+  margin-top: 20px;
+  color: white;
+  background-color: #343a40;
+  font-family: "Inter", sans-serif;
+  padding: 1rem 2rem;
+  font-size: 2.2rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 600;
+}
+
+h2{
+  background-color: #343a40;
+  color: #f8f9fa;
+  padding: 1rem;
+  font-family: "";
+}
+
+#home-image{
+  display: block;
+  max-width: 55%;
+  margin: 0 auto 25px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+section {
+  max-width: 700px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 15px;
+}
+
+ul, ol {
+  margin-left: 30px;
+  font-size: 1.1rem;
+}
+
+.meme-generator{
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+.meme-generator img{
+  max-height: 430px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+.generate-meme-btn {
+  padding: 8px 20px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  color: #f64d4d;
+  background: #fff;
+  border-radius: 8px;
+  border-left: 4px solid #222;
+  border-right: 4px solid #222;
+  transition: all 400ms ease;
+}
+.generate-meme-btn:hover {
+  padding: 8px 36px;
+  border-left: 8px solid #222;
+  border-right: 8px solid #222;
+  letter-spacing: 3px;
+}
+.meme-author {
+  margin: 8px;
+  font-style: italic;
+  color: #555;
+}
+
+#weight-converter label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+#weight-converter input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+#output .card {
+  border-radius: 10px;
+  padding: 15px;
+  color: white;
+  margin-bottom: 15px;
+}
+#output .bg-primary {
+  background-color: #007bff;
+}
+#output .bg-success {
+  background-color: #28a745;
+}
+#output .bg-danger {
+  background-color: #dc3545;
+}
+
+#color-flipper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#color-flipper button {
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  background: #333;
+  color: white;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+#color-flipper button:hover {
+  padding: 8px 36px;
+  border-left: 8px solid #222;
+  border-right: 8px solid #222;
+  letter-spacing: 3px;
+  background: #555;
+}
+
+footer {
+  text-align: center;
+  padding: 15px 10px;
+  background-color: #222;
+  color: white;
+  font-size: 1rem;
+  margin-top: 50px;
+}
+
+a{
+  color: white;
+  padding: 1rem;
+}
+
+
