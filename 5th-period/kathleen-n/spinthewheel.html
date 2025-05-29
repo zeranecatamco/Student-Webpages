@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spin The Wheel</title>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="spinthewheel.css">
+</head>
+<body>
+  <div class="wrapper">
+    <!-- the section for adding labels to wheel + reset wheel -->
+    <div id="input-section">
+      <p>ADD LABELS TO THE WHEEL</p>
+      <input id="label-input" type="text" placeholder="Enter a label" />
+      <button id="update-btn">Add Label</button>
+      <button id="reset-btn">Reset Wheel</button>
+    </div>
+
+    <!-- container for wheel, button, and text -->
+    <div class="container">
+      <div class="pointer"></div>
+      <canvas id="wheel"></canvas>
+      <button id="spin-btn">Spin</button>
+      <div id="final-value">
+        <p>CLICK SPIN TO START!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- result popup for what the wheel will land on -->
+  <div id="result-popup" class="hidden">
+    <div class="popup-content">
+      <p id="popup-text"></p>
+      <button id="close-popup">OK</button>
+    </div>
+  </div>
+
+  <!-- Chart.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+  <!-- Chart.js Datalabels Plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
+  <!-- Script -->
+  <script src="spinthewheel.js"></script>
+  
+  <footer>
+  <div style="text-align: center; margin: 40px 0;">
+    <a href="index.html" class="back-home">← Back to Home</a>
+  </div>
+</footer>
+
+</body>
+</html>
