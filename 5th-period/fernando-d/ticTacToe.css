@@ -1,0 +1,58 @@
+body {
+  background: #00b4d8;
+  margin: 0;
+  font-family: "Georgia";
+}
+
+#gameContainer {
+  font-family: "Georgia";
+  text-align: center;
+  
+}
+
+#cellContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 115px);
+  justify-content: center;
+  margin: 0px auto;
+  background: #ffffff;
+  font-family: "Permanent Marker";
+  width: 345px;
+ 
+}
+
+.cell {
+  width: 110px;
+  height: 110px;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  cursor: pointer;
+  box-shadow: 0 0 0 2px #000;
+  user-select: none;
+}
+
+.return-home,
+#restartBtn {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  padding: 10px 8px;
+  border-radius: 4px;
+  background: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.return-home:hover,
+#restartBtn:hover {
+  background-color: #ddd;
+}
+
+h1{
+  font-family: Georgia;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title> <!-- title shown on the browser tab-->
+  <link rel="stylesheet" href="TypingTest.css">
+  </head>
+  <body>
+    <div class="container"> <!--main container for all elements-->
+      <h1>Typing Speed Test</h1>
+      <p id="text-display"></p> <!--paragraph where the random sentences will appear-->
+      <textarea id= "input-box" placeholder="Start typing here..."disabled></textarea> <!--textbox for the user to type in-->
+      <div class="results"> <!--section to display their test results-->
+        <p>Time Left: <span id="time">60</span>s</p> <!--shows how much time is left-->
+        <p>WPM: <span id="wpm">0</span></p> <!--shows the words per minute-->
+        <button onclick="startTest()">Start / Restart</button> <!--button that will start or restart the test-->
+      </div>
+    </div>
+    <script src="./TypingTest.js"></script>
+  </body>
+</html>

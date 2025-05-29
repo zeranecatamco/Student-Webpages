@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+	<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Alison's Webpage</title>
+    	<link rel="stylesheet" href="style.css" > 
+</head>
+
+<body>
+	<div id="page">
+		<!--========================= Blue Navigation Box =========================-->
+		<div id="navigation">
+			<div id="navLinks">
+				<li>
+					<a href="#home">Home</a>
+					<a href="#aboutSect">About Me</a>
+					<a href="#projects">Projects</a>
+					<a href="#footSect">Contact</a>
+				</li>
+			</div>
+		</div>
+		<!--========================= Purple Intro Box =========================-->
+		<header id="home">
+			<h3>Hi! I'm Alison</h3><br>
+			<h2>Welcome to my Webpage</h2>
+		</header>
+		<!--========================= Yellow Profile Box =========================-->
+		<main id="aboutSect">
+			<h1>About Me</h1>
+			<div id="writing">
+				<p>Hello! I'm a highschool junior who's started getting into programming recently (thanks to AP Comp Sci P). I've always had an interest in technology, games, and the such, and will probably pursue a software development major in college. <br>
+					Over the past year in APCSP, we've learned a good lot. It was a chaotic start and jumping straight into C++ left me extremely confused for a while. But, I eventually began to grasp what exactly a function was and how nested loops worked, both being pretty big turning points in my learning as everything else also became clearer. Shifting over to Javascript put me back in the position of confusion I was at when we started C++, but unlike then, I adapted pretty quickly. After just the first project, Javascript felt a lot more approachable as I began to remember the proper syntax, and I became just as proficient with it as I was with C++. Then, preparing for the APCSP test, I did a lot of self studying and that was a bit of a pain, but I learned a lot about how the internet and computers actually work which was cool. I'll probably keep practicing coding after this, because even though it was a hassle sometimes, coding was pretty interesting 👍 </p>
+			</div>
+		</main>
+
+		<!--========================= Blue Projects Box =========================-->
+		<projects id="projects">
+			<h3 id="projectSect">My Projects</h3>
+			<!--============================= Descriptions =============================-->
+			<div id="text1" class="desc">
+				<h2>Simple Stopwatch</h2>
+				<h4>This is just a simple stopwatch application that you can start, stop, and reset. It works by incrementing the digits on screen and updating each unit when the ticking time goes beyond that unit of time's bounds. It's great for timing some laps, cooking, or whatever else you need to time.</h4>
+			</div>
+			<div id="text2" class="desc">
+				<h2>To Do List</h2>
+				<h4>Another simple program that allows users to add and subtract from their own custom to do list. It allows them to input their tasks and adds them to the list, and allows users to add tasks suggested by the application. Once a task is completed, it can be checked/crossed off on the list simply by pressing the task, or can be taken out of the list with the x button next to it. </h4>
+			</div>
+			<div id="text3" class="desc">
+				<h2>Connect Four Game</h2>
+				<h4>A replica of the Connect 4 Game but the user can place the tokens in whichever cell as long as it is empty. There is a lot of manual, redundant code in this program which create both the board and the win conditions. If the user pressses an empty cell, it will update to contain their token and then check if that was the winning move(or if it will tie the game) based on the win conditions. Each time a token is placed, the tokens/players switch. If a win condition is met on either side or if the board is full and no one has won, the game will be end. Users can play again by clicking restart, clearing the board, and allowing them to play as many times as they'd like.</h4>
+			</div>
+			<!--------------------------------- Stopwatch --------------------------------->
+			<div id="StopwatchPro" class="projects">
+				<div id="WatchContainer">
+					<h2>STOPWATCH</h2>
+					<div id="time">
+						<span class="digit" id="hrs"> 00 </span>
+						<span class="txt"> : </span>
+						<span class="digit" id="mins"> 00 </span>
+						<span class="txt"> : </span>
+						<span class="digit" id="secs"> 00 </span>
+						<span class="txt"> : </span>
+						<span class="digit" id="milis"> 00 </span>
+						<br><br><br>
+						<div id="buttons">
+							<button class="btn" id="start">Start</button>
+							<button class="btn" id="stop">Stop</button>
+							<button class="btn" id="reset">Reset</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--------------------------------- To Do List  --------------------------------->
+			<div id="ToDoLiPro" class="projects">
+				<div class="ToDoListContainer">
+					<div class="todo-app">
+						<h2>To Do List</h2>
+						<div class="row">
+							<input type="text" id="input-box" placeholder="Add Text">
+							<button onclick="addTask()">ADD</button>
+						</div>
+						<ul id="list-container"></ul>
+					</div>
+					<div class="suggestionsBox">
+						<h2>Suggested Tasks</h2>
+						<div class="sgstRow">
+							<li>• Do laundry <button onclick="addSgstTask(0)">ADD</button> </li>
+							<li>• Make bed <button onclick="addSgstTask(1)">ADD</button> </li>
+							<li>• Pay bills <button onclick="addSgstTask(2)">ADD</button> </li>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--------------------------------- Connect 4  --------------------------------->
+			<div id="Connect4Pro" class="projects">
+				<div id="Connect4Container">
+					<h2>Connect Four</h2>
+					<div id="cellContainer">
+						<div cellIndex="0" class="cell"></div>
+						<div cellIndex="1" class="cell"></div>
+						<div cellIndex="2" class="cell"></div>
+						<div cellIndex="3" class="cell"></div>
+						<div cellIndex="4" class="cell"></div>
+						<div cellIndex="5" class="cell"></div>
+						<div cellIndex="6" class="cell"></div>
+						<div cellIndex="7" class="cell"></div>
+						<div cellIndex="8" class="cell"></div>
+						<div cellIndex="9" class="cell"></div>
+						<div cellIndex="10" class="cell"></div>
+						<div cellIndex="11" class="cell"></div>
+						<div cellIndex="12" class="cell"></div>
+						<div cellIndex="13" class="cell"></div>
+						<div cellIndex="14" class="cell"></div>
+						<div cellIndex="15" class="cell"></div>
+						<div cellIndex="16" class="cell"></div>
+						<div cellIndex="17" class="cell"></div>
+						<div cellIndex="18" class="cell"></div>
+						<div cellIndex="19" class="cell"></div>
+						<div cellIndex="20" class="cell"></div>
+						<div cellIndex="21" class="cell"></div>
+						<div cellIndex="22" class="cell"></div>
+						<div cellIndex="23" class="cell"></div>
+						<div cellIndex="24" class="cell"></div>
+						<div cellIndex="25" class="cell"></div>
+						<div cellIndex="26" class="cell"></div>
+						<div cellIndex="27" class="cell"></div>
+						<div cellIndex="28" class="cell"></div>
+						<div cellIndex="29" class="cell"></div>
+						<div cellIndex="30" class="cell"></div>
+						<div cellIndex="31" class="cell"></div>
+						<div cellIndex="32" class="cell"></div>
+						<div cellIndex="33" class="cell"></div>
+						<div cellIndex="34" class="cell"></div>
+						<div cellIndex="35" class="cell"></div>
+						<div cellIndex="36" class="cell"></div>
+						<div cellIndex="37" class="cell"></div>
+						<div cellIndex="38" class="cell"></div>
+						<div cellIndex="39" class="cell"></div>
+						<div cellIndex="40" class="cell"></div>
+						<div cellIndex="41" class="cell"></div>
+					</div>
+					<h2 id="statusText"></h2>
+					<button id="restartBtn">Restart</button>
+				</div>
+			</div>
+		</projects>
+
+		<!--========================= Purple Footer Box =========================-->
+		<script src="https://kit.fontawesome.com/8e96d2fb1f.js" crossorigin="anonymous"></script>
+
+		<footer id="footSect">
+			<h1>Socials</h1> <br>
+			<a><i class="fa-solid fa-envelope fa-xl" style="color:var(--white)"></i></a>
+			<a><i class="fa-brands fa-github fa-xl" style="color:var(--white)"></i></a>
+			<a><i class="fa-brands fa-codepen fa-xl" style="color:var(--white)"></i></a>
+		</footer>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html>

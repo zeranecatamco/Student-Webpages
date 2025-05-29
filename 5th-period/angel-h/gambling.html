@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Slots and Coinflip Game</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      background-color: rgb(40, 107, 109);
+      margin: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    button {
+      font-family: 'Comic Sans MS';
+      background-color: #2ca2a6;
+      border: 2px solid #238184;
+      color: white;
+      padding: 10px 20px;
+      margin: 10px 5px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #238184;
+      color: #e0f7f7;
+    }
+
+    input[type="number"] {
+      font-family: 'Comic Sans MS';
+      padding: 6px;
+      border-radius: 5px;
+      border: 1px solid #238184;
+      width: 120px;
+      margin: 10px 0;
+      text-align: center;
+      color: black;
+    }
+
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+      min-height: 100px;
+      white-space: pre-line;
+      background-color: transparent;
+      padding: 10px;
+      border-radius: 6px;
+      border: 2px solid #238184;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      color: white;
+      font-family: 'Comic Sans MS';
+    }
+
+    #game {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    #restartDiv {
+      margin-top: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Slots and Coinflip Game</h1>
+
+  <div id="menu">
+    <button onclick="startSlots()">Play Slots</button>
+    <button onclick="startCoinflip()">Play Coinflip</button>
+  </div>
+
+  <div id="game" style="display:none;">
+    <div id="slotsUI" style="display:none;">
+      <p>Balance: $<span id="slotsCash">100</span></p>
+      <input id="slotsBet" type="number" placeholder="Bet amount" min="1" />
+      <button onclick="playSlots()">Spin Slots</button>
+      <button onclick="exitGame()">Exit</button>
+    </div>
+
+    <div id="coinflipUI" style="display:none;">
+      <p>Balance: $<span id="coinCash">100</span></p>
+      <p>
+        Choose Heads or Tails:
+        <button onclick="playCoinflip('H')">Heads</button>
+        <button onclick="playCoinflip('T')">Tails</button>
+      </p>
+      <input id="coinBet" type="number" placeholder="Bet amount" min="1" />
+      <button onclick="exitGame()">Exit</button>
+    </div>
+  </div>
+
+  <div id="restartDiv">
+    <button onclick="restartGame()">Restart Game</button>
+  </div>
+
+  <div id="output"></div>
+
+  <script>
+    let slotsCash = 100;
+    let coinCash = 100;
+
+    function startSlots() {
+      hideRestart();
+      document.getElementById('menu').style.display = 'none';
+      document.getElementById('game').style.display = 'block';
+      document.getElementById('slotsUI').style.display = 'block';
+      document.getElementById('coinflipUI').style.display = 'none';
+      updateSlotsCash();
+      setOutput("Welcome to Slots! Place your bet and spin.");
+    }
+
+    function startCoinflip() {
+      hideRestart();
+      document.getElementById('menu').style.display = 'none';
+      document.getElementById('game').style.display = 'block';
+      document.getElementById('coinflipUI').style.display = 'block';
+      document.getElementById('slotsUI').style.display = 'none';
+      updateCoinCash();
+      setOutput("Welcome to Coinflip! Choose heads or tails and place your bet.");
+    }
+
+    function updateSlotsCash() {
+      document.getElementById('slotsCash').innerText = slotsCash;
+    }
+
+    function updateCoinCash() {
+      document.getElementById('coinCash').innerText = coinCash;
+    }
+
+    function setOutput(text) {
+      document.getElementById('output').innerText = text;
+    }
+
+    function playSlots() {
+      let betInput = document.getElementById('slotsBet');
+      let bet = parseInt(betInput.value);
+      if (isNaN(bet) || bet <= 0) {
+        setOutput("Please enter a valid bet amount.");
+        return;
+      }
+      if (bet > slotsCash) {
+        setOutput("You don't have enough money to bet that.");
+        return;
+      }
+
+      let num1 = Math.floor(Math.random() * 9) + 1;
+      let num2 = Math.floor(Math.random() * 9) + 1;
+      let num3 = Math.floor(Math.random() * 9) + 1;
+
+      let result = `Spinning...\n|${num1}|${num2}|${num3}|\n`;
+
+      if (num1 === num2 && num1 === num3) {
+        let win = bet * 27;
+        slotsCash += win;
+        result += `Jackpot! You won $${win}!`;
+      } else if (num1 === num2 || num1 === num3 || num2 === num3) {
+        let win = bet * 2;
+        slotsCash += win;
+        result += `Two of a kind! You won $${win}!`;
+      } else {
+        slotsCash -= bet;
+        result += `You lost $${bet}!`;
+      }
+
+      updateSlotsCash();
+      setOutput(result);
+
+      if (slotsCash <= 0) {
+        setOutput(result + "\nYou've gone bankrupt!");
+        exitGame();
+        showRestart();
+      }
+
+      betInput.value = '';
+    }
+
+    function playCoinflip(choice) {
+      let betInput = document.getElementById('coinBet');
+      let bet = parseInt(betInput.value);
+      if (isNaN(bet) || bet <= 0) {
+        setOutput("Please enter a valid bet amount.");
+        return;
+      }
+      if (bet > coinCash) {
+        setOutput("You don't have enough money to bet that.");
+        return;
+      }
+
+      let coin = Math.random() < 0.5 ? 'H' : 'T';
+
+      let result = `Coin flips... ${coin === 'H' ? 'Heads' : 'Tails'}!\n`;
+
+      if (choice === coin) {
+        coinCash += bet;
+        result += `You won $${bet}!`;
+      } else {
+        coinCash -= bet;
+        result += `You lost $${bet}!`;
+      }
+
+      updateCoinCash();
+      setOutput(result);
+
+      if (coinCash <= 0) {
+        setOutput(result + "\nYou've gone bankrupt! Game over.");
+        exitGame();
+        showRestart();
+      }
+
+      betInput.value = '';
+    }
+
+    function exitGame() {
+      document.getElementById('game').style.display = 'none';
+      document.getElementById('slotsUI').style.display = 'none';
+      document.getElementById('coinflipUI').style.display = 'none';
+      document.getElementById('menu').style.display = 'block';
+    }
+
+    function showRestart() {
+      document.getElementById('restartDiv').style.display = 'block';
+    }
+
+    function hideRestart() {
+      document.getElementById('restartDiv').style.display = 'none';
+    }
+
+    function restartGame() {
+      slotsCash = 100;
+      coinCash = 100;
+      updateSlotsCash();
+      updateCoinCash();
+      setOutput("Game restarted! Choose a game to play.");
+      hideRestart();
+      exitGame();
+    }
+  </script>
+
+</body>
+</html>

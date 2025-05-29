@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* the body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #AEC3B0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-color: #598392;
+    height: 100vh; /* this centers the content vertically and horizontally */
+
+   background-image:url("https://w0.peakpx.com/wallpaper/334/304/HD-wallpaper-plain-sage-green-sage-green.jpg"); 
+}
+
+/* quiz container styling */
+#game-container {
+    background-color: #AEC3B0;
+    padding: 30px 40px; 
+    border-radius: 15px; /* for rounded corners */
+  border:solid white 7px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* shadow */
+    width: 350px; 
+    text-align: center;
+ 
+  
+}
+
+/* header styling */
+h2 {
+    font-size: 22px;
+    color: #EFF6E0;
+    margin-bottom: 20px;
+}
+
+/* the letter display styling */
+#letter {
+    font-size: 20px; 
+    font-weight: bold;
+    color: #EFF6E0;
+    margin-bottom: 10px;
+}
+
+/*input styling */
+input {
+    width: 85%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc; 
+    border-radius: 8px; 
+    font-size: 16px;
+}
+
+/* button Styling */
+button {
+    padding: 15px 25px;
+    background-color: #EFF6E0;
+    color: #2a6f97;
+    border: none;
+    border-radius: 8px; 
+    font-size: 16px;
+    cursor: grab;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+/* hint button */
+.hidden {
+    display: none;
+}
+/*this changes the color when cursor hovers over the button*/
+button:hover {
+      background-color:#ffc9b9;
+      transition: 0.7s;
+  }
+
+

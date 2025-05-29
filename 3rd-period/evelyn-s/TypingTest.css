@@ -1,0 +1,48 @@
+body{
+  background: url('https://png.pngtree.com/background/20221112/original/pngtree-nobody-interface-of-pixel-game-platform-picture-image_1962988.jpg') no-repeat center center fixed; /*background image covers the entire screen*/
+  background-size: cover;
+  margin: 0; /*no margins*/
+  padding: 0; /* no padding*/
+  display: flex; /*flexbox to center the container on the screen*/
+  justify-content: center; /*center container horizontally*/
+  align-items: center; /*center vertically*/
+
+}
+
+.container{
+  padding:30px; /*space inside the container*/
+  border-radius:8px; /*rounds corners*/
+  width: 500px;
+  text-align: center; /*center all text isnide container*/
+  
+}
+
+#text-display{
+  font-size: 18px;
+  margin-bottom:20px; /*space below sentence*/
+  color:#5f0f40;
+}
+
+#input-box{
+  width: 100%;
+  height:150px;
+  font-size:14px; /*fontsize inside the textbox*/
+  padding:10px;
+  margin-bottom:20px; /*space below the textbox*/
+  resize: none;
+}
+
+.results{
+  font-size:18px; /*font size for the results part*/
+}
+
+button{
+  padding:10px 20px;
+  font-size:14px;
+  margin-top:10px;
+  cursor:pointer; /*change cursor to pointer when hovering*/
+  background-color: #c77dff;
+  color:#240046; /*button text color*/
+  border: none; /*no border*/
+  border-radius:4px; /*rounded corners on button*/
+}

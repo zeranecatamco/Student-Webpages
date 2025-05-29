@@ -1,0 +1,597 @@
+<html>
+  <title>KF(CLICKER)</title>
+  <head>
+    <style>
+      /* KF CLICKER BY JALIL JOHNSON AND KIERIAN BAUTISTA */
+      /* Styles for the body */
+      body {
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Arrange children in a column */
+        justify-content: center; /* Center children vertically */
+        align-items: center; /* Center children horizontally */
+        height: 100vh; /* Full viewport height */
+        margin: 0; /* Remove default margin */
+        background-color: #f8f8f8; /* Light grey background color */
+      }
+
+      /* Styles for the start screen */
+      #startScreen {
+        position: fixed; /* Fixed position on screen */
+        top: 0; /* Align to top */
+        left: 0; /* Align to left */
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+        color: white; /* White text color */
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Arrange children in a column */
+        justify-content: center; /* Center children vertically */
+        align-items: center; /* Center children horizontally */
+        text-align: center; /* Center text */
+        font-family: IMPACT, sans-serif; /* Font styling */
+        padding: 20px; /* Padding around content */
+      }
+
+      /* Styles for the start button */
+      #startButton {
+        background-color: #C41230; /* Red background color */
+        color: white; /* White text color */
+        padding: 15px 30px; /* Padding around button */
+        font-size: 24px; /* Large font size */
+        border: none; /* No border */
+        cursor: pointer; /* Pointer cursor on hover */
+        margin-top: 20px; /* Margin above button */
+      }
+
+      /* Styles for the game content */
+      #gameContent {
+        display: none; /* Hidden by default */
+      }
+
+      /* Repeated styles for the body */
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f8f8f8;
+      }
+
+      /* Styles for the KFC button */
+      #KFC {
+        background-color: #C41230; /* Red background color */
+        color: #ffffff; /* White text color */
+        width: 350px; /* Width of the button */
+        height: 350px; /* Height of the button */
+        border-radius: 50%; /* Circular shape */
+        font-family: "IMPACT", serif; /* Font styling */
+        font-size: 55px; /* Large font size */
+        display: flex; /* Use flexbox layout */
+        align-items: center; /* Center text vertically */
+        justify-content: center; /* Center text horizontally */
+        text-align: center; /* Center text */
+        border: 3px solid #000000; /* Black border */
+        text-shadow: 2px 2px 2px black; /* Text shadow effect */
+        transition: all 0.4s ease; /* Smooth transition for effects */
+        cursor: pointer; /* Pointer cursor on hover */
+        background-image: url('https://digitaleat.kfc.com/menus/image/bare/kfc-12pcBucketv2.webp'); /* Background image */
+        background-size: cover; /* Cover the entire button */
+        background-position: center; /* Center the image */
+      }
+
+      /* Hover effect for KFC button */
+      #KFC:hover {
+        background-color: #ff6347; /* Change background color on hover */
+        transform: scale(1.1); /* Slightly enlarge the button */
+        box-shadow: 0 0 10px rgba(255, 99, 71, 0.7); /* Add shadow on hover */
+      }
+
+      /* Active state for KFC button */
+      #KFC:active {
+        transform: scale(0.95); /* Shrink button when clicked */
+        box-shadow: none; /* Remove shadow */
+      }
+
+      /* Styles for the counter bar */
+      #counterBar {
+        position: fixed; /* Fixed position at bottom */
+        bottom: 0; /* Align to bottom */
+        width: 100%; /* Full width */
+        background-color: #222; /* Dark background color */
+        color: white; /* White text color */
+        text-align: center; /* Center text */
+        padding: 15px; /* Padding around content */
+        font-size: 24px; /* Large font size */
+        font-family: IMPACT, sans-serif; /* Font styling */
+      }
+
+      /* Styles for the shop container */
+      #shopContainer {
+        position: fixed; /* Fixed position at top right */
+        top: 10px; /* Align to top */
+        right: 10px; /* Align to right */
+        background-color: #222; /* Dark background color */
+        color: white; /* White text color */
+        padding: 20px; /* Padding around content */
+        border-radius: 10px; /* Rounded corners */
+        font-family: IMPACT, sans-serif; /* Font styling */
+        width: 220px; /* Width of shop container */
+      }
+
+      /* Styles for the shop button */
+      #shop {
+        cursor: pointer; /* Pointer cursor on hover */
+        background-color: #444; /* Darker background color */
+        padding: 15px; /* Padding around button */
+        border: none; /* No border */
+        color: white; /* White text color */
+        font-size: 20px; /* Medium font size */
+        width: 100%; /* Full width */
+      }
+
+      /* Styles for the shop items container */
+      #shopItems {
+        display: none; /* Hidden by default */
+        margin-top: 10px; /* Margin above shop items */
+        width: 100%; /* Full width */
+      }
+
+      /* Styles for individual shop item buttons */
+      #shopItems button {
+        display: block; /* Block-level element */
+        margin-top: 10px; /* Margin above buttons */
+        width: 100%; /* Full width */
+        padding: 15px; /* Padding around button */
+        border: none; /* No border */
+        background-color: #555; /* Darker background color */
+        color: white; /* White text color */
+        cursor: pointer; /* Pointer cursor on hover */
+        font-size: 16px; /* Medium font size */
+      }
+
+      /* Hover effect for shop item buttons */
+      #shopItems button:hover {
+        background-color: #777; /* Change background color on hover */
+      }
+
+      /* Styles for the info box */
+      #infoBox {
+        position: fixed; /* Fixed position at top left */
+        top: 10px; /* Align to top */
+        left: 10px; /* Align to left */
+        background-color: #222; /* Dark background color */
+        color: white; /* White text color */
+        padding: 20px; /* Padding around content */
+        border-radius: 10px; /* Rounded corners */
+        font-family: IMPACT, sans-serif; /* Font styling */
+        width: 220px; /* Width of info box */
+      }
+
+      /* Styles for floating images */
+      .floating-image {
+        position: absolute; /* Absolute positioning */
+        width: 35px; /* Width of floating image */
+        height: 17.5px; /* Height of floating image */
+        opacity: 1; /* Fully visible */
+        transition: opacity 0.5s ease; /* Smooth transition for opacity */
+      }
+
+      /* Styles for the skin section */
+      #skinSection {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed position */
+        top: 100px; /* Align to top */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust for centering */
+        background-color: #444; /* Dark background color */
+        color: white; /* White text color */
+        padding: 20px; /* Padding around content */
+        border-radius: 10px; /* Rounded corners */
+        width: 300px; /* Width of skin section */
+      }
+
+      /* Styles for the skin button */
+      #skinButton {
+        background-color: #444; /* Dark background color */
+        padding: 15px; /* Padding around button */
+        border: none; /* No border */
+        color: white; /* White text color */
+        font-size: 20px; /* Medium font size */
+        width: 100%; /* Full width */
+        cursor: pointer; /* Pointer cursor on hover */
+      }
+
+      /* Styles for skin section buttons */
+      #skinSection button {
+        background-color: #555; /* Darker background color */
+        padding: 10px; /* Padding around button */
+        border: none; /* No border */
+        color: white; /* White text color */
+        font-size: 16px; /* Medium font size */
+        width: 100%; /* Full width */
+        cursor: pointer; /* Pointer cursor on hover */
+        margin-top: 10px; /* Margin above buttons */
+      }
+
+      /* Hover effect for skin section buttons */
+      #skinSection button:hover {
+        background-color: #777; /* Change background color on hover */
+      }
+
+      /* Styles for the purchase skin button */
+      #purchaseSkinButton {
+        background-color: #28a745; /* Green background color */
+        color: white; /* White text color */
+        padding: 10px; /* Padding around button */
+        font-size: 16px; /* Medium font size */
+        width: 100%; /* Full width */
+        cursor: pointer; /* Pointer cursor on hover */
+        margin-top: 10px; /* Margin above button */
+      }
+
+      /* Hover effect for purchase skin button */
+      #purchaseSkinButton:hover {
+        background-color: #218838; /* Darker green on hover */
+      }
+      
+      #ink{
+         background-color: #28a745; /* Green background color */
+        color: white; /* White text color */
+        padding: 10px; /* Padding around button */
+        font-size: 16px; /* Medium font size */
+        width: 100%; /* Full width */
+        cursor: pointer; /* Pointer cursor on hover */
+      position: fixed;
+        bottom:75px;
+        
+      }
+      
+       #customerGifsContainer {
+        position: fixed;
+        bottom: 100px;
+        left: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+         max-width: 500px;
+        border-radius: 10px;
+      }
+      
+       #fryCookGifsContainer {
+        position: fixed;
+        bottom: 100px;
+        right: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+         max-width: 500px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Start screen with welcome message and start button -->
+    <div id="startScreen">
+      <h1>Welcome to KF(CLICKER)!</h1>
+      <p><strong>Fryer Upgrade:</strong> INCREASE CHICKEN CREATION</p>
+      <p><strong>Fry Cook:</strong> Hires employees which make chicken!</p>
+      <p><strong>Customers:</strong> The more seats you have filled (more customers) means the faster the chicken on your screen will disappear</p>
+       <p><strong>Money:</strong> The faster chicken disappears, the faster you get money, you can use money to increase Pay, and also buy skins</p>
+      <p><strong>Money:</strong> Pay is used to get an additional multiplier to your passive chicken</p>
+        <p><strong>Skins:</strong>Skins are purely cosmetic, and there is only one skin implemented at the moment</p>
+      <button id="startButton">Start</button> <!-- Start button -->
+    </div>
+    
+    <section id="button">
+      <button id="KFC"></button> <!-- KFC button for clicking -->
+    </section>
+    
+    <!-- Counter bar displaying chicken eaten and money -->
+    <div id="counterBar">Chicken: <span id="chickenEaten">0</span> 🍗 
+      Money: <span id="money">0</span></div>
+    
+    <!-- Info box showing game stats -->
+    <div id="infoBox">
+      <h3>Info</h3>
+      <p>Fry Cooks: <span id="fryCookCount">0</span></p>
+      <p>Fryer Upgrades: <span id="fryerUpgradeCount">0</span></p>
+      <p>Unfilled Seats: <span id="JabotCount">0</span></p>
+    </div>
+
+    <!-- Shop container for purchasing upgrades -->
+    <div id="shopContainer">
+      <button id="shop">Shop</button> <!-- Shop button -->
+      <div id="shopItems"> <!-- Container for shop items -->
+        <button id="BetterFryer">Fryer Upgrade (Lvl 0) - Cost: 35</button>
+        <button id="FryCook">Fry Cook (Lvl 0) - Cost: 50</button>
+        <button id="Customer">Customer (Lvl 0) - Cost: 75</button>
+        <button id="PayRaise"> Pay Raise (Lvl 0) - cost: 500$</button>
+        <button id="skinButton">Change Skin</button>
+      </div>
+    </div>
+
+    <!-- Skin selection section -->
+    <div id="skinSection">
+      <h3>Select a Skin</h3>
+      <button id="kfcSkin">KFC Skin</button> <!-- KFC skin button -->
+      <button id="jollibeeSkin" disabled>Jollibee Skin</button> <!-- Jollibee skin button, disabled -->
+      <button id="purchaseSkinButton" disabled>Buy Jollibee Skin (Cost:100000</button> <!-- Purchase button for Jollibee skin, disabled -->
+    </div>
+    
+    <!-- solely added for submission -->
+    <div id="ink"> <a href="https://youtu.be/jE8Sj5XLBFk?si=NXLCDRV8YxbdvU6g">Link to tutorial </a> </div>
+    
+      <div id="customerGifsContainer"></div>
+     <div id="fryCookGifsContainer"></div>
+
+    <script>
+      // Initial chicken payment and cost variables
+      let pay = 1; // Amount earned per chicken
+      let payCost = 500; // Cost of pay raise
+      let payRaiseLevel = 0; // Level of pay raise
+
+      // Function to handle pay raise purchase
+      function payRaise() {
+        if (money >= payCost) { // Check if there's enough money
+          money -= payCost; // Deduct cost from money
+          payCost = Math.floor(payCost * 2.45); // Increase pay cost
+          pay += 2.5; // Increase pay amount
+          payRaiseLevel++; // Increment pay raise level
+          updateDisplay(); // Update display with new values
+        }
+      }
+      document.getElementById("PayRaise").addEventListener("click", payRaise); // Event listener for pay raise button
+
+      let chickenCount = 0; // Initial chicken count
+      // Array of chicken image URLs for floating images, all of them are JUST pngs of chicken, and specifically one png of chicken.
+      const chickenUrls = [
+        'https://png.pngtree.com/png-clipart/20241125/original/pngtree-hd-fried-chicken-png-image_17296351.png',
+        'https://purepng.com/public/uploads/large/purepng.com-fried-chickenfood-tasty-dish-cook-chicken-eat-fried-fry-spicy-recipe-leg-941524616527006iy.png',
+        'https://pngimg.com/d/fried_chicken_PNG14100.png'
+      ];
+      
+      const customerUrls = [
+        'https://media.tenor.com/AYE0sypnFJAAAAAM/genshin-impact-furina.gif', 'https://media.tenor.com/HvO5rM3ktlwAAAAM/ishowspeed-honkai-star-rail.gif','https://media.tenor.com/kdBXseNbvbsAAAAM/robin-hsr-soundoriented.gif'
+      ]
+      
+      const fryCookUrls =[
+        'https://upload-os-bbs.hoyolab.com/upload/2021/09/07/46089660/8d174d748b559d967f395ee476230169_8290060927718620183.gif', 'https://media3.giphy.com/media/3oKHWpPTAIrUjPrDRm/giphy.gif?cid=6c09b952lmgbnc5p8ddlal1105kt4wum6ai56ffeepvh41ut&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g', 'https://i.redd.it/4sfuhytalz3d1.gif'
+      ]
+      
+      // Skin system variables. Skin system as an homage to the skin systems in video games these days, like Fortnite
+      let currentSkin = 'kfc'; // Default skin is what you start with/the kfc skin
+      let jollibeeSkinBought = false; // Track whether the Jollibee skin has been bought
+
+      // Skins configuration array for easy management, just in case I decide to revisity project just to add a popeyes skin or something.
+      const skins = [
+        {
+          name: 'kfc',
+          url: 'https://digitaleat.kfc.com/menus/image/bare/kfc-12pcBucketv2.webp', // KFC skin URL
+        },
+        {
+          name: 'jollibee',
+          url: 'https://queen.jollibee.com.ph/2023/05/UPDATED-BUCKET-DARKER-CRISPY-JUICY-min-915x1024.png', // Jollibee skin URL
+        }
+      ];
+
+      // Function to apply the selected skin to the button
+      function applySkin() {
+        const button = document.getElementById("KFC"); // Get KFC button
+        const skin = skins.find(s => s.name === currentSkin); // Find current skin
+        button.style.backgroundImage = `url('${skin.url}')`; // Set background image to selected skin
+      }
+
+      // Function to toggle visibility of the skin section
+      document.getElementById("skinButton").addEventListener("click", function() {
+        const skinSection = document.getElementById("skinSection"); // Get skin section
+        skinSection.style.display = skinSection.style.display === "none" ? "block" : "none"; // Toggle display
+        updateSkinSection(); // Update skin section availability
+      });
+
+      // Function to update skin section buttons based on money and skin status
+      function updateSkinSection() {
+        const jollibeeSkinButton = document.getElementById("jollibeeSkin"); // Get Jollibee skin button
+        const purchaseButton = document.getElementById("purchaseSkinButton"); // Get purchase button
+        
+        // Enable purchase button if conditions are met
+        if (money >= 10000 && !jollibeeSkinBought) {
+          purchaseButton.disabled = false; // Enable purchase button
+        } else {
+          purchaseButton.disabled = true; // Disable purchase button
+        }
+
+        // Enable Jollibee skin button if skin has been bought
+        if (jollibeeSkinBought) {
+          jollibeeSkinButton.disabled = false; // Enable Jollibee skin button
+        }
+      }
+
+      // Event listener for purchasing the Jollibee skin
+      document.getElementById("purchaseSkinButton").addEventListener("click", function() {
+        if (money >= 100000) { // Check if there's enough money
+          money -= 100000; // Deduct cost
+          jollibeeSkinBought = true; // Mark Jollibee skin as bought
+          updateSkinSection(); // Update skin section
+          alert("You have successfully bought the Jollibee Skin!"); // Alert user
+          document.getElementById("purchaseSkinButton").style.display = "none"; // Hide purchase button
+        }
+      });
+
+      // Event listener for KFC skin selection
+      document.getElementById("kfcSkin").addEventListener("click", function() {
+        currentSkin = 'kfc'; // Set current skin to KFC
+        applySkin(); // Apply selected skin
+        document.getElementById("skinSection").style.display = "none"; // Hide skin section
+      });
+
+      // Event listener for Jollibee skin selection
+      document.getElementById("jollibeeSkin").addEventListener("click", function() {
+        if (jollibeeSkinBought) { // Check if Jollibee skin is bought
+          currentSkin = 'jollibee'; // Set current skin to Jollibee
+          applySkin(); // Apply selected skin
+          document.getElementById("skinSection").style.display = "none"; // Hide skin section
+        } else {
+          alert("You need to buy the Jollibee skin first!"); // Alert user
+        }
+      });
+
+      // Function to simulate chicken eating
+      function chickenEater() {
+        chickenCount += fryerUpgradeCount*pay; // Increase chicken count by the number of fryer upgrades
+        document.getElementById("chickenEaten").textContent = chickenCount; // Update chicken eaten display
+        spawnFloatingImage(); // Spawn floating chicken images
+      }
+
+      document.getElementById("KFC").addEventListener("click", chickenEater); // Event listener for KFC button click
+
+      // Fry Cook management
+      let fryCookAmount = 0; // Initial fry cook count
+      let fryCookCost = 50; // Initial fry cook cost
+
+     // Function to buy a fry cook
+function buyFryCook() {
+    if (chickenCount >= fryCookCost) { // Check if there's enough chicken
+        chickenCount -= fryCookCost; // Deduct cost from chicken count
+        fryCookAmount++; // Increase fry cook count
+        fryCookCost = Math.floor(fryCookCost * 1.35); // Increase fry cook cost
+        updateDisplay(); // Update display with new values
+
+        // Add a GIF to the fryCookGifsContainer
+        const gifUrl = fryCookUrls[Math.floor(Math.random() * fryCookUrls.length)];
+        const gifElement = document.createElement("img");
+        gifElement.src = gifUrl;
+        gifElement.style.width = "50px"; 
+        gifElement.style.height = "50px"; 
+        gifElement.style.margin = "1px"; 
+        document.getElementById("fryCookGifsContainer").appendChild(gifElement);
+    }
+}
+      
+      function FryCookCooking(){
+        chickenCount += fryCookAmount*pay;
+        updateDisplay();
+      }
+      
+      // Set interval to execute FryCookCooking function every second
+      setInterval(function() {
+        FryCookCooking(); // Call fry cook cooking function
+        updateDisplay(); // Update display
+        if (fryCookAmount > 0) {
+          for(let j = 0; j<fryCookAmount;j++){
+          spawnFloatingImage(); // Spawn floating chicken images if fry cooks are present
+        }
+        }
+      }, 1000);
+
+      document.getElementById("FryCook").addEventListener("click", buyFryCook); // Event listener for fry cook purchase button
+
+      // Fryer Upgrade management
+      let fryerUpgradeCount = 1; // Initial fryer upgrade count
+      let fryerUpgradeCost = 35; // Initial fryer upgrade cost
+
+      // Function to buy a fryer upgrade
+      function buyFryerUpgrade() {
+        if (chickenCount >= fryerUpgradeCost) { // Check if there's enough chicken
+          chickenCount -= fryerUpgradeCost; // Deduct cost from chicken count
+          fryerUpgradeCount++; // Increase fryer upgrade count
+          fryerUpgradeCost = Math.floor(fryerUpgradeCost * 1.45); // Increase fryer upgrade cost
+          updateDisplay(); // Update display with new values
+        }
+      }
+      document.getElementById("BetterFryer").addEventListener("click", buyFryerUpgrade); // Event listener for fryer upgrade button
+      
+      // Customer upgrade management
+      let JabotCount = 100; // Initial number of unfilled seats
+      let JabotCost = 75; // Initial cost for a customer
+      let customer = 0; // Initial customer count
+      
+      // Function to buy a customer upgrade
+       function buyCustomer() {
+          if (chickenCount >= JabotCost) { // Check if there's enough chicken
+              chickenCount -= JabotCost; // Deduct cost from chicken count
+              JabotCount--; // Decrease unfilled seats count
+              customer++; // Increase customer count
+              JabotCost = Math.floor(JabotCost * 1.075); // Increase customer cost
+              updateDisplay(); // Update display with new values
+
+              // Add a GIF to the customerGifsContainer (the one in the bottom left)
+              const gifUrl = customerUrls[Math.floor(Math.random() * customerUrls.length)];
+              const gifElement = document.createElement("img");
+              gifElement.src = gifUrl;
+              gifElement.style.width = "50px"; 
+              gifElement.style.height = "50px"; 
+              gifElement.style.margin = "1px"; 
+              document.getElementById("customerGifsContainer").appendChild(gifElement);
+          }
+      }
+      document.getElementById("Customer").addEventListener("click", buyCustomer); // Event listener for customer purchase button
+
+      // Function to update display values
+      function updateDisplay() {
+        // Update display for chicken eaten, fry cooks, fryer upgrades, and unfilled seats
+        document.getElementById("chickenEaten").textContent = chickenCount;
+        document.getElementById("fryCookCount").textContent = fryCookAmount;
+        document.getElementById("fryerUpgradeCount").textContent = fryerUpgradeCount;
+        document.getElementById("JabotCount").textContent = JabotCount;
+
+        // Update button text with new level and cost
+        document.getElementById("FryCook").textContent = `Fry Cook (Lvl ${fryCookAmount}) - Cost: ${fryCookCost}`;
+        document.getElementById("BetterFryer").textContent = `Fryer Upgrade (Lvl ${fryerUpgradeCount}) - Cost: ${fryerUpgradeCost}`;
+        document.getElementById("Customer").textContent = `Unfilled Seats (${JabotCount}) - Cost: ${JabotCost}`;
+        document.getElementById("PayRaise").textContent = `Pay Raise (Lvl ${payRaiseLevel}) - Cost: ${payCost}$`; // Update pay raise button text
+      }
+
+      // Shop dropdown toggle function
+      document.getElementById("shop").addEventListener("click", function () {
+        let shopItems = document.getElementById("shopItems"); // Get shop items
+        shopItems.style.display = shopItems.style.display === "none" ? "block" : "none"; // Toggle display
+      });
+      
+      let money = 0; // Initial money count
+
+      // Function to simulate cash flow from customers
+      function cashFlow() {
+        money += customer; // Increase money based on number of customers
+        document.getElementById("money").textContent = ` ${money}`; // Update money display
+        updateSkinSection(); // Update skin section availability
+      }
+      
+      
+      //function to spawn customers
+    
+      
+      // Function to spawn floating chicken images
+      function spawnFloatingImage() {
+        for (let i = 0; i < fryerUpgradeCount; i++) { // Loop through fryer upgrades
+          const img = document.createElement("img"); // Create a new image element
+          img.src = chickenUrls[Math.floor(Math.random() * chickenUrls.length)]; // Set random chicken image
+          img.className = "floating-image"; // Set class for styling
+          
+          // Set random position for floating image
+          img.style.left = Math.random() * window.innerWidth + "px";
+          img.style.top = Math.random() * window.innerHeight + "px";
+          
+          document.body.appendChild(img); // Add image to document body
+          
+          // Change the opacity to create a fade-out effect
+          setTimeout(() => {
+            img.style.opacity = "0"; // Fade out image
+            cashFlow(); // Update cash flow
+            // Remove image from the document after it fades out
+            setTimeout(() => document.body.removeChild(img), 500); // Remove after 500ms
+          }, JabotCount * 300); // Delay based on unfilled seats
+        }
+      }
+
+      document.getElementById("KFC").addEventListener("click", chickenEater); // Event listener for chicken eating
+
+      // Event listener for starting the game
+      document.getElementById("startButton").addEventListener("click", function() {
+        document.getElementById("startScreen").style.display = "none"; // Hide start screen
+        document.getElementById("gameContent").style.display = "block"; // Show game content
+      });
+    </script>
+  </body>
+</html>

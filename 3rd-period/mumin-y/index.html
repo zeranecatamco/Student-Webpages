@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mumin Yusufi's World</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Website.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#aboutme">About Me</a>
+    <a href="#hobbies">Hobbies</a>
+    <a href="#journey">Journey</a>
+    <a href="#projects">Projects</a>
+    <a href="#meme-generator">Meme Generator</a>
+    <a href="#weight-converter">Weight Converter</a>
+    <a href="#color-flipper">Color Flipper</a>
+  </nav>
+
+  <section id="home">
+    <img id="home-image" src="https://static.vecteezy.com/system/resources/previews/050/068/927/non_2x/a-boy-sitting-on-top-of-the-earth-with-his-arms-up-free-vector.jpg" />
+    <h1>Mumin Yusufi's World</h1>
+    <p style="text-align:center; font-size:1.5rem; font-weight:bold;">My <br> World</p>
+  </section>
+
+  <section id="aboutme">
+    <h2>About Me</h2>
+    <p>I am Mumin Yusufi from Hayward, California. I am a true student of the game and I love to continue learning. I am also a programmer and developed multiple projects. From C++ to HTML, I have a solid amount of experience under my belt. I have included three different projects in this website as well. This year in computer science, I have learned so much. I now know different types of loops, if statements, and so much more. My comprehension for this subject has increased immensely. It was a fun year and allowed me to use my creativity and incorporate it into my work. As a senior at Mt. Eden High, my K-12 journey is almost complete. Class of 2025 has never been closer and I am about to graduate. This school journey was definitely one to remember. From a global pandemic in the middle of it, along with random unforgettable moments mixed in through the years. There were highs and lows but I am definitely proud of my achievements. Now as I graduate, the learning never stops. I will continue to explore and learn new content. Whether that be mentally, physically, or spiritually, I am ready to tackle more opportunities and grow as a person.</p>
+  </section>
+
+  <section id="hobbies">
+    <h2>Hobbies and Loves</h2>
+    <ul>
+      <li>Family</li>
+      <li>Religion</li>
+      <li>Basketball</li>
+      <li>Tennis</li>
+      <li>Cricket</li>
+      <li>Traveling</li>
+      <li>Chess</li>
+    </ul>
+  </section>
+
+  <section id="journey">
+    <h2>The Journey</h2>
+    <ol>
+      <li>Southgate Elementary School</li>
+      <li>King Middle School</li>
+      <li>Mount Eden High School</li>
+      <li>College (TBD)</li>
+      <li>Go and Be Great</li>
+    </ol>
+  </section>
+
+  <div id="projects" class="project-section">
+    <h2> Projects Descriptions</h2>
+    <p><strong>Meme Generator:</strong> An interactive and fun project that generates different memes on the screen with a click of the button.</p>
+    <p><strong>Weight Converter:</strong> A handy tool that converts weight in kilograms to grams, pounds, and ounces in real-time when you type in your desired input.</p>
+    <p><strong>Color Switcher:</strong> Can’t decide which color you should use? Use the color switcher NOW!!</p>
+  </div>
+
+  <section id="meme-generator">
+    <h2>Meme Generator</h2>
+    <div class="meme-generator">
+      <button class="generate-meme-btn">Generate Meme</button>
+      <h3 class="meme-title">Loading...</h3>
+      <img src="" alt="Randomly generated meme will appear here." />
+      <div class="meme-author"></div>
+    </div>
+  </section>
+
+  <section id="weight-converter">
+    <h2>Weight Converter</h2>
+    <label for="kginput">Enter Weight in KG:</label>
+    <input type="number" id="kginput" placeholder="Enter KG" min="0" step="any" />
+    <div id="output" style="visibility: hidden;">
+      <div class="card bg-primary"><h4>Grams:</h4><div id="grams"></div></div>
+      <div class="card bg-success"><h4>Pounds:</h4><div id="pounds"></div></div>
+      <div class="card bg-danger"><h4>Ounces:</h4><div id="ounce"></div></div>
+    </div>
+  </section>
+
+  <section id="color-flipper">
+    <h2>Color Flipper</h2>
+    <p>Current Color: <span id="color-code">#SWITCH YOUR COLOR!!</span></p>
+    <button id="switch-btn">Switch Color</button>
+  </section>
+
+  <footer>
+    <p>&copy; Class of 2025 Mumin Yusufi</p>
+  </footer>
+
+  <script src="Website.js"></script>
+</body>
+</html>

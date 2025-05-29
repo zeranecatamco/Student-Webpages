@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Website - AP COMP SCI FINAL PROJECT</title>
+  <style>
+   
+      body{
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      background-color: blue;
+      padding: 0px;
+      overflow-x: hidden;
+      text-align: center;
+    }
+    
+    a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+  font-size: 18px
+}
+    .box:hover{
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.65);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+    
+    
+     header{
+      background: linear-gradient(135deg, #2c7da0, #90e0ef);
+     
+      padding: 5rem;
+      text-align: center;
+      
+      align-items: center;
+      justify-content: center;
+      text-color: white;
+    }
+    
+    h1{
+      text-align: center;
+    }
+    
+     img{ 
+       
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  top-margin: 10px;
+  
+     }
+    
+    .grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 10px;
+      overflow-y: auto;
+    }
+
+    .box{
+      background: white;
+      padding: 30px;
+      margin: 10px 0;
+      text-align: center;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      height: 450px;
+      
+    }
+   
+        .box2{
+      background: white;
+      padding: 30px;
+      margin: 10px 0;
+      text-align: center;
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;    
+      justify-content: center;
+    }
+    
+    h2 {
+      color: #0077cc;
+      font-weight: bold;
+      text-decoration: none;
+      bottom-margin: 10px;
+      display: inline-block;
+    }
+
+    footer {
+      background-color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-weight: bold;
+      border-top: 1px solid #ccc;
+      flex-shrink: 0;
+    }
+    
+   
+     .aboutMe{
+      background: white;
+      padding: 10px;
+      text-align: center;
+      width: 80%
+      box-sizing: border-box;
+      border-radius: 6px;
+      margin: 10px;
+      
+    }
+    
+    .homePage{
+      padding: 10px;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Website
+      </h1>
+    </header>
+  
+  <main>
+    
+  </main>
+  <div class = "homePage"> 
+   </div>
+  
+  
+  <div class = "aboutMe">
+    <p>Hi, my name is Fernando D. and I am a junior from Mt. Eden High School in Hayward, California. This year I had the opportunity to become a programmer through taking AP Computer Science Principles. I've enjoyed being able to learn more about how computers and the internet work as well as the logic behind some of my favorite games. Being a beginner programmer, it was hard at first to adjust to essentially a whole new language. However, over the course of the year with lots of practice I was able to develop a solid understanding of the fundamentals of coding. We started with learning C++, then moved on to HTML, JavaScript and CSS as well. In the end we were able to develop our own programs, collaborate with peers and even develop our own webpage such as this one. This website is a portfolio of the projects I have created this year. Altogether, despite a rocky start, this year turned out to be a great experience in learning a new skill and developing a greater understanding of an essential practice.
+    </p> 
+  </div>
+
+  <div class="grid">
+    
+    <a href="ticTacToe.html" class="box-link">
+    <div class="box">
+      <h2 href="ticTacToe.html">Tic Tac Toe Game</h2>
+       <img src= "https://play-lh.googleusercontent.com/KZTO1L6r8CzWlg2InJoU_ndRAuvYiaS-35MyYdDPeeVCPNVfM9SBY2qRGjvvADmDIR8"></img>
+    </div>
+    </a>
+  
+  <a href="memoryGame.html" class="box-link">
+    <div class="box">
+      <h2>Memory Game</h2>
+        <img src= "https://www.memozor.com/templates/memoire/images/zoom/memory_game_kids_colors.jpg"</img>
+    </div>
+      
+      <a href="connectFour.html" class="box-link">
+    <div class="box">
+      <h2>Connect Four</h2>
+      <img src= "https://momaland.farama.org/_images/moconnect4.gif"></img>
+    </div>
+  </a>
+ 
+    <div class="box2">
+      <p>This is a simple Tic Tac Toe Game made using HTML, CSS, and Javascript. This was my first experience and project made with Javascript, so it was a bit of a learning experience. Nonetheless I enjoyed being able to see the game come to life after working through challenges, debugging issues and deepening my understanding of programming. This game employs key programming concepts such as the creation of separate div elements, displaying of a grid, and implementing logical operators and conditionals to ensure proper gameplay.</p>
+    </div>
+    <div class="box2">
+      <p>This is another project I made using javascript. After watching a tutorial video, I was able to put what I learned to use and practice implementing code. I was also able to make several adjustments, particularly to the styling and design to give the code a more personal touch. This project reinforced my knowledge of programming and allowed me the opportunity to create another fun and fully functional game from the ground up.</p>
+    </div>
+    <div class="box2">
+      <p>This is my third and final Javascript program, a functional Connect Four game. From the three projects I worked on, this was definitely the most difficult as there were lots of elements involved and it was challenging to work out the game logics due to its complexity. Furthermore, we were not to use a tutorial video or similar resource. However, through collaborating with my peers, we were able to get the game working properly. This project, like the rest, was a great learning experience and challenged me to take what I know and apply it to creating a functioning program.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 AP COMP SCI - Fernando D.</p>
+    <p>Contact Me!</p>
+    <a href = "mailto:16613@husd.k12.ca.us">Email</a>, <a href = "https://github.com/fdiaz1222"> GitHub</a>, <a href = "https://codepen.io/FDiaz1222">CodePen</a>  </footer>
+</body>
+</html>
+
+

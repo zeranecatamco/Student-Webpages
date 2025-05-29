@@ -1,0 +1,192 @@
+<!-- DOMINIK AND ANGEL -->
+<!-- https://www.youtube.com/watch?v=dRzhwwXy-Sk -->
+<!-- ADDED TOTAL WINS IN TOP RIGHT CORNER OF WIN/LOSS SCREEN, CHANGED THE HANGMANS HEAD TO DOMINIKS FACE, CHANGED UP THE WORDS, CHANGED UP APPEARANCE ONLY A LITTLE, MADE IT SO SPACES WORK IN WORDS -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="name-section">
+    <h1>Hangman Project</h1>
+    </div>
+    <!-- container for the main game -->
+    <div class="container">
+      <!-- options container for categories -->
+      <div id="options-container"></div>
+      <!-- boxes for guessed letters --> 
+      <div id="letter-container" class="letter-container hide"></div>
+      <!-- where words are displayed -->
+      <div id="user-input-section"></div>
+      
+      <!-- canvas where hangman is drawn -->
+      <canvas id="canvas"></canvas>
+      <!-- basically game results win/lose -->
+      
+      <div id="new-game-container" class="new-game-popup hide">
+        <div id="result-text"></div>
+        <div id="win-counter">Total Wins: 0</div>
+        <button id="new-game-button">New Game</button>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="hangman.js"></script>
+<style>
+  
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "atma", sans-serif;
+}
+
+body {
+  background-color: #286b6d; 
+}
+
+.container {
+  font-size: 16px;
+  background-color: #41abae; 
+  width: 90vw;
+  max-width: 34em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 3em;
+  border-radius: 0.6em;
+  box-shadow: 0 1.2em 2.4em rgba(35, 129, 132, 0.25); 
+}
+
+#options-container {
+  text-align: center;
+}
+#options-container div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.2em 0 2.4em 0;
+}
+#options-container button {
+  padding: 0.6em 1.2em;
+  border: 3px solid #238184;
+  background-color: #2ca2a6; 
+  color: white; 
+  border-radius: 0.3em;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+#options-container button:disabled {
+  border: 3px solid #1e7174; 
+  color: #a0d6d7; 
+  background-color: #2ca2a6; 
+}
+#options-container button.active {
+  background-color: #1e7174; 
+  border: 3px solid #238184;
+  color: #fff;
+}
+.letter-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6em;
+}
+#letter-container button {
+  height: 2.4em;
+  width: 2.4em;
+  border-radius: 0.3em;
+  background-color: #2ca2a6; 
+  color: white;
+  cursor: pointer;
+}
+.new-game-popup {
+  background-color: #41abae; 
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 0.6em;
+}
+
+#user-input-section {
+  display: flex;
+  justify-content: center;
+  font-size: 1.8em;
+  margin: 0.6em 0 1.2em 0;
+}
+canvas {
+  display: block;
+  margin: auto;
+  border: 10px solid #238184; 
+  border-radius: 10px;
+}
+.hide {
+  display: none;
+}
+#result-text h2 {
+  font-size: 1.8em;
+  text-align: center;
+}
+#result-text p {
+  font-size: 1.25em;
+  margin: 1em 0 2em 0;
+}
+#result-text span {
+  font-weight: 600;
+}
+#new-game-button {
+  font-size: 1.25em;
+  padding: 0.5em 1em;
+  background-color: #2ca2a6; 
+  border: 3px solid #238184;
+  color: #fff;
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+.win-msg {
+  color: #39d78d; 
+}
+.lose-msg {
+  color: #fe5152; 
+}
+
+.dashes, .space {
+  display: inline-block; 
+  width: 20px;
+  text-align: center; 
+}
+
+#win-counter {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+#name-section {
+  text-align: center;
+  font-weight: 100;
+  font-family: 'Atma', sans-serif; 
+  color: #ffffff;
+}
+    </style>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #AEC3B0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: grey;
+}
+
+#game-container {
+  background-color: #AEC3B0;
+  padding: 30px 40px;
+  border-radius: 15px;
+  border: solid white 7px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 10px 5px;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 28px;
+  color: #598392;
+}
+
+#prompt-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #EFF6E0;
+  margin-bottom: 5px;
+}
+
+
+#main-word {
+  font-size: 26px;
+  color: #EFF6E0;
+  margin-bottom: 20px;
+}
+
+#options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+#options button {
+  padding: 10px 18px;
+  background-color: #EFF6E0;
+  color: #525152;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+ 
+}
+
+#options button:hover {
+  background-color: #F5CAC3;
+}
+
+#feedback {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+#next-button {
+  padding: 12px 24px;
+  background-color: #EFF6E0;
+  color: #525152;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  
+}
+
+
+#next-button:hover {
+  background-color: #F5CAC3;
+}
+
+
