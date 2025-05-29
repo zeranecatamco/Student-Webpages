@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag Guessing Game</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="./GuessTheFlag.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Main title of the game -->
+        <h1>Flag Guessing Game</h1>
+        
+        <!-- Container for displaying the flag image -->
+        <div id="flag-container">
+            <img id="flag" src="https://i.insider.com/5b1feba65e48ec1f008b45a3?width=600&format=jpeg&auto=webp" alt="Country Flag">
+        </div>
+        
+        <!-- Answer buttons for user selection -->
+        <div id="answer-buttons" class="btn-container">
+            <button class="btn" onclick="checkAnswer('Jamaica')">Jamaica</button>
+            <button class="btn" onclick="checkAnswer('Grenada')">Grenada</button>
+            <button class="btn" onclick="checkAnswer('Germany')">Germany</button>
+            <button class="btn" onclick="checkAnswer('Dominica')">Dominica</button>
+        </div>
+        
+        <!-- Button to load the next flag -->
+        <button id="next-btn" onclick="nextFlag()">Next</button>
+        
+        <!-- Placeholder for feedback (correct/incorrect) -->
+        <div id="feedback"></div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="./GuessTheFlag.js"></script>
+</body>
+</html>
