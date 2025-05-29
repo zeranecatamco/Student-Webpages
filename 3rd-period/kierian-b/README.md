@@ -1,7 +1,7 @@
 # Final Portfolio Project – Kierian A.
 
 ## About Me
-Hi! I'm Kierian A., a student developer passionate about building creative and user-focused web applications. I’ve spent the year learning how to bring ideas to life through code, exploring everything from responsive design to dynamic functionality. My journey has been filled with challenges and accomplishments that have helped me grow as a developer and problem-solver.
+Hello name's Kierian Aren Bautista. I've always had at the very least a vague interest in computers and technology since I was younger, whether it be with Minecraft redstone or my love for computer parts in modern days. So when I saw that Mt.Eden Highschool offered AP Computer Science Principles I jumped at the opportunity to take it. As a programmer I know I have grown a long way since the beginning of the year, so in the future if I decide to continue following the path of a computer programmer I'll have some experience at least, and if I don't I'll have a pretty interesting hobby.
 
 ## About This Project
 This final portfolio project is the culmination of my work and learning throughout the year. It showcases the skills I’ve developed in web design, front-end development, and project planning. Through building this portfolio, I’ve deepened my understanding of HTML, CSS, and JavaScript, and learned how to present my work professionally in a clean and engaging format.
