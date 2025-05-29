@@ -7,11 +7,13 @@ Welcome to my personal website! My name is Catalina Chavez. I am 16 years old an
 
 ## Project Overview
 
-For this project I worked in a team of 3 to complete the code. We obtained this project from a tutorial to understand more of the fundamentals on how to create a game in Javascript. We also used HTML and CSS to help us design the project and create a neat structure. The aim for this memory card game is to let the user utilize their brain skills to remember a card they flipped before hand and check a different card to see if they make a match. This game is a great way to test your skills and build a stronger brain that can retain and remember more information.
+This website contains my portfolio and description about who I am as a programmer. Through this website I share my journey throughout this year in AP Computer Science. This website holds various of my projects worked on throughout this school year -
 
-This project is an educational alphabet game. With the help of my group, we applied what fundamentals we learned from the matching game to create our own game with our own idea. Our idea was to create a game that could help kids learn their ABC's, such as the letters order in the alphabet and the difference between uppercase & lowercase letters. This game was done with javascript, CSS, and HTML.
+Memory Game -For this project I worked in a team of three to complete the code. We obtained this project from a tutorial to understand more of the fundamentals on how to create a game in Javascript. We also used HTML and CSS to help us design the project and create a neat structure. The aim for this memory card game is to let the user utilize their brain skills to remember a card they flipped before hand and check a different card to see if they make a match. This game is a great way to test your skills and build a stronger brain that can retain and remember more information.
 
-This project is a poem and quote generator. To complete this project I worked with a partner to learn through a tutorial how to create a generator on javascript. Just like the memory card game, we also used our own ideas for our design with CSS and HTML. Additionally we added our own feature to the generator, the poem generator. Test out the generator to randomize various quotes and poems.
+Learn your ABC's! - This project is an educational alphabet game. With the help of my group, we applied what fundamentals we learned from the matching game to create our own game with our own idea. Our idea was to create a game that could help kids learn their ABC's, Users are able to learn the order of the letters in the alphabet and the difference between uppercase & lowercase letters. This game was done with javascript, CSS, and HTML.
+
+Poem & Quote Generator - This project is a poem and quote generator. To complete this project I worked with a partner to learn through a tutorial how to create a generator on javascript. Just like the memory card game, we also used our own ideas for our design with CSS and HTML. Additionally we added our own feature to the generator, the poem generator. Test out the generator to randomize various quotes and poems.
 
 ## Portfolio Site Includes
 
