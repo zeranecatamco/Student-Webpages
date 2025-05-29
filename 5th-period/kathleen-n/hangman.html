@@ -1,0 +1,44 @@
+<!--Shania Martinez Sanchez & Kathleen Nanquil-->
+
+<!--The new functionality that we added that wasn't part of the video was changing the colors of the keyboard buttons once they are pressed. When users click one of the letter buttons, the button will turn a lighter shade and fade slightly. This makes it easier for the user to know which buttons they have used and which they haven't, enhancing their gameplay and visibility.-->
+
+<!DOCTYPE html>
+ <html lang="en">
+   <head>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Hangman</title>
+     <!-- Google Fonts -->
+     <link
+       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+       rel="stylesheet"  
+     />
+     <!-- Stylesheet -->
+     <link rel="stylesheet" href="hangman.css">
+   </head>
+   <body>
+     <!--creating boxes for letters, categories, drawing area, result (win/lose)-->
+     <div class="container">
+       <div id="options-container"></div>
+       <div id="letter-container" class="letter-container hide"></div>
+       <div id="user-input-section"></div>
+       <canvas id="canvas"></canvas>
+       <div id="new-game-container" class="new-game-popup hide">
+         <div id="result-text"></div>
+         <button id="new-game-button">New Game</button>
+       </div>
+     </div>
+     <div id="">
+       
+     </div>
+     <!-- Script -->
+     <script src="hangman.js"></script>
+    <footer>
+  <div style="text-align: center; margin: 40px 0;">
+    <a href="index.html" class="back-home">← Back to Home</a>
+  </div>
+</footer>
+   </body>
+ </html>

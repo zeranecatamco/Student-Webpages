@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F5F5E1;
+  color: #406343;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: #557C55; /* dark sage green */
+  background-color: #C3E2C2; /* soft mint green */
+  padding: 15px;
+  border: solid #285430 5px; /* dark forest green */
+  border-radius: 25px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+h2 {
+  color: #285430; /* forest green */
+  background-color: #C1F2B0; /* pale green */
+  padding: 7px;
+  border: solid #406343 3px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+h3 {
+  color: #609966;
+  background-color: #EFE9D8; /* creamy background */
+  border: 3px dashed #7FB77E;
+  padding: 5px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.todolist,
+.hangman,
+.match,
+.wheel {
+  background-color: #C3E2C2;
+  border: 10px double #618264;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;  /* contain width */
+  text-align: center;
+}
+
+.todolist:hover,
+.hangman:hover,
+.match:hover, 
+.wheel:hover {
+  background-color: #A8D5BA;
+  transform: scale(1.01);
+}
+
+.screenshot-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.banner-img {
+  width: 100%;
+  max-width: 10000px;
+  height: auto;
+  border-radius: 10px;
+  border: solid #ADC2A9 10px;
+  padding: 1rem;
+  display: block;
+  margin: 20px auto;
+}
+.project-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 40px; /* more space between image and text */
+  max-width: 1100px; /* wider container */
+  margin: 0 auto 50px auto;
+  background-color: #C3E2C2;
+  border: 10px double #618264;
+  border-radius: 25px;
+  padding: 40px; /* more padding inside */
+  flex-wrap: wrap;
+}
+
+.project-row p {
+  flex: 1;
+  font-size: 1.1rem; /* larger font */
+  line-height: 1.8;  /* more line spacing */
+  margin: 0;
+  color: #406343;
+}
+
+.project-row .screenshot-img {
+  width: 350px; /* make image wider */
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+    
