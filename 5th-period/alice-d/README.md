@@ -27,5 +27,5 @@ A very tricky game and I could say the same with the coding, as I would have nee
 
 ##Links: 
 
-[Github Link](https://github.com/alicedazp/Final-Project---Personal-Portfolio.git)
-[Website Link](https://alicedazp.github.io/Final-Project---Personal-Portfolio/)
+- [Github Link](https://github.com/alicedazp/Final-Project---Personal-Portfolio.git)
+- [Website Link](https://alicedazp.github.io/Final-Project---Personal-Portfolio/)
