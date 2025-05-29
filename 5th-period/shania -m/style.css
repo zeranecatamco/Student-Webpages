@@ -1,0 +1,37 @@
+ <style>
+    body{
+      font-family:'Trebuchet MS';
+      background-color: #bde0fe;
+    }
+    h1{
+      text-align: center;
+      color: #231942;
+      background-color: #be95c4;
+    Padding: 1rem; 
+    border: solid indigo 5px;
+    border-radius: 25px;
+    margin-top: 0.25rem;
+    }
+    
+    .abtme{
+      
+      font-size: 20px;
+      color: #231942 ; 
+      background-color: #f4acb7;
+      padding : 25px; 
+      border: solid indigo 10px;
+      margin: 25px
+        
+      
+      
+    }
+    h2{
+      font-size: 25px;
+    color: #231942 ; 
+      font-size: 25px;
+       text-align: left;
+    }
+   
+      
+    
+  </style>
