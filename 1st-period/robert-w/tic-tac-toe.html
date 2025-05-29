@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang = "en">
+<html>
+  <!--js coding done by Robert Walton-->
+  <!--css styling done by Erika-->
+    <head>
+      <title>EVIL tic tac toe</title>
+        <style>
+             body {
+                  display: flex;
+                  align items: center;
+                  justify-content: center;
+                  font-family: 'Georgia';
+                  background: radial-gradient(
+                  rgba(92, 5, 5, 1) 0%,
+                  rgba(54, 2, 2, 1) 45%,
+                  rgba(23, 2, 2, 1) 100%
+                  
+                  );
+                  color: rgb(201, 64, 110);
+                  text-align: center;
+          }
+    
+  .tile{
+    padding:35px;
+    border-radius: 8px;
+    margin-top: 5px;
+    box-shadow: 10px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+          .tile:hover{
+            background: dark-grey;
+          }
+ 
+          button {
+  background-color: white;
+  border: none;
+  border-radius: 4px;
+  color: black;
+  padding: 6px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-family: 'Monaco';
+  margin-top: 18px;
+  
+  }
+          button:hover {
+            background color: #000000;
+            color: rgb(96, 189, 96);
+          }
+          
+                   
+</style>
+  <main>
+    <body>
+      <h1>Evil Tic Tac Toe </h1>
+      <h3>the first to get 3 in a row LOSES</h3>
+      <h5>(x = player 1, O = player 2)</h5>
+       <p id="message">Click a box to start! </p>
+      
+    <div class= "row">
+       <div class= "row">
+        <button class = "tile" id = "tile00" onclick="tileSelect(0)">-</button>
+        <button class = "tile" id = "tile10" onclick="tileSelect(1)">-</button>
+        <button class = "tile" id = "tile20" onclick="tileSelect(2)">-</button>
+    </div>
+    <div class = "row">
+        <button class = "tile" id = "tile01" onclick="tileSelect(3)">-</button>
+        <button class = "tile" id = "tile11" onclick="tileSelect(4)">-</button>
+        <button class = "tile" id = "tile21" onclick="tileSelect(5)">-</button>
+    </div>
+    <div class = "row">
+       <button class = "tile" id = "tile02" onclick="tileSelect(6)">-</button>
+       <button class = "tile" id = "tile12" onclick="tileSelect(7)">-</button>
+       <button class = "tile" id = "tile22" onclick="tileSelect(8)">-</button>
+    </div>
+      <rect>
+      
+
+<button onclick="newGame()">New Game</button>
+        
+          </main>
+  <script>
+    let gridSpaces = []
+    gridSpaces.push(0,0,0,0,0,0,0,0,0);
+    //i have an array, each index coresponding to a tile
+    //0 for if empty, 1 for an X, 2 for an O
+    let P1turn = true;
+    let playerWon = 0;
+    //i assing each button to a constant, noting their x and y coordinates
+    const tileX0Y0 = document.getElementById("tile00");
+    const tileX1Y0 = document.getElementById("tile10");
+    const tileX2Y0 = document.getElementById("tile20");
+    const tileX0Y1 = document.getElementById("tile01");
+    const tileX1Y1 = document.getElementById("tile11");
+    const tileX2Y1 = document.getElementById("tile21");
+    const tileX0Y2 = document.getElementById("tile02");
+    const tileX1Y2 = document.getElementById("tile12");
+    const tileX2Y2 = document.getElementById("tile22");
+    
+    const msg = document.getElementById("message");
+    
+    let tiles = []
+    tiles.push(tileX0Y0,tileX1Y0,tileX2Y0,tileX0Y1,tileX1Y1,tileX2Y1,tileX0Y2,tileX1Y2,tileX2Y2);
+//i put all of the const's that refference the html button elements in an array for easy referenceing
+    
+    function tileSelect(x){
+      if (playerWon === 0){
+        //if the game isn't over
+        if(gridSpaces[x] === 0){
+          //check if the grid space isn't empty
+          if (P1turn === true){
+            //if it's p1's turn, give the tile to X
+            gridSpaces[x] = 1;
+            tiles[x].style.color = "Salmon";
+         }else{    
+           //else, give to O
+            gridSpaces[x] = 2;
+           tiles[x].style.color = "Teal";
+         }
+        render();
+        logic();
+        P1turn = !P1turn;
+          //im so sorry erika, i only caught this glitch after i shared the code with you
+        }
+      //what i'm refering to is that i used to call the functions "render()" and "logic()"
+        //outside the if statement checking if the tile was emtpy
+        //which meant you could click a tile that was already claimed and get another turn
+        //yikes
+      }
+    }
+    
+    
+    function render(){
+      //loop through every tile in the array and set their text content to X or O
+      for (let i = 0;i<9; i++){
+        if (gridSpaces[i] === 1){
+          tiles[i].textContent = "X";
+        }else if (gridSpaces[i] === 2){
+          tiles[i].textContent = "O";
+        }
+      }
+    }
+    
+    function logic(){
+      //this is a bit overkill, sorry
+      for (let i = 0; i < 9; i++){
+        if (i === 0 || i === 3 || i === 6){
+          //i need to check if any of the 3 rows all have the same state (X or O, not empty)
+          if (gridSpaces[i] != 0 && gridSpaces[i] == gridSpaces [i+1] && gridSpaces [i+1] == gridSpaces [i+2]){
+            playerWon = true;
+          }  
+        }
+        if (i === 0 || i === 1 || i === 2){
+          //then all the columns
+          if (gridSpaces[i] != 0 && gridSpaces[i] == gridSpaces[i+3] && gridSpaces[i+3] == gridSpaces[i+6]){
+            playerWon = true;
+          }
+        } 
+        if (i === 0){
+          //then the top left to bottom right diagonal
+          if (gridSpaces[0] != 0 && gridSpaces[0] == gridSpaces[4] && gridSpaces[4] == gridSpaces[8]){
+            playerWon = true;
+          }
+        }
+        if (i === 2){
+          //then the top right to bottom left diagonal
+          if (gridSpaces[2] != 0 && gridSpaces[2] == gridSpaces[4] && gridSpaces[4] == gridSpaces[6]){
+            playerWon = true;
+          }
+        }
+      }  
+      if (playerWon){
+        //if the player won, i use javascript's flexible variables to set "playerWon" to 1 or 2
+        //depending on who won
+        if (P1turn){
+          playerWon = 2;
+        }else{
+          playerWon = 1;
+        }
+        //then tell the players who won the game
+        msg.textContent = "Player " + playerWon + " Won the game!"
+      }  
+      
+    }      
+    
+    function newGame(){
+      //this is a simple one
+      //i just set all of the variables back to their default when the button is pressed
+      P1turn = true;
+      playerWon = 0;
+      for (let i = 0; i < 9; i++){
+        gridSpaces[i] = 0;
+        tiles[i].textContent = "-";
+        tiles[i].style.color = "black";
+      }
+       message.textContent= "Click on a box to start!";
+    }
+    
+    
+
+    </script>
+      </body>
+      
+     

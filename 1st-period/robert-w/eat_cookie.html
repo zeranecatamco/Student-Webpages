@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang = "en">
+    <!--Leonardo Castillo-->
+    <!--Wesley Wu-->
+    <!--Robert Walton-->
+    <style>
+      button.cookie{
+        background-color:transparent;
+        border-color:transparent;
+        width:100px;
+        height:100px;
+      }
+      table, td{
+        border:1px solid;
+        border-color:black;
+        border-collapse:collapse;
+        background-color:white;
+      }
+      body {
+          margin-left:15%;
+          margin-right:15%;
+        background-image: url('jerma-giygas-meme.gif');
+          
+      }
+       td {
+        background: white;
+      }
+      p {
+        border: #E64F4C;
+        border-width: 1px;
+        background: #E64F4C;
+        color: white;
+      }
+   .everything{
+        display:flex;
+       grid-area:stuff;
+       
+   }
+    .picnic{
+        background-image: url('https://img.freepik.com/premium-vector/tablecloth-background-red-seamless-pattern_87543-456.jpg');
+        border-style:inset;
+          border-color:white;
+          border-width:5px;
+    }
+    .cookie-stuff{
+        margin-right:auto;
+    }
+    .div-wrapper{
+      display:grid;
+      grid-template-columns: repeat(7,1fr);
+      grid-auto-row:200px;
+      background-color:transparent;
+      grid-template-areas:
+        "empty stuff stuff stuff empty"
+    }
+    h1, h4{
+        text-align:center;
+        background-color:black;
+        color:white;
+        font-family:"Times New Roman",serif;
+    }
+    .buffer{
+        height:70px;
+        background-color:transparent;
+        border-color:transparent;
+    }
+    </style>
+    <head>
+      <meta name = "viewport" content="width=device=width user-scalable=no, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <title>A clicker game</title>
+    <body>
+        <div class="picnic">
+        <h4>How about a nice calm picknic...</h4>
+        <h1>In the pit of tortured souls!</h1>
+    <div class="everything"> 
+        
+        <div class="cookie-stuff">
+      <div id="cookie-counter">
+        <input id="display" readonly>
+      </div>
+      <div>
+        <button class="cookie" onclick="get_cookie()"><img id ="cookieimg" src="https://pixeldude.neocities.org/cookie/sprite_cookie00.png"></button>
+        </div>
+        </div>
+           
+         <div class = "ui">
+           <p>Clicker Upgrades</p>
+ 
+        <table>
+          <tr>
+            <td id="click-up-cost">Cost:</td>
+            <td id="tough-up-cost">Cost:</td>
+          </tr>
+          <tr>
+            <td><button onclick="upgrade('click')">Stronger Click</button></td>
+            <td><button onclick="upgrade('health')">Tougher Cookie</button></td>
+          </tr>
+        <tr>
+          <td id="upgrade-amount1">[0]</td>
+          <td id="upgrade-amount2">[0]</td>
+          </tr>
+        
+        </table>
+      
+           <p>Restock</p>
+    
+        <table>
+          <tr>
+            <td id = "restore-cost">Cost: </td>
+          </tr>
+          <tr>
+            <td> <button onclick="upgrade('restore')">Restore the Cookie</button> </td>
+          </tr>
+          </table>
+     
+        <p>Auto Upgrades</p>
+      
+           <table>
+             <tr>
+               <td id = "auto-cost">Cost: </td>
+               <td id = "auto-stock">Cost: 5000</td>
+             </tr>
+             <tr>
+               <td><button onclick="upgrade('auto_click')">Automatic Clicker</button></td>
+               <td><button onclick="upgrade('auto_restore')">Automatically Restock</button></td>
+             </tr>
+             <tr>
+               <td id = "upgrade-amount3">[0]</td>
+               <td id = "upgrade-amount4">[0]</td>
+             </tr>
+           </table>
+      
+      </div>
+       
+    </div>
+     
+        <p>Options:</p>
+        <div id="setting">
+      <button onclick="save()">save</button>
+      <button onclick="DEBUG('GONE')">reset</button>
+          <button onclick="delSave()">delete save</button>
+          
+          
+        </div>
+            <div class="buffer"></div>
+        </div>
+      <script>
+        let score = 0;
+        const display = document.getElementById("display");
+        const cookie_img = document.getElementById("cookieimg");
+        const cookie_cost_click = document.getElementById("click-up-cost");
+        const cookie_cost_tough = document.getElementById("tough-up-cost");
+        const cookie_cost_restore = document.getElementById("restore-cost");
+        const cookie_cost_autoclick = document.getElementById("auto-cost");
+        const cookie_cost_autorestore = document.getElementById("auto-stock");
+        
+        const upgradeVal1 = document.getElementById("upgrade-amount1");
+        const upgradeVal2 = document.getElementById("upgrade-amount2");
+        const upgradeVal3 = document.getElementById("upgrade-amount3");
+        const upgradeVal4 = document.getElementById("upgrade-amount4");
+        display.value = score;
+        
+        let cookie_max = 60;
+        let cookie_hlth = cookie_max;
+        let cookie_punch = 1;
+        let auto_interval = 0;
+        let auto_restock = false;
+        let auto_restore_count = 0;
+        
+        if (localStorage.getItem("score") !== null){
+          score = Number(localStorage.getItem("score"));
+          display.value = score;
+        }  
+        if (localStorage.getItem("health") !== null){
+          cookie_hlth = Number(localStorage.getItem("health"));
+        }
+        if (localStorage.getItem("maxHealth") !== null){
+          cookie_max = Number(localStorage.getItem("maxHealth"));
+        }
+        if (localStorage.getItem("punch") !== null){
+          cookie_punch = Number(localStorage.getItem("punch"));
+        }
+        if (localStorage.getItem("autoclick") !==null ){
+          auto_interval = Number(localStorage.getItem("autoclick"));
+        }
+        if (localStorage.getItem("restock") !== null){
+          auto_restock = ((localStorage.getItem("restock")) == "true");
+        }
+        
+        cookie_eat();
+        render_upgrades();
+        
+        function get_cookie(){
+          if (cookie_hlth > 0){
+            score += cookie_punch;
+            cookie_hlth -= cookie_punch;
+            console.log(cookie_hlth);
+            display.value = score;
+            cookie_eat()
+            render_upgrades();
+          }
+          
+        }
+        setInterval(auto_clicker,(10000-(auto_interval * 10)));
+        function auto_clicker(){
+          if (auto_interval > 0){
+            get_cookie();
+          }
+          auto_restore_count++;
+          if (auto_restore_count >= 5 && auto_restock == true){
+            auto_restore_count = 0;
+            upgrade("restore");
+          }
+        }  
+        function cookie_eat(){
+          let divider = (cookie_max / 29);
+          console.log(divider);
+          console.log(divider * 29)
+          if (cookie_hlth >= 27 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie00.png";
+          }else if(cookie_hlth >= 26 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie01.png";
+          }else if(cookie_hlth >= 25 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie02.png";
+          }else if(cookie_hlth >= 24 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie03.png";
+          }else if(cookie_hlth >= 23 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie04.png";
+          }else if(cookie_hlth >= 22 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie05.png";
+          }else if(cookie_hlth >= 21 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie06.png";
+          }else if(cookie_hlth >= 20 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie07.png";
+          }else if(cookie_hlth >= 19 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie08.png";
+          }else if(cookie_hlth >= 18 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie09.png";
+          }else if(cookie_hlth >= 17 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie10.png";
+          }else if(cookie_hlth >= 16 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie11.png";
+          }else if(cookie_hlth >= 15 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie12.png";
+          }else if(cookie_hlth >= 14 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie13.png";
+          }else if(cookie_hlth >= 13 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie14.png";
+          }else if(cookie_hlth >= 12 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie15.png";
+          }else if(cookie_hlth >= 11 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie16.png";
+          }else if(cookie_hlth >= 10 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie17.png";
+          }else if(cookie_hlth >= 9 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie18.png";
+          }else if(cookie_hlth >= 8 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie19.png";
+          }else if(cookie_hlth >= 7 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie20.png";
+          }else if(cookie_hlth >= 6 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie21.png";
+          }else if(cookie_hlth >= 5 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie22.png";
+          }else if(cookie_hlth >= 4 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie23.png";
+          }else if(cookie_hlth >= 3 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie24.png";
+          }else if(cookie_hlth >= 2 * divider){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie25.png";
+          }else if(cookie_hlth > 0){
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie26.png";
+          }else{
+            cookie_img.src = "https://pixeldude.neocities.org/cookie/sprite_cookie27.png";
+          }
+          
+        }
+        
+        function render_upgrades(){
+          cookie_cost_click.textContent = "Cost: " + (15*cookie_punch);
+          cookie_cost_tough.textContent = "Cost: " + (Math.floor(20+(cookie_max/4)));
+          if (score >= Math.floor(cookie_max /4)){
+            cookie_cost_restore.textContent = "Cost: " + (Math.floor(cookie_max/4));
+          }else if(score >= Math.floor(cookie_max / 6)){
+            cookie_cost_restore.textContent = "Cost: " + (Math.floor(cookie_max/6));
+          }else{
+            cookie_cost_restore.textContent = "Cost: ?";
+          }
+          cookie_cost_autoclick.textContent = "Cost: "+ (Math.floor(100 + ((30 * auto_interval))));
+          if (auto_restock == true){
+            cookie_cost_autorestore.textContent = "Bought";
+          }
+          upgradeVal1.textContent = "[" + cookie_punch + "]";
+          upgradeVal2.textContent = "[" + cookie_max + "]";
+          upgradeVal3.textContent = "[" + auto_interval + "]";
+          upgradeVal4.textContent = "[" + auto_restock + "]";
+        }
+        
+        function DEBUG(x){
+          if (x == 'GONE'){
+            score = 0;
+            cookie_punch = 1;
+            cookie_max = 60;
+            cookie_hlth = cookie_max;
+            display.value = score;
+            cookie_eat();
+          }else if (x =='COOKIE'){
+            score += 10000000;
+          }
+        }
+        
+        function save(){
+          localStorage.setItem("score",score);
+          localStorage.setItem("health",cookie_hlth);
+          localStorage.setItem("maxHealth",cookie_max);
+          localStorage.setItem("punch",cookie_punch);
+          localStorage.setItem("autoclick",auto_interval);
+          localStorage.setItem("restock",auto_restock);
+        }
+      
+        function delSave(){
+          localStorage.clear();
+        }
+        
+        function upgrade(type){
+          if (type == "click"){
+            if (score >= (15*cookie_punch)){
+              score -= (15 * cookie_punch)
+              cookie_punch += 1;
+            }
+
+          }else if(type == "health"){
+            if (score >= (Math.floor(20+(cookie_max/4)))){
+              score -= Math.floor(20 + (cookie_max / 4));
+              cookie_max += 10;
+            }
+            
+          }else if(type == "restore"){
+            let cookie_restore = 0;
+            if (score >= Math.floor(cookie_max /4)){
+              score -= Math.floor((cookie_max / 4));
+              cookie_restore = cookie_max;
+            }else if (score >= Math.floor(cookie_max / 6)){
+              score -= Math.floor(cookie_max / 6);
+              cookie_restore = (cookie_max / 2);
+            }else{
+              cookie_restore = score + 5;
+              score = 0;
+            }
+            if ((cookie_hlth + cookie_restore) > cookie_max){
+              cookie_hlth = cookie_max;
+            }else{
+              cookie_hlth += cookie_restore;
+            }
+              }else if (type == "auto_click"){
+      //i changed the formula for the cost to use (auto_interval) instead of (cookie_punch)
+      //idk why it used (cookie_punch) before
+              if (score >= Math.floor(100 + ((30 * auto_interval))) && (auto_interval < 990)){
+                score -= Math.floor(100 + ((30 * auto_interval)));
+                auto_interval += 10
+            }
+              }else if (type == "auto_restore"){
+              if ((score >= 5000) && auto_restock === false){
+                score -= 5000;
+                auto_restock = true;
+            }
+            
+          }
+          display.value=score;
+          cookie_eat();
+          render_upgrades();
+        }
+      
+      
+      </script>
+    </body>
