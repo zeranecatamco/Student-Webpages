@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic_Tac_Toe</title>
+    <link rel="stylesheet" href="ttt.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="turn-container"> 
+<!--displays the current player's turn; either X or O-->
+        <h3>Turn For</h3>
+        <div class="turn-box align">X</div> 
+<!--shows that it is player X's turn -->
+        <div class="turn-box align">O</div>
+<!--shows that it is player O's turn-->
+        <div class="bg"></div>
+    </div>
+    <div class="main-grid">
+<!--container that holds the actual Tic Tac Toe game-->
+        <div class="box align">0</div>
+        <div class="box align">1</div>
+        <div class="box align">2</div>
+        <div class="box align">3</div>
+        <div class="box align">4</div>
+        <div class="box align">5</div>
+        <div class="box align">6</div>
+        <div class="box align">7</div>
+        <div class="box align">8</div>
+<!--9 boxes total where players will place X or O-->
+    </div>
+   <h2 id="results"></h2>
+<!--results of game will be displayed-->
+  <div class="scoreboard">
+    <p id="score-X">Player X: 0</p>
+    <p id="score-O">Player O: 0</p>
+    <p id="score-Draw">Draws: 0</p>
+</div>
+  
+    <button id="play-again">Play Again</button>
+<!--button resets game after it ends-->
+    <script src="ttt.js"></script>
+</body>
+</html>
