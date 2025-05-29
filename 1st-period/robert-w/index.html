@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang = "en">
+  <style>
+    body{
+      margin:0;
+      background-image:url('jerma-giygas-meme.gif');
+    }
+    .div-wrapper{
+      display:grid;
+      grid-template-columns: repeat(7,1fr);
+      grid-auto-row:200px;
+      background-color:transparent;
+      grid-template-areas:
+      "bingus one one two two two flingus"
+      "bungus buffer1 buffer1 buffer1 buffer1 buffer1  shmungus"
+      "bungus three three four four four shmungus"
+      "bungus buffer2 buffer2 buffer2 buffer2 buffer2  shmungus"
+      "bungus five five six six six shmungus"
+      "bungus buffer3 buffer3 buffer3 buffer3 buffer3  shmungus"
+      
+    }
+    div{
+      height:250px;
+      text-align:center;
+      color:white;
+      font-family: 'Times New Roman', serif;
+      background-color:black;
+    }
+    #bufferone{
+      grid-area:buffer1;
+    }
+    #buffertwo{
+      grid-area:buffer2;
+    }
+    #bufferthree{
+      grid-area:buffer3;
+    }
+    .buffer{
+      height:50px;
+      background-color:black;
+    }
+    .intro{
+      height:500px;
+      background-color:transparent;
+      background-image:url('occult_background.png');
+      background-repeat:no-repeat;
+      background-size:cover;
+    }
+    
+    .one{
+      grid-area:one;
+    }
+    
+    .two{
+      grid-area:two;
+    }
+    
+    .three{
+      grid-area:three;
+    }
+    
+    .four{
+      grid-area:four;
+    }
+    
+    .five{
+      grid-area:five;
+    }
+    
+    .six{
+      grid-area:six;
+    }
+
+    .bingus{
+      background-color:transparent;
+      grid-area:bingus;
+    }
+
+    .flingus{
+      background-color:transparent;
+      grid-area:flingus;
+    }
+
+    .img-fill{
+      width:100%;
+      height:100%;
+      object-fit:fill;
+    }
+    h1{
+      color:rgb(79, 3, 3);
+    }
+  </style>
+  <body>
+    <div class="intro">
+       <p>welcome to my:</p>
+      <h1>EVIL WEBPAGE</h1>
+      <p>Hello there! my name is Robert Walton. I got into coding because</p>
+      <p>I was interested in making videogames, and silly projects in general.</p><br>
+      <p>Because this is my protfolio for my final project, i wanted to do something extra silly.</p>
+      <p>So i decided to give all of the projects i've worked on this year a makeover.</p>
+      <p>I was told to make my website "modern", and to update all of my projects to reflect that...</p>
+      <p>But i find the modern website asthetic to be boring, so i decided to make it all EVIL instead!</p>
+      
+    </div>
+    <div class="div-wrapper">
+      <div class="bingus"><img class="img-fill" src="shadow_left.png"></div>
+      <div class="one"><a href="eat_cookie.html"><img class="img-fill" src="eat-cookie-screenshot.png"></a></div>
+      <div class="two">
+        <p>here you can find:</p>
+      <h2>EVIL PICNIC</h2>
+        <p>this is a simple clicker game project i made.</p>
+        <p>the goal is to eat the cookie, and then buy</p>
+        <p>more cookies to eat. simple enough.</p>
+      </div>
+      <div class="buffer" id="bufferone"></div>
+      <div class="three"><a href="tic-tac-toe.html"><img class="img-fill" src="tic-tac-toe-screenshot.png"></a></div>
+      <div class="flingus"><img class="img-fill" src="shadow_right.png"></div>
+      <div class="four">
+        <p>here you can find:</p>
+        <h2>EViL TIC TAC TOE</h2>
+        <P>which is the exact same as normal tic tac toe...</P>
+        <p>except that getting three in a row causes you to LOOSE instead</p>
+        <p>...</p>
+        <p>kind of usesless honestly</p>
+      </div>
+      <div class="buffer" id="buffertwo"></div>
+      <div class="five"><a href="calc.html"><img class="img-fill" src="calc-screenshot.png"></a></div>
+      <div class="six">
+        <p>here you can find:</p>
+        <h2>EVIL CALCULATOR?</h2>
+        <p>it's actually just a normal calculator we painted red</p>
+        <p>that's about it</p>
+      </div>
+      <div class="buffer" id="bufferthree"></div>
+    </div>
+  </body>

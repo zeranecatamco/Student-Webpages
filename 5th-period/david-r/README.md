@@ -4,15 +4,13 @@
 Hi! My name is David, and I'm a junior at Mt. Eden High School. I'm currently taking AP Computer Science Principles. This class has taught me key programming concepts like variables, arrays, loops, and functions, as well as how to build web pages using HTML, CSS, and JavaScript. I enjoy creating projects that are both fun and challenging. Outside of coding, I like wrestling, hiking, spending time with friends, and listening to music by artists like The Marías and Mac DeMarco.
 
 ## About This Project
-This portfolio website is my final project for AP Computer Science Principles. It showcases who I am, what I’ve learned throughout the year, and the projects I’ve created in class. By building this site, I’ve gained a deeper understanding of web development and improved my coding skills through hands-on practice.
+This portfolio website is my final project for AP Computer Science Principles. It shows who I am, what I’ve learned throughout the year, and the projects I’ve created in class. By building this site, I’ve gained a better understanding of web development and improved my coding skills through this.
 
 ## What’s Included in the Portfolio Site
 - **Home Page** – A welcome message and intro to the site  
-- **About Me** – Personal interests and background information  
-- **What I’ve Learned** – Topics like HTML, CSS, JavaScript, binary, loops, variables, arrays, and functions  
-- **My Goals** – Academic and personal goals for the future  
+- **About Me** – Personal interests and background information    
 - **My Projects** – Descriptions and links to class projects  
-- **Extras** – My favorite website and a photo of Mt. Eden High School  
+- **Pictures** – Picture of my wrestling team and me wrestling
 
 ## Featured Projects
 - **Tic-Tac-Toe**  
@@ -25,5 +23,5 @@ This portfolio website is my final project for AP Computer Science Principles. I
   Inspired by *Squid Game*, this game challenges players to move only when the light is green. If the player moves while the light is red, the game ends. It’s a fun and interactive project that uses conditionals and timers.
 
 ## Links
-- 🔗 [GitHub Repository](https://github.com/yourusername/final-project-portfolio)  
-- 🌐 [Live Website](https://yourusername.github.io/final-project-portfolio/)
+- 🔗 [GitHub Repository](https://github.com/David-r01/Final-Project)  
+- 🌐 [Live Website](https://david-r01.github.io/Final-Project/)
