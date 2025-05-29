@@ -1,121 +1,162 @@
-<!-- <!DOCTYPE>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8"/>
-    <title>Shreya Rathaur's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-<body>  
-  <header> 
-  <h1>Shreya Rathaur's AP Computer Science Portfolio</h1>
-    <p> Hello! My name is Shreya Rathaur and I am currently in AP Computer Science Principles. Before this class, I had absolutely no background knowledge on coding- I didn't even know the names of the different languages. Computer Science and coding was not something I saw myself doing in the future, but I took the class to gain an experience of coding that I otherwise wouldn't have had. This class taught me a lot thanks to Mr. Alvarado and it not only made computer science and coding more accessible and understandable, it made it more enjoyable. I feel like the satisfaction you get when you resolve a bug in your code and it starts working as intended is unmatched!</p>
-  </header>
-<!--   <a href="calculator.html">Check out my Calculator</h1>
-  <script src="index.js"> -->
-  
+<html>
+    <head>
 
-    
+<link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+        <link rel="preconnect" href="https://fonts.gstatic.com&quot; crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap&quot; rel="stylesheet">        <title>Secure Password Generator</title>
+        <style>
+body {
+    margin: 0px;
+    height: 100vh;
+    background-color: #0D0221;
+    color: #020122;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", serif;
+}
 
- -->
-<!DOCTYPE html>
-<html lang = "en">
-<head>
-  <meta charset="UTF-8">
-  <title>My Personal Webpage</title>
-  <style> 
-    body{
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      background-color: rgb(245,245,220);
-    }
-    
- .container {
-      margin: 10px;
-      background-color: white;
-      padding: 20px;
-      border-radius: 15px;
-      border: 10px solid rgb(173, 216, 230);
-     display: flex;
-     flex-direction: column;
+#title{
+    font-family: "Karla", serif;
+    font-weight: 800;
+    margin-bottom: 10px;
+    line-height: 33px;
+}
 
-    }
+#green-text{
+    display: block;
+    color: #0F084B;
+    margin: 0px;
+}
+
+#description{
+    margin-top: 0px;
+    margin-bottom: 35px;
+    color: #0F084B;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 100px;
     
-    h1{
-      text-align: center;
-      color:rgb(0,0,0);
-      background-color: rgb(173, 216, 230);
-      padding: 1rem;
-      border-radius: 10px;
-      border: solid black 5px;
-      margin-top: 0.25rem
-    }
-    
-    img{
-        width: 100%;
-        border-radius: 25px;
+}
+
+#container1{
+    background-color: #A6CFD5;
+    padding: 70px 70px;
+    width: 600px;
+    margin: 100px;
+    border-radius: 150px;
+}
+
+
+#btn1{
+    background-color: #0F084B;
+    color: #ffffff;
+    width: 145px;
+    margin-bottom: 10px;
+    padding: 7px 7px;
+    border: none;
+    border-radius: 20px;
+    font-family: "Inter", serif;
+}
+#text-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.passwords-container{
+    margin: 16px auto;
+    text-align: center;
+    width: 100%;
+}
+
+.passwords{
+    margin: 5px;
+    width: 162px;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px 0px;
+    background-color: #0D0221;
+    color: #C2E7D9;
+    font-weight: 500;
+    height: 20px;
+}
+
+hr{
+    color: #2F3E53;
+}
+
+#password1, #password3{
+    margin: 0px 10px 0px 0px;
+}
+
+#password2, #password4{
+    margin: 0px 0px 0px 10px;
+}
+        </style>
+    </head>
+    <body>
+        <div class="containers">
+            <div id="container1">
+
+                <div id="text-container">
+                    <h1 id="title">Generate a <span id="green-text">random password</span></h1>
+                    <p id="description">Never use an unsecure password again.</p>
+                    <button id="btn1">Generate Password</button>
+                </div>
+                <hr>
+
+ <div class="passwords-container">
+         <span class="passwords" id="password1"></span>
+                    <span class="passwords" id="password2"></span>
+                </div>
+               
+            </div>
+
+          
+        
+               
+            </div>
+        </div>
+            <script>
+                 const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
       
-    }
-    a{
-      text-decoration: none;
-      color: rgb(23, 131, 202);
-    }
-    a:hover{
-      text-decoration: underline;
-    }
-
-  </style>
-  </head>
-  <body>
-    <img src="https://germanshepherdshop.com/cdn/shop/articles/everything-you-need-to-know-about-the-black-german-shepherd-476400.jpg?v=1621276651">
-      <div class = "container">   
-    <h1>Shreya Rathaur's Personal Webpage!</h1>
-    <div class = "container">
-    <p> Get To Know A Little Bit About Me Through These Links:  </p>
+     const password1El = document.getElementById("password1");
+     const password2El = document.getElementById("password2"); 
     
-    <div class = "contact">
-    <p> <a href="https://www.coolmathgames.com/">Cool Math Games</a></p>
-      </div>
-      <p> <a href="https://www.google.com/search?q=snake+game&oq=snake+game&gs_lcrp=EgZjaHJvbWUyDwgAEEUYORiDARixAxiABDINCAEQABiDARixAxiABDINCAIQLhiDARixAxiABDIKCAMQABixAxiABDIHCAQQABiABDIKCAUQABixAxiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIGCAkQABgD0gEIMTYzNGowajeoAgCwAgA&sourceid=chrome&ie=UTF-8">Snake Game</a></p>
       
-    </div>
-     <div class = "container">
-    <h2>About Me</h2>
-       
-    <p>Hi, my name is Shreya Rathaur and I am a high school senior. I am the youngest child in my family of 5 (including my dog) as I have an elder sister who is 21. I have a dog named Zena and she is a Black German Shepherd who is 5 years old. My family and I got my dog from a shelter in Hollister and ever since then she has been my family's best companion! Below, I will talk about my hobbies, interests, and favorite things! Thank you for visiting my website!</p>
-    </div>
-    <div class = "container">
-    <h2>Hobbies, Interests, Favorite Things</h2>
-    <ul>
-      <li>Dancing</li>
-      <li>Playing Piano</li>
-      <li>Playing Alto-Saxophone</li>
-      <li>Playing Tennis</li>
-      <li>Cooking</li>
-      <li>Learning New Things ^^</li>
-    </ul>
-    </div>
+      const button1 = document.getElementById("btn1");
+      
+      
+     button1.addEventListener("click", function(){
+      generatePassword();
+      })
+     
+   
+      
+     function generatePassword(){
+     let pw1 = "";
+  for(let i = 0; i < 14; i++){
+     let randomNumber = Math.floor(Math.random()*characters.length);  
+     pw1 += characters[randomNumber];
+     }
+     password1.textContent = pw1;
+                        
     
-    <div class = "container">
-    <h2>2025 Goals </h2>
-    <ul>
-      <li>Wake up early to have time</li>
-      <li>Do well on my APs and the tests</li>
-      <li>Spend more time with my parents</li>
-      <li>Play tennis more frequently</li>
-      <li>Brush my dog's teeth every single day</li>
-      <li>Learning New Things!!</li>
-    </ul>
-    </div>
 
-    <footer>
-       <div class = "container">
-         <p>&copy; 2025 Shreya Rathaur's Webpage</p>  
-    </footer>
-      </div>
-    </div> 
-</body>
+     let pw2 = "";
+  for(let i = 0; i < 14; i++){
+     let randomNumber = Math.floor(Math.random()*characters.length);  
+     pw2 += characters[randomNumber];
+     }
+     password2.textContent = pw2;
+      
+    
+            </script>
+    </body>
 </html>
-    
-    
-
 
 
