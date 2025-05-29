@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch</title>
+  <link rel="stylesheet" href="Stopwatch.css">
+  </head>
+<body>
+ <!--stopwatch container-->
+<div class="stopwatch">
+    <h1 id="displayTime">00:00:00</h1>
+  <!--buttons for start stop and reset-->
+    <div class="buttons">
+  <!--stop button when clicked will call the watchStop function-->
+      <img src="images/stop.png" onclick="watchStop()">
+ <!-- start button when clicked will call the watchStart function-->
+      <img src="images/start.png"onclick="watchStart()">
+ <!--reset button when clicked will call the watchReset function-->
+      <img src="images/reset.png" onclick="watchReset()">
+  </div>
+  <script src="Stopwatch.js"></script>
+</body>
+</html>
