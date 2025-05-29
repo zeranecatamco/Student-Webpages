@@ -35,7 +35,7 @@ It's just a calculator.
 
 ### 4. would be my personal website... but.....
 I'm sorry, i didn't get the css for this updated before the end of wednesday (the due date for the project).
-maybe if i get to it i'll update the website tommorrow and fix add it to the others.
+maybe if i get to it i'll update the website tommorrow and add it to the others.
 
 ## Links
 
