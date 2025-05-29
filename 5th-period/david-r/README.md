@@ -1,15 +1,29 @@
-# David Ramos
+# David R. – Final Portfolio Project
 
-- Hi! My name is David, and I'm a student at Mt. Eden High School. I'm currently taking AP Computer Science in my Junior year of high school. I've learned so much about this class like what are variables and arrays. I really enjoy creating projects because it was super fun. Outside of coding, I enjoy wrestling, hiking, hanging out with friends, and listening to music from artist like "The Marias" and "Mac Demarco".
+## About Me
+Hi! My name is David, and I'm a junior at Mt. Eden High School. I'm currently taking AP Computer Science Principles. This class has taught me key programming concepts like variables, arrays, loops, and functions, as well as how to build web pages using HTML, CSS, and JavaScript. I enjoy creating projects that are both fun and challenging. Outside of coding, I like wrestling, hiking, spending time with friends, and listening to music by artists like The Marías and Mac DeMarco.
 
-- This project is the final assignment for my AP Computer Science Principles class. The project it's making a website that tells who I am, what I’ve learned this year, and the projects I’ve made over these past months in class. Throughout the class, I’ve learned what are HTML, CSS, JavaScript, and programming fundamentals like arrays, loops, variables, binary, and functions and how to use these when coding. Because of making this web page, it has helped me improve in this class by learning how to code better.
+## About This Project
+This portfolio website is my final project for AP Computer Science Principles. It showcases who I am, what I’ve learned throughout the year, and the projects I’ve created in class. By building this site, I’ve gained a deeper understanding of web development and improved my coding skills through hands-on practice.
 
-- My profolio has a home page, what I have learned in this class, a about me section, what are my goals, my projects throughout this class year, and extras that are, my favorite website and a picture of my school.
+## What’s Included in the Portfolio Site
+- **Home Page** – A welcome message and intro to the site  
+- **About Me** – Personal interests and background information  
+- **What I’ve Learned** – Topics like HTML, CSS, JavaScript, binary, loops, variables, arrays, and functions  
+- **My Goals** – Academic and personal goals for the future  
+- **My Projects** – Descriptions and links to class projects  
+- **Extras** – My favorite website and a photo of Mt. Eden High School  
 
-- My Projects:
-  - Tic-Tac-Toe: A two player game where players take turns placing X and O on a grid. The first to get three in a row wins. It's -competitive, fun, and easy to play.
-  - Clock App: A digital clock app that displays the current time and lets us change the background color.
-  - Red Light Green Light: A game inspired by Squid Game where the player must move only when the light is green. If you move when the light is red, you're out! It’s fun and challenging.
+## Featured Projects
+- **Tic-Tac-Toe**  
+  A classic two-player game where players take turns placing Xs and Os on a 3x3 grid. The first player to line up three symbols in a row wins. It's competitive, fun, and easy to play.
 
-- A link to my GitHub repository: [Github Repository](https://github.com/David-r01/Final-Project)
-- A link to my live site that is running through GitHub Pages: [Live Website](https://david-r01.github.io/Final-Project/)
+- **Clock App**  
+  A digital clock that displays the current time in real time and allows the user to change the background color. It’s a simple but useful app that demonstrates working with time and user input.
+
+- **Red Light Green Light**  
+  Inspired by *Squid Game*, this game challenges players to move only when the light is green. If the player moves while the light is red, the game ends. It’s a fun and interactive project that uses conditionals and timers.
+
+## Links
+- 🔗 [GitHub Repository](https://github.com/yourusername/final-project-portfolio)  
+- 🌐 [Live Website](https://yourusername.github.io/final-project-portfolio/)

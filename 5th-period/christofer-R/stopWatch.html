@@ -1,0 +1,175 @@
+<html>
+  <style>
+    body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman';
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #1e3a8a; /* dark blue background */
+}
+
+h1 {
+    color: #93c5fd; /* light blue text */
+    text-align: center;
+    background-color: #1e3a8a; /* match container background */
+    padding: 20px 0px;
+}
+
+.digit {
+    font-size: 50px;
+    color: #dbeafe; /* very light blue/white */
+    margin: 0px 0px;
+}
+
+.txt {
+    font-size: 30px;
+    color: #dbeafe;
+    margin: 0px 10px;
+}
+
+#buttons {
+    margin-top: 50px;
+}
+
+.btn {
+    width: 100px;
+    padding: 10px 15px;
+    margin: 0px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.5s;
+    color: white;
+    font-weight: 500;
+    border: solid #93c5fd; /* light blue border */
+    background-color: #1e40af; /* medium blue button background */
+}
+
+.btn:hover {
+    background-color: #3b82f6; /* lighter blue on hover */
+    border-color: #bfdbfe; /* even lighter border on hover */
+}
+
+#start, #stop, #reset {
+    background-color: #1e40af; /* consistent blue for all buttons */
+}
+</style>
+  
+  <body>
+    <div class="container">
+        <h1>Computer Science Project 1</h1>
+        <h1>Online Timer & Stopwatch</h1> <!--Tittle-->
+        <div id="time">
+  <span class="digit" id="hr"> <!--These digits seperate hour, min, and sec-->
+        00</span>
+  <span class="txt">:</span>
+  <span class="digit" id="min">
+        00</span>
+  <span class="txt">:</span>
+  <span class="digit" id="sec">
+        00</span>
+  <span class="txt">.</span>
+  <span class="digit" id="count">
+        00</span>
+</div>
+        <div id="buttons">
+            <button class="btn" id="start"> <!--starts the timer-->
+                Start</button>
+            <button class="btn" id="stop"><!--stops the timer-->
+                Stop</button>
+            <button class="btn" id="reset"><!--Resets the timer-->
+                Reset</button>
+    </div>
+  </div>
+</body> 
+</html>   
+<script>
+let startBtn = document.getElementById('start');
+let stopBtn = document.getElementById('stop');
+let resetBtn = document.getElementById('reset');
+
+let hour = 00; <!--Indicates Variables -->
+let minute = 00;
+let second = 00;
+let count = 00;
+
+startBtn.addEventListener('click', function () {
+    timer = true; <!--Allows for button to be clicked and run the function start-->
+    stopWatch();
+});
+
+stopBtn.addEventListener('click', function () {
+    timer = false; <!--Allows for button to be clicked and run the function stop-->
+});
+
+resetBtn.addEventListener('click', function () {
+    timer =false;  <!--Allows for button to be clicked and run the function reset and reset hour, minute, second, and count-->
+    hour =0;
+    minute =0;
+    second =0;
+    count =0;
+    document.getElementById('hr').innerHTML = "00";   <!--This section updates each section /hr,min,sec,count-->
+    document.getElementById('min').innerHTML = "00";
+    document.getElementById('sec').innerHTML = "00";
+    document.getElementById('count').innerHTML = "00";
+});
+
+function stopWatch() {
+    if (timer) {   <!--When timer sarts, count starts coutning numbers-->
+        count++;
+
+        if (count == 100) { <!--When count reaches 100, 1 second has passed-->
+            second++;
+            count = 0;
+  }
+
+        if (second == 60) { <!--When count reaches 60 secnds, 1 minute has passed-->
+            minute++;
+            second = 0;
+  }
+
+        if (minute == 60) { <!--When count reaches 60 minute, 1 hour has passed-->
+            hour++;
+            minute = 0;
+            second = 0;
+  }
+
+        let hrString = hour;
+        let minString = minute;  <!--Indicates Variables-->
+        let secString = second;
+        let countString = count;
+
+        if (hour < 10) {
+            hrString = "0" + hrString;   <!--These if statmesnts basically indicate if hour, minuete, second, or count is less than 10, then a zero is pu into the begining of the strings-->
+    }
+
+        if (minute < 10) {
+            minString = "0" + minString;
+   }
+
+        if (second < 10) {
+            secString = "0" + secString;
+   }
+
+        if (count < 10) {
+            countString = "0" + countString;
+  }
+
+        document.getElementById('hr').innerHTML = hrString;
+        document.getElementById('min').innerHTML = minString;
+        document.getElementById('sec').innerHTML = secString;          <!--This section updates each section /hr,min,sec,count-->
+        document.getElementById('count').innerHTML = countString;
+        setTimeout(stopWatch, 10);
+    }
+}
+    </script>
+</html>
+</body>
