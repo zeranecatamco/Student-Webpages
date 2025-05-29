@@ -61,6 +61,35 @@ h1 {
   font-weight: 600;
 }
 
+
+.project-section {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.project-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.project-section p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.project-section strong {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.project-section small {
+  font-size: 0.9em;
+  color: #000;
+}
+
 h2{
   background-color: #343a40;
   color: #f8f9fa;
@@ -192,5 +221,3 @@ a{
   color: white;
   padding: 1rem;
 }
-
-
