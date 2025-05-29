@@ -15,7 +15,7 @@ An overview of my technical skills
 
 A showcase of featured projects
 
-Links to my GitHub and résumé
+Links to my GitHub and Repository
 
 A responsive design for various screen sizes
 
