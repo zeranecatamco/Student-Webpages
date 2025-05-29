@@ -18,5 +18,5 @@ This portfolio holds mostly everything I've made in this year's class of AP Comp
 Look into the website for more detailed descriptions!
 
 ## Links
-[GitHub repository](https://github.com/fortniteblaster75/Final-Project/tree/main)
+[GitHub Repository](https://github.com/fortniteblaster75/Final-Project/tree/main)
 [Live Website](https://fortniteblaster75.github.io/Final-Project/#projects)
