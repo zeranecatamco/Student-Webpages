@@ -1,0 +1,152 @@
+*{
+    color: white;
+    font-family: "Big Shoulders", sans-serif;
+    transition: 0.2s ease-in-out;
+    user-select: none;
+}
+
+.align{/*aligns box*/ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{/*the main portion of the looks, background*/
+    background-image:linear-gradient(to right, #F2E9E4, #d9d9d9);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    text-align: center;
+    padding-top: 5vh;
+}
+
+.turn-container{/*container that shows who's turn it is*/
+    width: 170px;
+    height: 80px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+}
+
+.turn-container h3{/*heading for the trun container*/
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+   font-family: "Big Shoulders", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.turn-container .turn-box{/*the actual boxes for the turn container and the turns*/
+    border: 3px solid #000;
+    font-size: 1.6rem;
+    font-weight: 700;
+   font-family: "Big Shoulders", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.turn-container .turn-box:nth-child(even){
+    border-right: none;
+}
+
+.bg{/*background for the turn box*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 85px;
+    height: 40px;
+    background-color: #22223B;
+    z-index: -1;
+}
+
+.main-grid{/*tic tac toe grid*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 250px;
+    width: 250px;
+    margin: 30px auto;
+    border: 2px solid #000;
+}
+
+.box{/*individula boxes*/
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 2px solid #000;
+}
+
+.box:hover{/*adds a little somthing something when you hover on the box*/
+    background-color: #22223B;
+}
+
+#play-again{/*styling for the play again button*/
+    background-color: #22223B;
+    padding: 10px 25px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+   font-family: "Big Shoulders", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  
+}
+
+#play-again:hover{/*hover for play again button*/
+    padding: 10px 40px;
+    background-color: #4A4E69;
+    color: #000;
+  font-family: "Tektur", sans-serif;
+  
+}
+
+.scoreboard{
+  font-size: 1.2rem;
+  background-color: grey;
+  background-image: linear-gradient(to right,#22223B 0%, #4A4E69 100%);
+  border: 10px;
+  border-radius: 20px;
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid white;
+  margin-bottom: 2rem; 
+  display: block;
+  
+}
+
+#score-X{
+  font-family: "Tektur", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100
+}
+
+#score-O{
+  font-family: "Tektur", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+#score-Draw{
+  font-family: "Tektur", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}

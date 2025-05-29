@@ -1,0 +1,26 @@
+*{
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
+ font-family: "poppins";
+}
+
+body{ 
+ background-image:linear-gradient(to right, #F2E9E4 0%, #C9ADA7 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+canvas{
+  background: #e0e1dd;
+  
+}
+
+.raleway-<uniquifier> {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}

@@ -1,0 +1,52 @@
+body {
+        /*stylig for the whole background*/
+       background-image: linear-gradient(to right,#F2E9E4, #e6ccb2);
+        width: 50%;
+        margin: 0 auto;
+        font-family: "Indie Flower", cursive;
+        font-weight: 400;
+        font-style: normal;
+
+        .container {
+          /*box atound the list of to dos*/
+          width: 360px;
+          background-color: #C9ADA7;
+          border: 1px solid black;
+        }
+
+        #inputField {
+          /*box to type in -> where you insert the to-dos*/
+          width: 300px;
+          height: 46px;
+          border: 2px solid black;
+          font-size: 25px;
+          vertical-align: middle;
+          padding: 1px;
+          font-family: "Indie Flower", cursive;
+          font-weight: 400;
+          font-style: normal;
+        }
+
+        #addToDo {
+          /*Plus box*/
+          height: 50px;
+          width: 46px;
+          border: 2px solid black;
+          vertical-align: middle;
+          font-size: 30px;
+          color: #2b2d42;
+        }
+
+        .to-dos {
+          /*formatting for the to do list*/
+          margin-top: 20px;
+          padding-left 20px;
+        }
+
+        .list-item {
+          /*formatting for individual lines of the list*/
+          margin-bottom: 12px;
+          cursor: pointer;
+          font-size: 25px;
+        }
+   
