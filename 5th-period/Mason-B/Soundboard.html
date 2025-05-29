@@ -1,0 +1,127 @@
+html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sound Board</title>
+  <style>
+    body {
+      background-color: #d6f0ff;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    #soundBoard-container {
+      background: rgba(255, 255, 255, 0.3);
+      max-width: 400px;
+      width: 100%;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      border: 4px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    h2 {
+      color: black;
+      margin: 8px 0;
+      font-size: 40px;
+    }
+
+    h3 {
+      color: #7209b7;
+      margin: 16px;
+      font-size: 22px;
+    }
+
+    button {
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 150px;
+      font-size: 22px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: 0.4s;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 5px;
+    }
+
+    button:hover {
+      background: #8b48d7;
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body>
+  <div id="soundBoard-container">
+    <h2>Sound Board</h2>
+    <h3>Drum Kit</h3>
+    <button id="btn1">Snare Drum (Q)</button>
+    <button id="btn2">Bass Drum (W)</button>
+    <button id="btn3">Cymbals (A)</button>
+    <button id="btn4">Hi-Hats (S)</button>
+    <button id="btn5">Toms (Z)</button>
+
+    <h3>Tambourine</h3>
+    <button id="btn6">Ti Ti (O)</button>
+    <button id="btn7">Ta (P)</button>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const sounds = {
+        snare: "https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/snare.wav",
+        base: "https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/tom-mid.wav",
+        cymbal: "https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/crash.wav",
+        hihat: "https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/hihat-open.wav",
+        toms: "https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/tom-mid.wav",
+        twoNote: "https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/hihat-close.wav",
+        oneNote: "https://raw.githubusercontent.com/ArunMichaelDsouza/javascript-30-course/master/src/01-javascript-drum-kit/sounds/snare.wav"
+      };
+
+      function playSound(name) {
+        const audio = new Audio(sounds[name]);
+        audio.play();
+      }
+
+      const buttonMap = {
+        btn1: "snare",
+        btn2: "base",
+        btn3: "cymbal",
+        btn4: "hihat",
+        btn5: "toms",
+        btn6: "twoNote",
+        btn7: "oneNote"
+      };
+
+      for (const [id, sound] of Object.entries(buttonMap)) {
+        document.getElementById(id).addEventListener("click", () => playSound(sound));
+      }
+
+      document.addEventListener("keydown", function (event) {
+        const keyMap = {
+          q: "snare",
+          w: "base",
+          a: "cymbal",
+          s: "hihat",
+          z: "toms",
+          o: "twoNote",
+          p: "oneNote"
+        };
+
+        const sound = keyMap[event.key.toLowerCase()];
+        if (sound) playSound(sound);
+      });
+    });
+  </script>
+</body>
+</html>
