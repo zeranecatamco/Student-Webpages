@@ -1,0 +1,659 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Kierian Bautista & Johnathan Rice -->
+  <style>
+		
+		/* Gives the graphics for the SPIN button. */
+    #ROLL {
+      margin-right: 20px;
+      background-color: #FF0000;
+      color: #ffffff;
+      width: 80px; 
+      height: 80px;
+      border-radius: 50%; 
+      font-family: "IMPACT", serif;
+      font-size: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 50px; 
+      border: none;
+      cursor: pointer;
+      border: 3px solid #000000;
+      text-shadow: 2px 2px 2px black;
+			transition: all 0.4s ease;
+    }
+		/* Gives the graphics for the hover effect on the Spin button */
+		#ROLL:hover {
+			background-color: #ff6347; 
+  transform: scale(1.1); 
+  box-shadow: 0 0 10px rgba(255, 99, 71, 0.7);
+		}
+		/* Gives the graphics for the pressing effect on the Spin button */
+		#ROLL:active{
+			transform: scale(0.75);
+			box-shadow:none;
+		}
+		
+		
+		/* Gives the graphics the Increase fun button, like the fact that it is GREEN! */
+    #INCREASE-FUN {
+      background-color: #00A86B;
+      color: #ffffff;
+      border: 3px solid #000000;
+      text-shadow: 2px 5px 4px black;
+			transition: all 0.4s ease;
+    }
+		/* Gives the graphics for the hover effect on the increase fun button */
+		#INCREASE-FUN:hover{
+			background-color: #16F529; 
+  transform: scale(1.1); 
+  box-shadow: 0 0 10px #16F529;
+		}
+		
+		/* Gives the graphics for the pressing effect on the increase fun button */
+		#INCREASE-FUN:active{
+			transform: scale(0.75);
+			box-shadow:none;
+		}
+		/* Gives the graphics the decrease fun button, like the fact that it is BLUE! */
+    #DECREASE-FUN {
+      background-color: #0000FF;
+      color: #ffffff;
+      border: 3px solid #000000;
+      text-shadow: 2px 5px 4px black;
+				transition: all 0.4s ease;
+    }
+		/* Gives the graphics for the hover effect on the decrease fun button */
+		#DECREASE-FUN:hover{
+			background-color: #ADD8E6; 
+  transform: scale(1.1); 
+  box-shadow: 0 0 10px #ADD8E6;
+		}
+			/* Gives the graphics for the pressing effect on the decrease fun button */
+		#DECREASE-FUN:active{
+transform: scale(0.75);
+			box-shadow:none;
+		}
+		
+		/* Gives the graphics the ALL IN button, like the fact that it is yellow */
+		#ALL-IN {
+      background-color: #FFD700;
+      color: #ffffff;
+      border: 3px solid #000000;
+      text-shadow: 2px 5px 4px black;
+			transition: all 0.4s ease;
+    }
+		/* Gives the graphics for the hover effect on the all in button */
+		#ALL-IN:hover{
+			background-color: #CCFF00; 
+  transform: scale(1.1); 
+  box-shadow: 0 0 10px #CCFF00;
+		}
+		/* Gives the graphics for the pressing effect on the all in button */
+		#ALL-IN:active{
+transform: scale(0.75);
+			box-shadow:none;
+		}
+		/* Gives the graphics the slashed dream button, like the fact that it is purple */
+		#RESET-BET {
+      background-color: #800080;
+      color: #ffffff;
+      border: 3px solid #000000;
+      text-shadow: 2px 5px 4px black;
+			transition: all 0.4s ease;
+    }
+		/* Gives the graphics for the hover effect on the slashed dream button */
+		#RESET-BET:hover{
+			background-color: #950606; 
+  transform: scale(1.1); 
+  box-shadow: 0 0 10px #950606;
+		}
+		/* Gives the graphics for the pressing effect on the slashed dream button */
+		#RESET-BET:active{
+transform: scale(0.75);
+			box-shadow:none;
+		}
+/* Sets the basic shape and size of the right hand side buttons */
+    button {
+      width: 145px;
+      margin-bottom: 10px;
+      padding: 7px 7px;
+      border: none;
+      border-radius: 5px;
+      font-family: "IMPACT", serif;
+    }
+/* Sets position of the reels, and info box */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px; 
+    }
+		/* sets graphics for the text at the top of the page that appears during GAMEPLAY */
+		#debug{
+			 font-size: 24px; 
+  font-weight: bold; 
+  color: #FFD700; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px; 
+		}
+	/* sets position for the right hand side buttons */
+    .button-column {
+      display: flex;
+      flex-direction: column;
+      
+    }
+/* sets position of the reels */
+    .slots {
+      text-align: center;
+      margin: 0 20px;
+    }
+/* sets graphics for the reset button at the buttom left, and its position */
+    #RESET {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #000000;
+      color: #ffffff;
+      padding: 10px;
+      border-radius: 5px;
+    }
+/* sets graphics and position of the information box */
+    .info-box {
+      text-align: center;
+      display: block;
+			font-family: comic sans ms;
+      font-size: 15px;
+      margin: 10px auto; 
+      padding: 10px;
+      width: 150px;
+      background-color: rgba(255, 255, 255, 0.2); 
+      color: white;
+      border: 2px solid black;
+      border-radius: 15px;
+    }
+		
+		/* creates the rainbow effect for the rolling animation */
+		
+		@keyframes rainbow {
+  0% { color: red; }
+  16% { color: orange; }
+  32% { color: yellow; }
+  48% { color: green; }
+  64% { color: blue; }
+  80% { color: indigo; }
+  100% { color: violet; }
+}
+
+.rainbow-text {
+  animation: rainbow 1s linear infinite;
+}
+/* CODE FOR THE TUTORIAL */
+	#tutorial-box {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        text-align: center;
+       
+    #tutorial-box a {
+        color: #FFD700;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    #tutorial-box a:hover {
+        text-decoration: underline;
+    }
+
+    $icon_width: 79px;
+$icon_height: 79px;
+$num_icons: 9;
+
+.debug {
+	position: fixed; top: 4px; left: 50%; transform: translateX(-50%); padding: 4px; background: white;border: 1px solid rgba(black, 0.3); font-family: monospace; font-size: 1.6rem;
+}
+
+html, body { height: 100%; }
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #222222;
+}
+
+.slots {
+	position: relative;
+	width: 3.5 * $icon_width;
+	height: 3 * $icon_height;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.3 * $icon_width;
+	background: linear-gradient(45deg, grey 0%, lightgray 100%);
+	border-top: 1px solid rgba(white, 0.6);
+	border-right: 1px solid rgba(white, 0.6);
+	border-left: 1px solid rgba(black, 0.4);
+	border-bottom: 1px solid rgba(black, 0.4);
+	box-shadow: -2px 2px 3px rgba(black, 0.3);
+	border-radius: 3px;
+	
+	&::before, 
+	&::after {
+		content:"";
+		position: absolute;
+		top: 50%;
+		width: 10px;
+		height: 2px;
+		background-color: rgba(black, 0.5);
+	}
+	
+	&::before {
+		left: 0;
+		transform: translate(-200%, -50%);
+	}
+	
+	&::after {
+		right: 0;
+		transform: translate(200%, -50%);
+	}
+	
+	@keyframes win1 {
+		0% { background: linear-gradient(45deg, orange 0%, yellow 100%); 
+		box-shadow: 0 0 80px orange }
+		100% { background: linear-gradient(45deg, grey 0%, lightgrey 100%); box-shadow: -2px 2px 3px rgba(black, 0.3); }
+	}
+	
+	@keyframes win2 {
+		0% { background: linear-gradient(45deg, lightblue 0%, lightgreen 100%); 
+		box-shadow: 0 0 80px lightgreen }
+		100% { background: linear-gradient(45deg, grey 0%, lightgrey 100%); box-shadow: -2px 2px 3px rgba(black, 0.3); }
+	}
+	
+	&.win1 {
+		animation: win1 200ms steps(2, end) infinite;
+	}
+	
+	&.win2 {
+		animation: win2 200ms steps(2, end) infinite;
+	}
+
+	.reel {
+		position: relative;
+		width: $icon_width;
+		height: 3 * $icon_height;
+		border: 1px solid rgba(black, 0.3);
+		border-radius: 3px;
+		overflow: hidden;
+		background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b7c57373-558e-4348-8cd0-b4fcc03a1fbb/djc1v17-41260be2-1f56-46ce-9c19-37735fe7a0fc.jpg/v1/fill/w_79,h_711,q_75,strp/slotreel_1__by_apcompsci3rdperiod_djb1yne_fullview_by_apcompsci3rdperiod_djc1v17-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzExIiwicGF0aCI6IlwvZlwvYjdjNTczNzMtNTU4ZS00MzQ4LThjZDAtYjRmY2MwM2ExZmJiXC9kamMxdjE3LTQxMjYwYmUyLTFmNTYtNDZjZS05YzE5LTM3NzM1ZmU3YTBmYy5qcGciLCJ3aWR0aCI6Ijw9NzkifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.jt4TzfqIpzUZS_kUHH4y5PjNZFvc7QERZ1hVEQQoV3A);
+		background-position: 0 0;
+		background-repeat: repeat-y;
+		
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: linear-gradient(rgba(black, 0.4) 0%, transparent 30%, transparent 70%, rgba(black, 0.4) 100%);
+			box-shadow: inset 0 0 6px 2px rgba(black, 0.3);
+		}
+
+	}
+	
+	p {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 100%;
+		transform: translate(-50%, calc(100% + 30px));
+		text-align: center;
+		font-size: 0.80rem;
+		color: #444;
+		
+		&:last-child {
+			transform: translate(-50%, calc(100% + 60px));
+		}
+		
+		a { color: red; font-weight: 700; }
+	}
+}
+
+  </style>
+</head>
+
+<body>
+	
+	<!-- creates the sections, buttons, and the most basic of functionalities for the SPIN BUTTON, and all of graphics on screen. Only sets relative position for then reels -->
+	
+	  <button id="ROLL">SPIN</button>
+  <div class="container">
+    
+  
+    <div class="slots">
+      <div class="reel"></div>
+      <div class="reel"></div>
+      <div class="reel"></div>
+    </div>
+
+    
+   
+    
+   
+    <div class="info-box">
+      FunBucks: <span id="funBucks">0</span>
+    <br>
+      How Much Fun You Are Having: <span id="currentFuns">1</span>
+    <br>
+      Current Bet: <span id="currentBet">50</span> FunBucks
+    </div>
+   
+    <div id="debug" class="debug"></div>
+  </div>
+
+	 <div class="button-column">
+      <button id="INCREASE-FUN">INCREASE FUN 😊</button>
+      <button id="DECREASE-FUN">DECREASE FUN 😔</button>
+		  <button id="ALL-IN">ALL IN 💰</button>
+		  <button id="RESET-BET">SLASHED DREAM 🌸</button>
+    </div>
+	
+
+  <button id="RESET">RESET-🔄</button>
+
+	
+	<!-- creates the stuff for the text at the top (as in the graphics) -->
+  <section style="position: fixed; right: 2em; bottom: 2em; font-family: 'Telefon', Sans-Serif; color:white; z-index:9999">
+    <ul style="display:flex; list-style-type:none; margin: 0; padding: 0;"></ul>
+  </section>
+	<div id="tutorial-box">
+    <a href="https://youtu.be/boI2B4Gpp34?si=UKgYK0MZdJS2Rfpc" target="_blank">SLOT MACHINE TUTORIAL VIDEO</a>
+</div>
+</body>
+	
+	<script>
+		
+		//variables used to set the starting amount for, payment needed to play (neededfun), the amount of money the player has (funbucks), how much money the player makes per second (funBucksRate), and currentFun (multiplier for wins, and how many 25$ is added to the payment amount)
+	let neededFun = 50;
+	 let funBucks = 50;
+		let randomMoneyGen = 12;
+    let funBucksRate = 12;
+		let currentFun = 1;
+
+		
+		
+		// the function for the SLASHED DREAM button, it works via setting neededFun (bet) back to its original state (50) and currentFUN (a variable used to track the bet, and also used as a winnings multiplier) back to 1. then it updates both of their corresponding text info.
+		function acheron(){
+			neededFun = 50;
+			currentFun = 1;
+			document.getElementById("currentFuns").textContent = currentFun;
+      document.getElementById("currentBet").textContent = neededFun;
+		}
+
+		//looks out for the click of the SLASHED DREAM button, and activates the acheron function
+		document.getElementById("RESET-BET").addEventListener("click", acheron);
+		
+		//disable and enable functions to make sure people dont CHEAT
+function disableButtons() {
+    document.getElementById("INCREASE-FUN").disabled = true;
+    document.getElementById("DECREASE-FUN").disabled = true;
+    document.getElementById("ALL-IN").disabled = true;
+    document.getElementById("RESET-BET").disabled = true;
+}
+
+// Enable all buttons after the spin is finished
+function enableButtons() {
+    document.getElementById("INCREASE-FUN").disabled = false;
+    document.getElementById("DECREASE-FUN").disabled = false;
+    document.getElementById("ALL-IN").disabled = false;
+    document.getElementById("RESET-BET").disabled = false;
+}
+		// this function BETS ALL OF YOUR MONEY by setting neededFun to the current amount of money you have, and also making currentFun equal to funBucks divided by 25. THen it updates their information in the information box accordingly.
+		function allIn() {
+			 neededFun = funBucks;
+			currentFun = funBucks/25;
+			document.getElementById("currentFuns").textContent = currentFun;
+      document.getElementById("currentBet").textContent = neededFun;
+    }
+		
+		//looks out for the press of the ALL in button, and calls the AllIn function.
+		 document.getElementById("ALL-IN").addEventListener("click", allIn);
+		
+		
+		//function which updates the Bet display.
+		function updateBetDisplay() {
+    document.getElementById("currentBet").textContent = neededFun;
+}
+			//function which updates the funbucks display.
+    function updateFunBucksDisplay() {
+      document.getElementById("funBucks").textContent = funBucks;
+    }
+
+    // Function to generate FunBucks over time
+		
+		//generates a random amount of funBucks (used a variable (randomMoneyGen) instead a of a number, so just in case I want to add an upgrade system)
+		//setInterval is a commonly used javascript function which repeatedly calls a function over and over again, in this case it calls the function every second
+    function startFunBucksGeneration() {
+      setInterval(() => {
+        let funBucksRate = Math.floor(Math.random() * randomMoneyGen) + 1;
+				funBucks += funBucksRate;
+        updateFunBucksDisplay();
+      }, 5000); // Every 1 second
+    }
+
+    // Start generating FunBucks, calls the function created a few lines before.
+    startFunBucksGeneration();
+		
+		
+		
+		
+		const debugEl = document.getElementById('debug'),
+			// Mapping of indexes to icons.
+			iconMap = ["kierubin", "imposter", "omniman", "thanos", "bobchat", "bell", "jabot", "jancarlo", "obama"],
+			// Width of the icons
+			icon_width = 79,	
+			// Height of one icon in the strip
+			icon_height = 79,	
+			// Number of icons in the strip
+			num_icons = 9,	
+			// Max-speed in ms for animating one icon down
+			time_per_icon = 100,
+			// Holds icon indexes
+			indexes = [0, 0, 0];
+
+
+/** 
+ * Roll one reel
+ */
+const roll = (reel, offset = 0) => {
+	// Minimum of 2 + the reel offset rounds
+	const delta = (offset + 2) * num_icons + Math.round(Math.random() * num_icons); 
+	
+	// Return promise so we can wait for all reels to finish
+	return new Promise((resolve, reject) => {
+		
+		const style = getComputedStyle(reel),
+					// Current background position
+					backgroundPositionY = parseFloat(style["background-position-y"]),
+					// Target background position
+					targetBackgroundPositionY = backgroundPositionY + delta * icon_height,
+					// Normalized background position, for reset
+					normTargetBackgroundPositionY = targetBackgroundPositionY%(num_icons * icon_height);
+		
+		// Delay animation with timeout, for some reason a delay in the animation property causes stutter
+		setTimeout(() => { 
+			// Set transition properties ==> https://cubic-bezier.com/#.41,-0.01,.63,1.09
+			reel.style.transition = `background-position-y ${(8 + 1 * delta) * time_per_icon}ms cubic-bezier(.41,-0.01,.63,1.09)`;
+			// Sets background position
+			reel.style.backgroundPositionY = `${backgroundPositionY + delta * icon_height}px`;
+		}, offset * 150);
+			
+		// After animation
+		setTimeout(() => {
+			// Reset position, so that it doesn't get higher without limit
+			reel.style.transition = `none`;
+			reel.style.backgroundPositionY = `${normTargetBackgroundPositionY}px`;
+			// Resolve this promise
+			resolve(delta%num_icons);
+		}, (8 + 1 * delta) * time_per_icon + offset * 150);
+		
+	});
+};
+
+
+/**
+ * Roll all reels, when promise resolves roll again
+ */
+function rollAll() {
+    // Check if the player has enough FunBucks to roll
+    if (funBucks >= neededFun) {
+        funBucks -= neededFun; // Deduct the required FunBucks for the roll
+        updateFunBucksDisplay(); // Update the FunBucks display on UI
+        debugEl.textContent = "Rolling..."; // Displays rolling message
+        debugEl.classList.add("rainbow-text"); // Add a visual effect to text
+
+        // Get all slot machine reels
+        const reelsList = document.querySelectorAll('.slots > .reel');
+
+        // Roll all reels simultaneously and wait for the result
+        Promise.all([...reelsList].map((reel, i) => roll(reel, i))).then((deltas) => {
+            // Update indexes for each reel based on the roll result
+            deltas.forEach((delta, i) => indexes[i] = (indexes[i] + delta) % num_icons);
+            
+            // Display the rolled symbols
+            debugEl.textContent = indexes.map((i) => iconMap[i]).join(' - ');
+
+            // Check for a winning combination
+            if (indexes[0] === indexes[1] && indexes[1] === indexes[2]) {
+                // Jackpot win (HUGE WIN) (difference is in multiplieres)
+                let winnings = Math.round(neededFun * currentFun * 4.5 + 45);
+                funBucks += winnings; // Add winnings to FunBucks
+                debugEl.textContent += ` | WINNER WINNER CHICKEN DINNER! You won ${winnings} FunBucks! 🎉`;
+                document.querySelector('.slots').classList.add('win1'); // Highlights win (animation for machine)
+
+            } else if (indexes[0] === indexes[1] || indexes[1] === indexes[2] || indexes[0] === indexes[2]) {
+                // Small win (matching two) (womp womp)
+                let winnings = Math.round(neededFun * currentFun * 1.15 + 25);
+                funBucks += winnings;
+                debugEl.textContent += ` | You won ${winnings} FunBucks! 🎉`;
+                document.querySelector('.slots').classList.add('win2'); // Highlight smaller win
+            } else {
+                // No win, remove win highlights
+                document.querySelector('.slots').classList.remove('win1', 'win2');
+            }
+
+            debugEl.classList.remove("rainbow-text"); // Remove visual effect from text
+            updateDisplay(); // Update the UI
+					 
+        });
+    } else {
+        // If the player doesn't have enough FunBucks, display an error message, telling them that they need more funBucks
+        debugEl.textContent = "Not enough credits! Need at least " + neededFun + " FunBucks!";
+			
+    }
+}
+
+// Function to reset the slot machine (features added a while ago, never removed, not super useful, was mostly used for debugging in earlier stages of coding)
+function resetSlots() {
+    const reelsList = document.querySelectorAll('.slots > .reel');
+    
+    // Reset each reel's position to its initial state
+    reelsList.forEach((reel) => {
+        reel.style.transition = "none"; // Disable transition effect
+        reel.style.backgroundPositionY = "0px"; // Reset position
+    });
+
+    indexes = [0, 0, 0]; // Reset the reel indexes
+
+    debugEl.textContent = "BETTER LUCK NEXT TIME"; // Display message
+
+    // Remove any winning class highlights
+    document.querySelector(".slots").classList.remove("win1", "win2");
+}
+
+// Attach event listener to reset button
+document.getElementById("RESET").addEventListener("click", resetSlots);
+
+// Function to increase the bet amount
+function increaseFun() {
+    neededFun += 25; // Increase the required FunBucks for a roll
+    currentFun += 1; // Increase the multiplier or difficulty
+    document.getElementById("currentFuns").textContent = currentFun; // Update display
+    updateBetDisplay(); // Update bet amount in UI
+}
+
+// Function to decrease the bet amount
+function decreaseFun() {
+    if (neededFun >= 25) { // Ensure FunBucks do not go below minimum
+        neededFun -= 25;
+        if (currentFun > -1) { // Prevent negative values for currentFun, let's player decrease fun to -1, or in other words get Free Rolls
+            currentFun -= 1;
+        }
+    }
+	updateBetDisplay();
+	 document.getElementById("currentFuns").textContent = currentFun;
+}
+
+// Event listener for the roll button with a timer
+document.getElementById("ROLL").addEventListener("click", function() {
+    let rollButton = document.getElementById("ROLL");
+    let existingTimer = document.getElementById("timer");
+
+    // If a timer already exists, prevent creating a new one
+    if (existingTimer) return;
+
+    // Create a timer display element
+    let timerDisplay = document.createElement("div");
+    timerDisplay.id = "timer";
+    timerDisplay.style.fontSize = "20px";
+    timerDisplay.style.marginTop = "10px";
+    timerDisplay.style.color = "white";
+    rollButton.parentNode.insertBefore(timerDisplay, rollButton.nextSibling);
+
+    // Disable the roll button during the countdown
+    rollButton.disabled = true;
+    rollButton.style.opacity = "0.5";
+
+    let countdown = 6; // Countdown duration in seconds
+    timerDisplay.textContent = `Wait ${countdown} seconds...`;
+
+    // Start the countdown timer
+    let timer = setInterval(() => {
+        countdown--;
+        timerDisplay.textContent = `Wait ${countdown} seconds...`;
+        if (countdown <= 0) {
+            clearInterval(timer); // Stop timer when countdown reaches 0
+            rollButton.disabled = false; // Re-enable the roll button
+            rollButton.style.opacity = "1";
+            timerDisplay.remove(); // Remove the timer display from UI
+        }
+    }, 1000);
+});
+
+// Update the current fun amount display
+document.getElementById("currentFuns").textContent = currentFun; 
+updateBetDisplay();
+
+// Attach event listeners for increasing and decreasing bet amount
+document.getElementById("INCREASE-FUN").addEventListener("click", increaseFun);
+document.getElementById("DECREASE-FUN").addEventListener("click", decreaseFun);
+
+// Attach event listener for rolling the slot machine
+document.getElementById("ROLL").addEventListener("click", rollAll);
+
+	</script>
+</html>
