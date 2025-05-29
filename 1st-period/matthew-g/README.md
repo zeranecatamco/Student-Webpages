@@ -21,5 +21,5 @@ The project fetured in my portfolio are:
 
 ## Links
 
-- [GiteHub Repository](https://github.com/Matt2024180/Final-Project/blob/main/pong.html)
+- [GiteHub Repository](https://github.com/Matt2024180/Final-Project)
 - [Live Website](link)
