@@ -1,41 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Cathalina Lomeli  & Francisco Diaz -->
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./style.css" />
-  <script src="./script.js" defer></script>
-  <title>Todo</title>
+  <title>My Personal WebPage</title>
+  <style>
+    body {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #cce7ff; /* Soft baby blue */
+      text-align: center;
+    }
+
+    h1 {
+      color: white;
+      background-color: #5fa8d3; /* Calm medium blue */
+      padding: 1rem;
+      border-radius: 10px;
+      border: solid #1c4e80 4px;
+      margin: 20px auto;
+      max-width: 60%;
+    }
+
+    .profile-img {
+      width: 40%;
+      border-radius: 15px;
+      display: block;
+      margin: 20px auto;
+      border: 5px solid #1c4e80;
+      padding: 5px;
+      background-color: #e0f0ff;
+      box-shadow: 5px 5px 15px rgba(0, 0, 50, 0.2);
+    }
+
+    .box {
+      background: #e6f3ff; /* Pale inner box blue */
+      border: 3px solid #5fa8d3;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 70%;
+      margin: 20px auto;
+      box-shadow: 3px 3px 10px rgba(0, 0, 100, 0.1);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    li {
+      background: #5fa8d3;
+      color: white;
+      margin: 8px;
+      padding: 12px;
+      border-radius: 8px;
+      width: 150px;
+      text-align: center;
+      box-shadow: 2px 2px 6px rgba(0, 0, 80, 0.15);
+    }
+
+    a {
+      text-decoration: none;
+      color: #1c4e80;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #0a3a66;
+    }
+
+    footer {
+      text-align: center;
+      padding: 12px;
+      background-color: #1c4e80;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
 </head>
+<body>  
+  <img class="profile-img" src="https://preview.redd.it/miyamoto-musashi-5120x2880-v0-2jchkbkcmfqd1.jpeg?auto=webp&s=a2b53e104e1d89e1a584e10c96451e680ea15bdb" alt="Profile Image" />
 
-<body>
-  <section class="todo">
-    <h2>To-do list</h2>
-    <div class="input">
-      <input type="text" class="input-field" id="todoInput" placeholder="Add a new todo" />
-      <!-- placeholder disapears after typing -->
-      <button class="btn">Add</button>
-    </div>
-    <ul class="scroll">
-      <li id="todoList"></li>
+  <h1>ABOUT THE AUTHOR</h1>
+
+  <div class="box">
+    <h2>About Me</h2>
+    <p>When I first started coding I knew literally nothing. One of the first things that threw me off was binary. It felt like I was learning a new language with just 0s and 1s, and I couldn’t wrap my head around how that connected to real programs. At first, writing even a basic if else statement felt confusing, and debugging was frustrating because I didn’t always know what I was looking for. But over time with practice I begun to understand the concepts more and more. I got more comfortable using arrays to organize data, and I started understanding how loops could make code more efficient. Even though I messed up a lot, those mistakes actually helped me learn. One of the hardest parts was figuring out how to break problems down—sometimes I’d stare at a blank screen not even knowing where to start. But after practicing with different challenges and projects, I learned how to plan out my code and think logically. While im not the best programer, I am very satisfied with the progress Ive made throughout the year. </p>
+  </div>
+
+  <div class="box">
+    <h2>Hobbies, Interests, and Favorite Things</h2>
+    <ul>
+      <li>Piano</li>
+      <li>Video Games</li>
+      <li>Soccer</li>
+      <li>Champion League</li>
+      <li>Music</li>
+      <li>Cats</li>
+      <li>Running</li>
+      <li>YouTube</li>
     </ul>
-    <div>
-      <hr class="counter" />
-      <div class="counter-container">
-        <p><span id="todoCount">0</span> items total</p>
-        <button id="deleteButton">Delete All</button>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <div class="footer">
-      <p class="made-by">Made By</p>
-      <p class="author">Cathalina & Francisco</p>
+  </div>
 
-    </div>
+  <div class="box">
+    <h2>My Projects</h2>
+    <a href="https://example.com/project1" target="_blank">Project 1: Portfolio</a><br>
+    <a href="https://example.com/project2" target="_blank">Project 2: Fun Facts Generator</a><br>
+    <a href="https://example.com/project3" target="_blank">Project 3: Travel Tips App</a>
+  </div>
+
+  <div class="box">
+    <h2>Contact Info</h2>
+    <p>Feel free to contact me on <a href="https://www.instagram.com/">Instagram</a></p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My Personal Page</p>
   </footer>
 </body>
-
 </html>
-<!-- sets up the basic visual text for the todo list-->
