@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Body background settings */
+body {
+    background: url('https://www.euroaccessories.co.uk/media/catalog/product/cache/de1f6a8f5696f0794821adb579d7d23b/image/629345a6/world-flags-5ft-x-3ft-12pcs-country-flag.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Main container styling */
+.app {
+    background: rgba(255, 255, 255, 0.8);
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+/* Heading styling inside the app */
+.app h1 {
+    font-size: 25px;
+    color: #333;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+
+/* Styling for the quiz section */
+.quiz {
+    padding: 20px 0;
+}
+
+/* Styling for the quiz question heading */
+.quiz h2 {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+}
+
+/* Answer button styling */
+.btn {
+    background: #4CAF50;
+    color: white;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Button hover effect */
+.btn:hover:not([disabled]) {
+    background: #222;
+    color: #fff;
+}
+
+/* Disabled button styling */
+.btn:disabled {
+    cursor: not-allowed;
+}
+
+/* Styling for the 'Next' button */
+#next-btn {
+    background: #000;
+    color: white;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Feedback message styling */
+#feedback {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Flag image styling */
+#flag-container img {
+    max-width: 100%;
+    max-height: 400px; 
+    width: auto;
+    height: auto;
+}
