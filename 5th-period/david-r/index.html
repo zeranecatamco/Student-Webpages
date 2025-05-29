@@ -1,103 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My First Webpage</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>David Ramos Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="navbar">
-    <a href="#home">Home</a>
-    <a href="#about-me">About Me</a>
-    <a href="#goals">My Goals</a>
-    <a href="#projects">Projects</a>
-    <a href="#extra">Extra</a>
-  </div>
-  <header>
-    <h1>Welcome to David's Website!</h1>
+  <header id="home">
+    <h1>Hellooooo! I'm David!! 🤪 Welcome to my Webpage! 😁</h1>
+    <p>Mt. Eden High School | AP Computer Science Student</p>
   </header>
-  <main>
-    <div class="content">
-      <section id="home">
-        <p>Hello! I am from Mt. Eden High School and I am currently taking AP Computer Science. I enjoy studying and learning new things in this class.</p>
-      </section>
-      <section>
-        <h2>What I Have Learned So Far in AP Computer Science</h2>
-        <ul>
-          <li><a href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank">C++</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML</a></li>
-          <li>JS</li>
-          <li>Variables</li>
-          <li>Arrays</li>
-          <li>Loops</li>
-          <li>Data Types</li>
-          <li>Functions</li>
-          <li>Binary Code</li>
-        </ul>
-      </section>
-      <section id="about-me">
-        <h2>About Me</h2>
-        <ul>
-          <li>I am 17 years old</li>
-          <li>My favorite color is blue</li>
-          <li>I like to eat a lot</li>
-          <li>I do wrestling</li>
-          <li>I like to hang out with friends</li>
-        </ul>
-        <p>My name is David Ramos, and I am from Hayward, California. I was born in Castro Valley, California on April 1st, 2008. In my free time, I enjoy scrolling on TikTok, hanging out with friends, and listening to calm music while studying. One of my favorite activities is hiking because I enjoy the nature and the views. Finally, what you should know about me is that when meeting me, im shy at first but when I feel comfortable with you over time, im a goofy person. :)</p>
-      </section>
-      <section id="goals">
-        <h2>My Personal Goals in Life</h2>
-        <ul>
-          <li>Be able to talk to new people without getting nervous</li>
-          <li>Be able to do a handstand</li>
-          <li>Get closer to God</li>
-          <li>Be kind to others</li>
-          <li>Pass all my classes to graduate</li>
-          <li>Go to a UC or private school</li>
-          <li>Make a decent amount of money</li>
-          <li>Get six-pack abs before graduating</li>
-          <li>Repay my family for everything they have done for me</li>
-        </ul>
-      </section>
-      <section id="projects">
-        <h2>My Projects</h2>
-
-        <section id="tic-tac-toe">
-          <h3>Tic-Tac-Toe Game</h3>
-          <p>This is a Tic-Tac-Toe game were you can play with your friends to see who's the best at Tic-Tac-Toe! Its really fun and competitive! How you play the game is that you are either X or O, and your friend is O or X and you take turns marking empty squares, and the first to get 3 in a row wins.</p>
-          <p><strong>Live Version:</strong> <a href="ticTacToe.html" target="_blank">Click Here!</a></p>
-          <iframe height="400" style="width: 100%;" scrolling="no" title="Tic Tac Toe" src="https://codepen.io/DivadS/embed/yyLXQQZ?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-        </section>
-
-        <section id="clock-App">
-          <h3>Clock App</h3>
-          <p>This is a clock app that displays the current time. It may look boring but, you are able to change the background color which is fun!</p>
-          <p><strong>Live Version:</strong> <a href="clock.html" target="_blank">Click Here!</a></p>
-          <iframe height="400" style="width: 100%;" scrolling="no" title="Clock App" src="https://codepen.io/DivadS/embed/GgROoGM?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-        </section>
-
-        <section id="red-Light-Green-Light">
-          <h3>Red Light Green Light Game</h3>
-          <p>This is a Red Light Green Light game based on the show Squid Game. It's fun and challenging! How you play this game is by reaching to the other side but only if the light is green, you can move and if it's not, you stay still. Otherwise, if you move, you're out!</p>
-          <p><strong>Live Version:</strong> <a href="redLightGreenLight.html" target="_blank">Click Here!</a></p>
-          <iframe height="400" style="width: 100%;" scrolling="no" title="Red Light Green Light" src="https://codepen.io/DivadS/embed/gbOXPKX?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-        </section>
-      </section>
-      <section id="extra">
-        <h2>My Favorite Website When I Am Bored</h2>
-        <p>When I'm bored, I love playing the Snake Game. You can play it here: 
-        <a href="https://www.google.com/search?q=snake+game" target="_blank">Snake Game</a></p>
-      </section>
-      <section>
-        <h2>A Picture of My High School</h2>
-        <img src="https://d2rzw8waxoxhv2.cloudfront.net/imagine/medium/mehs94545/1712266779853-595-63.jpeg" alt="Image of Mt. Eden High School">
-      </section>
-    </div>
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about-me">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#pictures">Pictures</a>
+  </nav>
+  <main class="container">
+    <section id="about-me">
+      <h2>About Me</h2>
+      <p>Hi! I am from Hayward, California. I was born in Castro Valley, California on April 1st, 2008. I'm a highshool Junior from Mt. Eden High school. I decided to take AP Computer Science Principle because I got recomended to take it by my sister. Thanks to my sister, I learned so much new things about programming. I learned about key programming concepts like variables, arrays, loops, data types, binary codes and functions. I even learned how to build web pages using HTML, CSS, JavaScript and C++. Although, it was really hard to figure out things about programming, thanks to my amazing teacher, Mr. Alvarado, he showed me how in the simplest way. Thus, this class was really interesting and it help me developed as a person in programming. Outside of programming, i'm part of a wrestling team in my high school. I placed 3rd placed on league on my freshman year. I'm also part of a cross and track team. My record for the mile is 5:17 😎. Other than sports, I enjoyed hiking with family and friends, spending time with love ones, eat, and try to be a better person in general by respecting others. My top 3 favorite music artist are, The Marias, MacDemarco, and Cuco. My biggest goal right now in life is to improve on education and myself, try to get into a UC school, and to repay my family. How i'm going to accomplished these goals is by following God because, hes the only way to become succesful in everthing. † Luke 1:37 †</p>
+    </section>
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="project">
+        <h3>Tic-Tac-Toe Game</h3>
+        <p>A fun 2-player game where you try to get 3 in a row. Challenge your friends!</p>
+        <a href="ticTacToe.html" target="_blank">Click Here to Play!</a>
+        <iframe height="400" style="width: 100%;" src="ticTacToe.html" frameborder="0" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="project">
+        <h3>Clock App</h3>
+        <p>This app shows the current time and lets you change the background color for fun!</p>
+        <a href="clock.html" target="_blank">Try it!</a>
+        <iframe height="400" style="width: 100%;" src="clock.html" frameborder="0" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="project">
+        <h3>Red Light Green Light Game</h3>
+        <p>Inspired by Squid Game. Reach the end when it’s green, or get caught and lose! Remeber when its red don't MOVE!</p>
+        <a href="redLightGreenLight.html" target="_blank">Play Now!</a>
+        <iframe height="400" style="width: 100%;" src="redLightGreenLight.html" frameborder="0" loading="lazy" allowfullscreen></iframe>
+      </div>
+    </section>
+    <section id="pictures">
+      <h2>Random Pictures 😅</h2>
+      <div class="picture-gallery">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA_JZavd1-_EuXW4JopK_dIB3bC7oCtRDSGg&s">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMaGVmRi2mp0cYE-oN2Oijkf9C8MXNk1jM_w&s">
+      </div>
+    </section>
   </main>
   <footer>
-    <p>&copy;2025 David Ramos' Webpage</p>
+    <p>&copy; 2025 David Ramos. All rights reserved!! 😤</p>
   </footer>
-  <script src="script.js"></script>
 </body>
 </html>
