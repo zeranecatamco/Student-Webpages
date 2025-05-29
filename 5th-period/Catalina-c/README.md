@@ -1,5 +1,4 @@
-# CatalinaCh5.Github.io
-# Catalina C. - Final Portfolio
+# Catalina C
 
 ## About Me
 
@@ -7,7 +6,7 @@ Welcome to my personal website! My name is Catalina Chavez. I am 16 years old an
 
 ## Project Overview
 
-This website contains my portfolio and description about who I am as a programmer. Through this website I share my journey throughout this year in AP Computer Science. This website holds various of my projects worked on throughout this school year -
+This website contains my portfolio and description about who I am as a programmer. Through this website I share my journey throughout this year in AP Computer Science. This website holds various of my projects worked on throughout this school year, here is my description on each project and an explanation for each project's purpose. -
 
 Memory Game -For this project I worked in a team of three to complete the code. We obtained this project from a tutorial to understand more of the fundamentals on how to create a game in Javascript. We also used HTML and CSS to help us design the project and create a neat structure. The aim for this memory card game is to let the user utilize their brain skills to remember a card they flipped before hand and check a different card to see if they make a match. This game is a great way to test your skills and build a stronger brain that can retain and remember more information.
 
