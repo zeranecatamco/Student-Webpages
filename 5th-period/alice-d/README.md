@@ -1,8 +1,8 @@
 # Alice D
 ## About Me!
 - Hello! My name is Alice Dazo and I am a full time Student at Mount Eden Highschool. I am a senior who has taken an interest in the subject Compsci, and here are some of my projects and what I have learn throughout the years!
-## About My Project!
-- This is my third version of my personal website that includes with my previous projects that I have done this year. 
+## About My Project and What I have Learned!
+- This is my third version of my personal website that includes with my previous projects that I have done this year. I've learn a lot about technologies and how to use different kinds of progamming languages, such as css and html. I have also learn all of the basic functionality of css; such things as loops, arrays, intergers, etc. I've manage to create multiple games and apps while using html most of the time with a group or by myself.
 ## What does my Website Includes?: 
 - It includes a home page!
 - About me page!
@@ -25,7 +25,7 @@ A Matching Game!! It's a simple game however coding it was a little tricky, as t
 - Sodoku
 A very tricky game and I could say the same with the coding, as I would have needed to make three types of board according to it's difficulties. The solution to the game is to have numbers within the 9 boxes and that it doesn't interefere with the other columns or rows. Goodluck!!
 
-##Links: 
+## Links: 
 
 - [Github Link](https://github.com/alicedazp/Final-Project---Personal-Portfolio.git)
 - [Website Link](https://alicedazp.github.io/Final-Project---Personal-Portfolio/)
