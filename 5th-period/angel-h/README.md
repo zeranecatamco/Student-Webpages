@@ -8,8 +8,6 @@ This portfolio holds mostly everything I've made in this year's class of AP Comp
 
 This year was rough, but I learned a lot. Learning how to program was pretty fun. Writing the new code was an experience, it gave me the chance to test out my critical thinking and problem solving skills. HTML, CSS, and JS together were also nice because I managed to make my code more visually understandable, but also give it a purpose and goal. Making this portfolio, I refreshed my memory on everything I learned and even picked up a few new skills. I learned how to use GitHub, navigate the interface, and implement my websites and programming into the site. I understand how to make my own website, and I brushed up a little bit on moving files and stuff. It was pretty cool to learn some new things about CSS to decorate my website, like the very neat text shadows. I also learned how to combine different files in coding, putting the different websites within one another. Ultimately, making the portfolio was confusing, but I pulled through and learned some stuff coming out of it.
 
-
-
 ## Content
 - another about me
 - learning journey
