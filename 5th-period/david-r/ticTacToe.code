@@ -1,0 +1,180 @@
+<!-- David Ramos and Dominik Lualhati -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tic-Tac-Toe</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+      background-color: lightblue;
+      text-align: center;
+    }
+    .container {
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .game {
+      height: 60vmin;
+      width: 60vmin;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5vmin;
+      justify-content: center;
+    }
+    .box {
+      height: 18vmin;
+      width: 18vmin;
+      border-radius: 1rem;
+      border: none;
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+      font-size: 8vmin;
+      color: white;
+      background-color: white;
+      cursor: pointer;
+    }
+    #reset, #new-btn {
+      padding: 1rem;
+      font-size: 1.25rem;
+      background: black;
+      color: white;
+      border-radius: 1rem;
+      border: none;
+      margin: 10px;
+      cursor: pointer;
+    }
+    #reset {
+      background: #191913;
+      color: blue;
+    }
+    .box:hover {
+      background-color: #cce6ff;
+    }
+    #msg {
+      font-size: 6vmin;
+      margin: 20px 0;
+    }
+    .msg-container {
+      height: 30vmin;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .hide {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="msg-container hide">
+    <p id="msg">Winner!</p>
+    <button id="new-btn">New Game?</button>
+  </div>
+
+  <main>
+    <h1>Tic-Tac-Toe</h1>
+    <div class="container">
+      <div class="game">
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+      </div>
+    </div>
+    <button id="reset">Reset Game</button>
+  </main>
+
+  <script>
+    let boxes = document.querySelectorAll('.box');
+    let resetBtn = document.querySelector('#reset');
+    let newGameBtn = document.querySelector('#new-btn');
+    let msgContainer = document.querySelector('.msg-container');
+    let msg = document.querySelector('#msg');
+    let turnO = true;
+
+    const winPatterns = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6]
+    ];
+
+    const enableBoxes = () => {
+      boxes.forEach(box => {
+        box.disabled = false;
+        box.innerText = "";
+        box.style.backgroundColor = "white";
+      });
+    };
+
+    const disableBoxes = () => {
+      boxes.forEach(box => box.disabled = true);
+    };
+
+    const showWinner = (winner) => {
+      msg.innerText = `Congratulations, the winner is ${winner}!`;
+      msgContainer.classList.remove('hide');
+      disableBoxes();
+    };
+
+    const checkWinner = () => {
+      let hasWin = false;
+      for (let pattern of winPatterns) {
+        let [a, b, c] = pattern;
+        let pos1 = boxes[a].innerText;
+        let pos2 = boxes[b].innerText;
+        let pos3 = boxes[c].innerText;
+        if (pos1 !== "" && pos1 === pos2 && pos2 === pos3) {
+          showWinner(pos1);
+          hasWin = true;
+          return;
+        }
+      }
+      if (!hasWin) {
+        const allFilled = [...boxes].every(box => box.innerText !== "");
+        if (allFilled) {
+          msg.innerText = "It's a draw!";
+          msgContainer.classList.remove('hide');
+        }
+      }
+    };
+
+    const resetGame = () => {
+      turnO = true;
+      enableBoxes();
+      msgContainer.classList.add('hide');
+    };
+
+    boxes.forEach(box => {
+      box.addEventListener('click', () => {
+        if (box.innerText !== "") return;
+        box.innerText = turnO ? "O" : "X";
+        box.style.color = turnO ? "red" : "black";
+        box.disabled = true;
+        turnO = !turnO;
+        checkWinner();
+      });
+    });
+
+    resetBtn.addEventListener('click', resetGame);
+    newGameBtn.addEventListener('click', resetGame);
+  </script>
+</body>
+</html>
