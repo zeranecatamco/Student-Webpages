@@ -1,0 +1,83 @@
+
+/* Basic Reset for Margin and Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Clean font */
+    background-color: #f4a261;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-color: #264653;
+    height: 100vh; /* Center content vertically and horizontally */
+  /* changes the image of the background*/ 
+  background-color: #e9c46a;
+}
+
+/* Quiz Container Styling */
+#game-container {
+    background-color: #f4a261;
+    padding: 30px 40px; /* Spacious feel */
+    border-radius: 15px; /* Rounded corners */
+  border:solid white 7px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 350px; /* Adjust width */
+    text-align: center;
+ 
+  
+}
+
+/* Header Styling */
+h2 {
+    font-size: 22px;
+    color: #264653;
+    margin-bottom: 20px;
+}
+
+/* Letter Display Styling */
+#letter {
+    font-size: 20px; /* Makes letter display larger */
+    font-weight: bold;
+    color: #264653;
+    margin-bottom: 10px;
+}
+
+/* Input Field Styling */
+input {
+    width: 85%; /* Makes input smaller than full width */
+    padding: 15px;
+    margin-bottom: 15px; /* Adds space between input & buttons */
+    border: 2px solid #ccc; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px;
+}
+
+/* Button Styling */
+button {
+    padding: 15px 25px;
+    background-color: #f2cc8f; /* Green color */
+    color: #264653;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px;
+    cursor: grab;
+    transition: background-color 0.3s ease; /* Smooth background transition */
+    margin-bottom: 15px; /* Adds space between buttons */
+}
+
+/* Hidden Element */
+.hidden {
+    display: none;
+}
+/*This will change the color when cursor hovers over the button*/
+button:hover {
+      background-color:#ffc9b9;
+      transition: 0.7s;
+  }
