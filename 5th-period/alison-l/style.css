@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poller+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
+
+/*========================= Colors =========================*/
+:root {
+	--purple: #9381ff;
+	--lightPurple: #b8b8ff;
+	--yellow: #ffeedd;
+	--white: #f8f7ff;
+	--black: #2b2d42;
+}
+/*========================= Fonts =========================*/
+h3 {
+	font-family: Limelight;
+	font-size: 4rem;
+	margin: 4px;
+}
+h1 {
+	font-family: "Poller One", serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 2.5rem;
+	margin: 4px;
+}
+h2 {
+	font-family: "Poiret One", sans-serif;
+	font-size: 2.5rem;
+	font-weight: 400;
+	font-style: normal;
+	margin: 4px;
+}
+p {
+	font-family: "Poiret One", sans-serif;
+	font-size: 30px;
+	font-weight: 400;
+	font-style: normal;
+	margin: 4px;
+	color: var(--black);
+}
+h4 {
+	font-family: "Cutive Mono", monospace;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 30px;
+}
+a {
+	font-family: "Poiret One", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+a:hover {
+	text-decoration: underline;
+}
+li {
+	list-style: none;
+	text-align: center;
+	margin-top: 40px;
+}
+/*========================= Body =========================*/
+body {
+	margin: 4px;
+	background-color: var(--white);
+}
+/*========================= Nav Bar =========================*/
+#navigation {
+	position: fixed;
+	width: 100%;
+	max-height: 64px;
+	overflow: hidden;
+	left: 0;
+	right: 0;
+	top: 0;
+	background-color: var(--white);
+	line-height: 30px;
+	margin-top: -20px;
+	padding-bottom: 15px;
+}
+#navigation a {
+	color: var(--black);
+	font-size: 25px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+/*========================================================================= Style for overall layout & colors =========================================================================*/
+#page {
+	max-width: 100%;
+	height: 100%;
+	padding: 2rem;
+}
+/*========================= Front page =========================*/
+#page > header {
+	height: 90vh;
+	margin-top: 30px;
+	background-color: var(--purple);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23b8b8ff' fill-opacity='0.24'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 4rem;
+	color: var(--white);
+}
+/*========================= About Sect =========================*/
+#page > main {
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-image: linear-gradient(var(--purple), var(--lightPurple));
+	padding: 4rem;
+	padding-top: 100px;
+	padding-bottom: 50px;
+}
+main h1 {
+	color: var(--white);
+}
+#writing {
+	margin: 0px 3rem;
+	text-align: center;
+	padding: 4rem 5rem;
+	background: var(--lightPurple);
+	border-radius: 15%;
+	border: 1px solid var(--white);
+}
+/*========================= Projects =========================*/
+#page > #projects {
+	height: auto;
+	width: auto;
+	background-color: var(--lightPurple);
+	padding: 4rem;
+}
+/*========================= Foot =========================*/
+#page > footer {
+	height: auto;
+	background-color: var(--purple);
+	padding: 4rem;
+	text-align: center;
+	align-items: center;
+	color: var(--white);
+}
+footer a {
+	color: var(--white);
+	font-size: 2.5rem;
+}
+/*========================= Grid for Projects Box =========================*/
+#projects {
+	display: grid;
+	width: 100%;
+	height: 100%;
+	grid-template-areas:
+		"title title"
+		"watch text1"
+		"list text2"
+		"connect text3";
+	grid-template-rows: repeat(4, auto);
+	grid-template-columns: 50vw 1fr;
+	row-gap: 50px;
+	column-gap: 50px;
+}
+#projects h3 {
+	margin-top:5rem;
+	grid-area: title;
+	text-align: center;
+	color: var(--black);
+	font-size: 3rem;
+}
+#projects h2 {
+	color: var(--black);
+}
+#projects h4 {
+	color: var(--black);
+}
+#StopwatchPro {
+	grid-area: watch;
+}
+#ToDoLiPro {
+	grid-area: list;
+}
+#Connect4Pro {
+	grid-area: connect;
+}
+#text1 {
+	max-height: 100vh;
+	overflow-y: scroll;
+	scrollbar-width: thin;
+	scrollbar-color: var(--white) var(--lightPurple);
+}
+#text2 {
+	max-height: 100vh;
+	overflow-y: scroll;
+	scrollbar-width: thin;
+	scrollbar-color: var(--white) var(--lightPurple);
+}
+#text3 {
+	max-height: 100vh;
+	overflow-y: scroll;
+	scrollbar-width: thin;
+	scrollbar-color: var(--white) var(--lightPurple);
+}
+.desc h2 {
+	font-weight: bold;
+}
+/*========================= Style for Stopwatch =========================*/
+#WatchContainer {
+	text-align: center;
+	background: rgba(255, 255, 255, 0.5);
+	height: auto;
+	padding: 50px;
+}
+#time {
+	font-family: "Cutive Mono", monospace;
+	font-weight: 400;
+	font-style: normal;
+	margin: 3rem;
+	padding: 2rem;
+	background-color: var(--yellow);
+	border-radius: 10%;
+}
+.digit {
+	font-size: 50px;
+	color: var(--black);
+}
+.txt {
+	font-size: 50px;
+	color: var(--black);
+}
+.btn {
+	font-family: "Poiret One", sans-serif;
+	font-size: 20px;
+	padding: 10px;
+	justify-content: space-around;
+	margin-left: 30px;
+	margin-right: 30px;
+	border-color: var(--white);
+	background-color: var(--white);
+}
+/*========================= Style for To Do List =========================*/
+.ToDoListContainer {
+	font-family: "Poiret One", sans-serif;
+	min-height: 590px;
+	background: rgba(255, 255, 255, 0.5);
+	display: flex;
+	justify-content: center;
+	overflow-x: scroll;
+}
+.ToDoListContainer h2 {
+	margin: 20px 10px 20px 20px;
+	font-size: 30px;
+}
+.todo-app {
+	font-weight: 400;
+	font-style: normal;
+	margin: 30px;
+	min-width: 20rem;
+	max-width: 20rem;
+	overflow-x: scroll;
+	scrollbar-width: thin;
+	scrollbar-color: var(--white) var(--yellow);
+	height: auto;
+	background: var(--yellow);
+	padding: 20px 35px 20px 20px;
+}
+.row {
+	justify-content: space-between;
+	align-items: center;
+	display: flex;
+	margin: 0px;
+	border-radius: 30px;
+	background: var(--white);
+	padding-left: 20px;
+	margin-bottom: 25px;
+}
+.ToDoListContainer input {
+	flex: 1;
+	border: none;
+	outline: none;
+	background: transparent;
+	padding: 10px;
+	font-weight: 10px;
+	font-size: 15px;
+}
+.ToDoListContainer button {
+	border: none;
+	padding: 20px;
+	border-radius: 50px;
+	background: var(--lightPurple);
+	color: var(--white);
+	cursor: pointer;
+}
+.ToDoListContainer ul li {
+	list-style: none;
+	font-size: 25px;
+	padding: 30px;
+	user-select: none;
+	cursor: pointer;
+	position: relative;
+	left: 10px;
+}
+.ToDoListContainer ul li::before {
+	content: " ";
+	position: absolute;
+	height: 25px;
+	width: 25px;
+	border-radius: 0%;
+	background-image: url("https://cdn-icons-png.flaticon.com/512/64/64571.png");
+	background-size: cover;
+	background-position: center;
+	top: 30px;
+	left: -10px;
+}
+.ToDoListContainer ul li.checked {
+	color: var(--black);
+	text-decoration: line-through;
+}
+.ToDoListContainer ul li.checked::before {
+	background-image: url("https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/all-icons/checkbox-fm1k35ckecyeu91rbl8vg.png/checkbox-peue399s9op2r6rsujppa.png?_a=DAJFJtWIZAAC");
+}
+.ToDoListContainer ul li span {
+	position: absolute;
+	right: 0;
+	top: 20px;
+	width: 40px;
+	height: 40px;
+	font-size: 40px;
+	color: black;
+	line-height: 50px;
+	text-align: center;
+	border-radius: 50%;
+}
+.ToDoListContainer ul li span:hover {
+	background: var(--purple);
+}
+.suggestionsBox {
+	max-height: 50vh;
+	font-size: 24px;
+	background-color: var(--yellow);
+	padding: 15px 25px 10px 10px;
+	margin: 20px;
+	border-radius: 5%;
+	overflow-y: scroll;
+	scrollbar-width: thin;
+	scrollbar-color: white var(--yellow);
+}
+.suggestionsBox button {
+	margin-left: 15px;
+	padding: 15px;
+}
+/*========================= Style for Connect 4 =========================*/
+#Connect4Container {
+	background: rgba(255, 255, 255, 0.5);
+	padding: 50px;
+	text-align: center;
+}
+.cell {
+	width: 55px;
+	height: 55px;
+	border: 2px solid;
+	box-shadow: 0 0 0 2px;
+	line-height: 55px;
+	font-size: 46px;
+	text-align: center;
+	cursor: pointer;
+}
+.cell:hover {
+	background-color: var(--yellow);
+}
+#gameContainer {
+	padding: 55px;
+}
+#cellContainer {
+	display: grid;
+	grid-template-columns: repeat(7, auto);
+	width: 425px;
+	margin: auto;
+	background: var(--white);
+}
+#restartBtn {
+	font-size: 20px;
+	border: 2px solid var(--white);
+	border-radius: 20%;
+	margin-top: 10px;
+	padding: 10px 20px;
+	background: var(--white);
+	cursor: pointer;
+}
+#restartBtn:hover {
+	background-color: var(--yellow);
+	border-color: var(--yellow);
+	font-weight: bold;
+}

@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff0f5;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+header {
+  background-color: #ffe4ec;
+  padding: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about h2 {
+  font-size: 2rem;
+  color: #cc3366;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+
+.about p {
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.extra-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.extra-info div {
+  flex: 1 1 250px;
+}
+
+.extra-info h3 {
+  color: #cc3366;
+  margin-bottom: 0.5rem;
+}
+
+.extra-info ul {
+  padding-left: 1.2rem;
+}
+
+.extra-info li {
+  margin-bottom: 0.4rem;
+}
+
+#projects {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+#projects h2 {
+  color: #cc3366;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project-links a {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #ffb6c1;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+
+.project-links a:hover {
+  background-color: #ff6f91;
+}
+.songs {
+  margin-top: 3rem;
+}
+
+.songs h2 {
+  font-size: 1.4rem;
+  color: #cc3366;
+  margin-bottom: 1rem;
+}
+
+.songs ul {
+  padding-left: 1rem;
+  font-size: 1rem;
+  line-height: 1.8; 
+}
+
+.songs li {
+  margin-bottom: 0.4rem;
+}
+
+.songs a {
+  color: #cc3366;
+  text-decoration: none;
+}
+
+.songs a:hover {
+  text-decoration: underline;
+}
